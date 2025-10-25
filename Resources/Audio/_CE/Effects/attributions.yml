@@ -1,0 +1,69 @@
+- files: ["grass_gather.ogg", "grass_gather2.ogg", "grass_gather3.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by hadescolossus of Freesound.org. Cropped and mixed from stereo to mono.'
+  source: "https://freesound.org/people/hadescolossus/sounds/705228/"
+
+- files: ["coins1.ogg", "coins2.ogg", "coins3.ogg", "coins_fall.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by severaltimes of Freesound.org. Cropped by TheShuEd.'
+  source: "https://freesound.org/people/severaltimes/sounds/173989/"
+
+- files: ["key_drop.ogg"]
+  license: "CC0-1.0"
+  copyright: 'Kyanite_ of Freesound.org. Mixed from stereo to mono.'
+  source: "https://freesound.org/people/Kyanite_/sounds/432913/"
+
+- files: ["lockpick_use.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by Fugeni of Freesound.org. Mixed from stereo to mono.'
+  source: "https://freesound.org/people/Fugeni/sounds/416286/"
+
+- files: ["lockpick_fail.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by SinusPi of Freesound.org. Cropped and mixed from stereo to mono.'
+  source: "https://freesound.org/people/SinusPi/sounds/545044/"
+
+- files: ["sharpening_stone.ogg"]
+  license: "CC-BY-4.0"
+  copyright: 'by tim.kahn of Freesound.org. Cropped and mixed from stereo to mono.'
+  source: "https://freesound.org/people/tim.kahn/sounds/35827/"
+
+- files: ["doorknob_1.ogg"]
+  license: "CC-BY-3.0"
+  copyright: 'by Leady.'
+  source: "https://freesound.org/people/Leady/sounds/12739/"
+
+- files: ["doorknob_2.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by BenjaminNelan.'
+  source: "https://freesound.org/people/BenjaminNelan/sounds/321087/"
+
+- files: ["crystal_ding.ogg"]
+  license: "CC0-1.0"
+  copyright: '2022-01-14-crystal-bell-08.flac by arseniiv'
+  source: "https://freesound.org/s/614832/"
+
+- files: ["crystal_ding2.ogg"]
+  license: "CC0-1.0"
+  copyright: '2022-01-14-crystal-bell-01.flac by arseniiv'
+  source: "https://freesound.org/s/614833/"
+
+- files: ["shovel_dig1.ogg", "shovel_dig2.ogg", "shovel_dig3.ogg", "shovel_dig4.ogg", "shovel_dig5.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by Ali_6868 of Freesound.org. Cropped and mixed from stereo to mono.'
+  source: "https://freesound.org/people/Ali_6868/sounds/384361/"
+
+- files: ["ladder_down.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by qubodup of Freesound.org.'
+  source: "https://freesound.org/people/qubodup/sounds/442770/"
+
+- files: ["ladder_up.ogg"]
+  license: "CC0-1.0"
+  copyright: 'by qubodup of Freesound.org.'
+  source: "https://freesound.org/people/qubodup/sounds/442771/"
+
+- files: ["nailing1.ogg", "nailing2.ogg", "nailing3.ogg", "nailing4.ogg"]
+  license: "CC-BY-4.0"
+  copyright: 'by InspectorJ of Freesound.org. Cropped and mixed from stereo to mono.'
+  source: "https://freesound.org/people/InspectorJ/sounds/406048/"
