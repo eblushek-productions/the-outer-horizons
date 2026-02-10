@@ -27,6 +27,8 @@
     - suitStorage
     - Belt
   - type: Gun
+    angleIncrease: 2
+    angleDecay: 14
     fireRate: 6
     selectedMode: SemiAuto
     availableModes:
@@ -77,6 +79,9 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+  - type: Gun
+    minAngle: 2
+    maxAngle: 25
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -110,6 +115,7 @@
   description: A cyborg-mounted weapon system based on the Viper pistol. Creates ammunition on the fly from an internal fabricator, which slowly self-charges.
   components:
   - type: Gun
+    angleIncrease: 0
     fireRate: 6
     selectedMode: SemiAuto
     availableModes:
@@ -157,6 +163,8 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
+    minAngle: 2
+    maxAngle: 8
     fireRate: 4
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
@@ -207,6 +215,8 @@
   - type: Item
     storedOffset: 0,-2
   - type: Gun
+    minAngle: 2
+    maxAngle: 17
     fireRate: 5
     availableModes:
     - SemiAuto
@@ -231,10 +241,8 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
   - type: Gun
-    minAngle: 1
-    maxAngle: 20
-    angleIncrease: 8
-    angleDecay: 9
+    minAngle: 2
+    maxAngle: 19
     fireRate: 4
     availableModes:
     - SemiAuto
