@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: GravityGenerator
-  parent: BaseMachinePowered
+  parent: [ BaseMachinePowered , CriticalMachine ]
   name: gravity generator
   description: It's what keeps you to the floor.
   placement:

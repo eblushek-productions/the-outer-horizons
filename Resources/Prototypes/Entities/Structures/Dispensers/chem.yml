@@ -2,7 +2,7 @@
   id: ChemDispenserEmpty
   name: chemical dispenser
   suffix: Empty
-  parent: ReagentDispenserBase
+  parent: [ ReagentDispenserBase , CriticalMachine ]
   description: An industrial grade chemical dispenser.
   components:
   - type: Sprite

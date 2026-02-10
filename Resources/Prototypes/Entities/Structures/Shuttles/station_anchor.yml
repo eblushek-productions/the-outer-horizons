@@ -53,7 +53,7 @@
 
 - type: entity
   id: StationAnchor
-  parent: [StationAnchorBase, BaseMachinePowered, ConstructibleMachine]
+  parent: [StationAnchorBase, BaseMachinePowered, ConstructibleMachine , CriticalMachine ]
   placement:
     mode: AlignTileAny
   components:
