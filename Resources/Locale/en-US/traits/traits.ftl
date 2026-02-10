@@ -54,6 +54,12 @@ trait-cowboy-desc = You speak with a distinct cowboy accent!
 trait-german-name = German accent
 trait-german-desc = You seem to come from space Germany.
 
+trait-illeism-full-name = Illeism (Full)
+trait-illeism-full-desc = Your actions deserve a narrator! You only refer to yourself in the third-person.
+
+trait-illeism-first-name = Illeism (First)
+trait-illeism-first-desc = Your actions deserve a narrator! You only refer to yourself in the third-person, but only with your first name.
+
 trait-italian-name = Italian accent
 trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 

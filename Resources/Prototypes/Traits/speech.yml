@@ -93,6 +93,27 @@
   - type: ReplacementAccent
     accent: liar
 
+- type: trait
+  id: IlleismFirst
+  name: trait-illeism-first-name
+  description: trait-illeism-first-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: IlleismAccent
+    splitOnStrings:
+    - " "
+    - "-"
+
+- type: trait
+  id: IlleismFull
+  name: trait-illeism-full-name
+  description: trait-illeism-full-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: IlleismAccent
+
 # 2 Cost
 
 - type: trait

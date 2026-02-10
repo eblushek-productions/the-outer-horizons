@@ -614,3 +614,19 @@
     accent-skeleton-words-7: accent-skeleton-words-replace-7
     accent-skeleton-words-8: accent-skeleton-words-replace-8
     accent-skeleton-words-9: accent-skeleton-words-replace-9
+
+- type: accent
+  id: illeism
+  wordReplacements:
+    accent-illeism-is-1: accent-illeism-is-replace
+    accent-illeism-is-2: accent-illeism-is-replace
+    accent-illeism-has-1: accent-illeism-has-replace
+    accent-illeism-has-2: accent-illeism-has-replace
+    accent-illeism-does: accent-illeism-does-replace
+    accent-illeism-doesnt: accent-illeism-doesnt-replace
+    accent-illeism-just-name-1: accent-illeism-just-name-replace
+    accent-illeism-just-name-2: accent-illeism-just-name-replace
+    accent-illeism-just-name-3: accent-illeism-just-name-replace
+    accent-illeism-possessive-1: accent-illeism-possessive-replace
+    accent-illeism-possessive-2: accent-illeism-possessive-replace
+    accent-illeism-will: accent-illeism-will-replace
