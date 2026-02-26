@@ -9,3 +9,6 @@
 
 - type: Tag
   id: OH14_Medicines
+
+- type: Tag
+  id: CERecipeWorkbench

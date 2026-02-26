@@ -8,9 +8,6 @@
     snapCardinals: true
     sprite: _OuterHorizons/DEBUG.rsi
     state: icon
-  - type: Icon
-    sprite: _OuterHorizons/DEBUG.rsi
-    state: icon
   - type: ActivatableUI
     key: enum.CEWorkbenchUiKey.Key
     requiresComplex: true
@@ -57,10 +54,6 @@
   name: workbench
   description: Table for the production of various basic tools.
   components:
-  - type: Sprite
-    state: icon
-  - type: Icon
-    state: workbench
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
