@@ -21,7 +21,7 @@ using Content.Shared.Power;
 
 namespace Content.Server.Shuttles.Systems;
 
-public sealed class ThrusterSystem : EntitySystem
+public sealed partial class ThrusterSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;

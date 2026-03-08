@@ -70,6 +70,24 @@
   - type: GuideHelp
     guides:
     - ShuttleCraft
+  - type: Temperature
+  - type: ContainerTemperature
+  - type: StructureTemperatureThreshold
+    thresholds:
+      - activateTemperature: 600
+        onThreshold:
+          !type:PressureThrusterOnTemperatureHigh
+        deactivateTemperature: 550
+        onThresholdExit:
+          !type:PressureThrusterOnTemperatureLow
+  - type: RedHeat
+    spriteData:
+    - temperature: 300
+      spriteLayer: heat1
+    - temperature: 450
+      spriteLayer: heat2
+    - temperature: 550
+      spriteLayer: heat3
   placement:
     mode: SnapgridCenter
 
@@ -125,6 +143,18 @@
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
+    - state: heat1
+      map: [ "heat1" ]
+      visible: false
+      shader: unshaded
+    - state: heat2
+      map: [ "heat2" ]
+      visible: false
+      shader: unshaded
+    - state: heat3
+      map: [ "heat3" ]
+      visible: false
+      shader: unshaded
 
 - type: entity
   id: OH14_ThrusterPressureRed
@@ -139,9 +169,11 @@
     color: "#eca664"
   - type: Thruster
     thrust: 125
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 25
+  - type: PressureThruster
+    inletName: inlet
+    moleMaxOutletLimit: 40
+    moleMinOutletLimit: 10
+    accelerationEfficiency: 1.2
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
@@ -155,6 +187,18 @@
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
+    - state: heat1
+      map: ["heat1"]
+      visible: false
+      shader: unshaded
+    - state: heat2
+      map: ["heat2"]
+      visible: false
+      shader: unshaded
+    - state: heat3
+      map: ["heat3"]
+      visible: false
+      shader: unshaded
 
 - type: entity
   id: OH14_ThrusterPressureOrange
@@ -166,9 +210,11 @@
     color: "#eca664"
   - type: Thruster
     thrust: 500
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 100
+  - type: PressureThruster
+    inletName: inlet
+    moleMaxOutletLimit: 100
+    moleMinOutletLimit: 30
+    accelerationEfficiency: 1.0
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
@@ -182,6 +228,18 @@
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
+    - state: heat1
+      map: [ "heat1" ]
+      visible: false
+      shader: unshaded
+    - state: heat2
+      map: [ "heat2" ]
+      visible: false
+      shader: unshaded
+    - state: heat3
+      map: [ "heat3" ]
+      visible: false
+      shader: unshaded
 
 # ------------------------ RCS
 
@@ -196,9 +254,11 @@
     board: ThrusterMachineCircuitboard
   - type: Thruster
     thrust: 60
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 20
+  - type: PressureThruster
+    inletName: inlet
+    moleMaxOutletLimit: 100
+    moleMinOutletLimit: 30
+    accelerationEfficiency: 1.0
   - type: PointLight
     color: "#eca664"
   - type: Sprite
@@ -227,9 +287,11 @@
   components:
   - type: Thruster
     thrust: 30
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 12
+  - type: PressureThruster
+    inletName: inlet
+    moleMaxOutletLimit: 120
+    moleMinOutletLimit: 60
+    accelerationEfficiency: 1.0
   - type: PointLight
     color: "#eca664"
   - type: Sprite
