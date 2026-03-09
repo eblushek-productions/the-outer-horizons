@@ -3,9 +3,6 @@
 [DataDefinition]
 public sealed partial class StructureTemperatureThresholdData
 {
-    [DataField] public int? ActivateTemperature;
-    [DataField] public int? DeactivateTemperature;
+    [DataField] public int Temperature;
     [DataField] public IStructureTemperatureThresholdHandler? OnThreshold;
-    [DataField] public IStructureTemperatureThresholdHandler? OnThresholdExit;
-    [ViewVariables] public bool ActiveThreshold;
 }

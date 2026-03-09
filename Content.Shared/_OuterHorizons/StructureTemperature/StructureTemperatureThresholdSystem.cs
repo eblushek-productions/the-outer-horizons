@@ -1,4 +1,5 @@
-﻿using Content.Shared.Temperature;
+﻿using System.Linq;
+using Content.Shared.Temperature;
 
 namespace Content.Shared._OuterHorizons.StructureTemperature;
 
@@ -13,25 +14,23 @@ public sealed class StructureTemperatureThresholdSystem : EntitySystem
 
     private void OnTemperatureChange(Entity<StructureTemperatureThresholdComponent> ent, ref OnTemperatureChangeEvent args)
     {
-        foreach (var threshold in ent.Comp.Thresholds)
+        var thresholds = ent.Comp.Thresholds.ToList();
+        thresholds.Sort((a, b) => b.Temperature.CompareTo(a.Temperature));
+
+        StructureTemperatureThresholdData? selected = null;
+
+        foreach (var threshold in thresholds)
         {
-            if (args.CurrentTemperature > threshold.ActivateTemperature)
+            if (args.CurrentTemperature >= threshold.Temperature)
             {
-                if(threshold.ActiveThreshold)
-                    continue;
-
-                threshold.OnThreshold?.Act(ent.Owner, args, EntityManager.EntitySysManager.DependencyCollection);
-                threshold.ActiveThreshold = true;
-            }
-
-            if (args.CurrentTemperature < threshold.DeactivateTemperature)
-            {
-                if (!threshold.ActiveThreshold)
-                    continue;
-
-                threshold.OnThresholdExit?.Act(ent.Owner, args, EntityManager.EntitySysManager.DependencyCollection);
-                threshold.ActiveThreshold = false;
+                if (selected == null || threshold.Temperature > selected.Temperature)
+                    selected = threshold;
             }
         }
+
+        if(selected is null || selected.Equals(ent.Comp.SelectedThreshold))
+            return;
+
+        selected.OnThreshold?.Act(ent, args, EntityManager.EntitySysManager.DependencyCollection);
     }
 }

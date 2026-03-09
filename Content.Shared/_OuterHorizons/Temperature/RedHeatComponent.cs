@@ -1,4 +1,6 @@
-﻿namespace Content.Shared._OuterHorizons.Temperature;
+﻿using Robust.Shared.Serialization;
+
+namespace Content.Shared._OuterHorizons.Temperature;
 
 [RegisterComponent]
 public sealed partial class RedHeatComponent : Component
@@ -11,4 +13,10 @@ public sealed partial class RedHeadSpriteData
 {
     [DataField] public int Temperature;
     [DataField] public string SpriteLayer;
+}
+
+[Serializable, NetSerializable]
+public enum RedHeadVisualLayers : byte
+{
+    Main
 }

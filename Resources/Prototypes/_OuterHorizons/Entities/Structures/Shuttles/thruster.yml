@@ -71,15 +71,17 @@
     guides:
     - ShuttleCraft
   - type: Temperature
+    atmosTemperatureTransferEfficiency: 0.005
+  - type: AtmosExposed
   - type: ContainerTemperature
   - type: StructureTemperatureThreshold
     thresholds:
-      - activateTemperature: 600
-        onThreshold:
-          !type:PressureThrusterOnTemperatureHigh
-        deactivateTemperature: 550
+      - temperature: 550
         onThresholdExit:
           !type:PressureThrusterOnTemperatureLow
+      - temperature: 600
+        onThreshold:
+          !type:PressureThrusterOnTemperatureHigh
   - type: RedHeat
     spriteData:
     - temperature: 300

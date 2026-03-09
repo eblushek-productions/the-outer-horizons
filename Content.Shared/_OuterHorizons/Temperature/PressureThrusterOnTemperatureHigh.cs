@@ -8,7 +8,7 @@ public sealed partial class PressureThrusterOnTemperatureHigh : IStructureTemper
 {
     public void Act(EntityUid entityUid, OnTemperatureChangeEvent args, IDependencyCollection dependencies)
     {
-        dependencies.Resolve<IEntityManager>().AddComponent<PressureThrusterDisabledComponent>(entityUid);
+        dependencies.Resolve<IEntityManager>().EnsureComponent<PressureThrusterDisabledComponent>(entityUid);
     }
 }
 

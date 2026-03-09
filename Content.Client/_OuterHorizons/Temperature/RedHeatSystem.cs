@@ -1,6 +1,4 @@
 ﻿using Content.Shared._OuterHorizons.Temperature;
-using Content.Shared.Temperature;
-using Content.Shared.Temperature.Components;
 using Robust.Client.GameObjects;
 
 namespace Content.Client._OuterHorizons.Temperature;
@@ -8,36 +6,35 @@ namespace Content.Client._OuterHorizons.Temperature;
 public sealed class RedHeatSystem : EntitySystem
 {
     [Dependency] private readonly SpriteSystem _spriteSystem = default!;
+    [Dependency] private readonly AppearanceSystem _appearanceSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<RedHeatComponent, OnTemperatureChangeEvent>(OnTemperatureChange);
+        SubscribeLocalEvent<RedHeatComponent, AppearanceChangeEvent>(OnAppearanceChange);
     }
 
-    private void OnTemperatureChange(Entity<RedHeatComponent> ent, ref OnTemperatureChangeEvent args)
+    private void OnAppearanceChange(Entity<RedHeatComponent> ent, ref AppearanceChangeEvent args)
     {
-        if(!TryComp<RedHeatComponent>(ent, out var redHeatComponent))
+        if(!_appearanceSystem.TryGetData<string>(ent, RedHeadVisualLayers.Main, out var layerName, args.Component))
             return;
 
-        redHeatComponent.SpriteData.Sort((a, b) => b.Temperature.CompareTo(a.Temperature));
+        SetLayer(ent, layerName);
+    }
 
-        RedHeadSpriteData? selected = null;
+    public void SetLayer(EntityUid uid, string? layerName)
+    {
+        var comp = EnsureComp<ActiveRedHeatComponent>(uid);
+        if (comp.ActiveLayer is not null)
+            _spriteSystem.LayerSetVisible(uid, comp.ActiveLayer, false);
 
-        foreach (var data in redHeatComponent.SpriteData)
+        if (string.IsNullOrEmpty(layerName))
         {
-            _spriteSystem.LayerSetVisible(ent.Owner, data.SpriteLayer, false);
-
-            if (args.CurrentTemperature >= data.Temperature)
-            {
-                if (selected == null || data.Temperature > selected.Temperature)
-                    selected = data;
-            }
+            RemComp<ActiveRedHeatComponent>(uid);
+            return;
         }
 
-        if (selected != null)
-        {
-            _spriteSystem.LayerSetVisible(ent.Owner, selected.SpriteLayer, true);
-        }
+        comp.ActiveLayer = layerName;
+        _spriteSystem.LayerSetVisible(uid, comp.ActiveLayer, true);
     }
 }
