@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
+using Content.Shared._OuterHorizons.Atmos.Components;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
@@ -210,6 +211,17 @@ namespace Content.Server.Atmos.EntitySystems
             var enumerator = EntityQueryEnumerator<BarotraumaComponent, DamageableComponent>();
             while (enumerator.MoveNext(out var uid, out var barotrauma, out var damageable))
             {
+                // Take the current pressure in entity position
+                var pressure = 1f;
+                if (_atmosphereSystem.GetContainingMixture(uid) is { } mixture)
+                    pressure = MathF.Max(mixture.Pressure, 1f);
+
+                // Apply/Remove pressure effect, mark is entity is in open space
+                if (pressure <= Atmospherics.HazardLowPressure)
+                    EnsureComp<UnderwaterEffectComponent>(uid);
+                else
+                    RemComp<UnderwaterEffectComponent>(uid);
+
                 var totalDamage = FixedPoint2.Zero;
                 foreach (var (barotraumaDamageType, _) in barotrauma.Damage.DamageDict)
                 {
@@ -219,13 +231,6 @@ namespace Content.Server.Atmos.EntitySystems
                 }
                 if (totalDamage >= barotrauma.MaxDamage)
                     continue;
-
-                var pressure = 1f;
-
-                if (_atmosphereSystem.GetContainingMixture(uid) is {} mixture)
-                {
-                    pressure = MathF.Max(mixture.Pressure, 1f);
-                }
 
                 pressure = pressure switch
                 {
