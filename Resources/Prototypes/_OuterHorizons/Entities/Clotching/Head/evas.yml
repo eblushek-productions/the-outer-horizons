@@ -18,6 +18,8 @@
   - type: Tag
     tags:
     - HelmetEVA
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying.png"
 
 - type: entity
   parent: OH14_ClothingHeadHelmetEVABasic
@@ -32,3 +34,5 @@
     unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
     equipDelay: 0.2
     unequipDelay: 0.5
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying2.png"
