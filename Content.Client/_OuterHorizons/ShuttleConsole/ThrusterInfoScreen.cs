@@ -42,7 +42,7 @@ public sealed class ThrusterInfoScreen : ScrollContainer
 
         foreach (var data in state.ThrusterData)
         {
-            if(addedUids.Contains(data.ThrusterEntity))
+            if (addedUids.Contains(data.ThrusterEntity))
                 continue;
 
             var entry = new ThrusterInfoEntry();

@@ -33,8 +33,10 @@ public sealed class PressureThrusterSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var pressureThrusterComponent, out var thrusterComponent))
         {
-            if(_gameTiming.CurTime < pressureThrusterComponent.NextExhaust)
+            if (_gameTiming.CurTime < pressureThrusterComponent.NextExhaust)
+            {
                 continue;
+            }
 
             pressureThrusterComponent.NextExhaust = _gameTiming.CurTime + pressureThrusterComponent.ExhaustTimeout;
 
@@ -58,7 +60,7 @@ public sealed class PressureThrusterSystem : EntitySystem
             !_nodeContainerSystem.TryGetNode(container, ent.Comp.InletName, out PipeNode? node))
         {
             Log.Error($"Entity {Name(ent)} has no node. Removing component!");
-            RemComp(ent,ent.Comp);
+            RemComp(ent, ent.Comp);
             return;
         }
 
@@ -68,8 +70,10 @@ public sealed class PressureThrusterSystem : EntitySystem
 
     private void UseThrust(Entity<PressureThrusterComponent, ThrusterComponent> ent)
     {
-        if(!UpdateCanThrust(ent) || !ent.Comp2.Firing)
+        if (!UpdateCanThrust(ent) || !ent.Comp2.Firing)
+        {
             return;
+        }
 
         var comp = ent.Comp1;
         var gasMixture = comp.Inlet.Air;
@@ -77,8 +81,10 @@ public sealed class PressureThrusterSystem : EntitySystem
         var outMixture = gasMixture.Remove(comp.MoleOutletLimit);
 
         var mass = 1f;
-        if(TryComp<PhysicsComponent>(Transform(ent).GridUid, out var gridPhysic))
+        if (TryComp<PhysicsComponent>(Transform(ent).GridUid, out var gridPhysic))
+        {
             mass = gridPhysic.Mass;
+        }
 
         UpdateTemperature(ent, outMixture);
 
@@ -90,15 +96,19 @@ public sealed class PressureThrusterSystem : EntitySystem
 
     private void UpdateTemperature(Entity<PressureThrusterComponent> ent, GasMixture outMixture, TemperatureComponent? temperature = null)
     {
-        if(!Resolve(ent, ref temperature))
+        if (!Resolve(ent, ref temperature))
+        {
             return;
+        }
 
         var deltaTemp = outMixture.Temperature - temperature.CurrentTemperature;
 
-        if(deltaTemp <= 0)
+        if (deltaTemp <= 0)
+        {
             return;
+        }
 
-        _temperatureSystem.ChangeHeat(ent, deltaTemp, temperature:temperature);
+        _temperatureSystem.ChangeHeat(ent, deltaTemp, temperature: temperature);
     }
 
     private bool UpdateCanThrust(Entity<PressureThrusterComponent, ThrusterComponent> ent)
@@ -107,13 +117,18 @@ public sealed class PressureThrusterSystem : EntitySystem
 
         if (IsCanThrust(ent))
         {
-            if(!thrusterComp.IsOn)
-                _thrusterSystem.EnableThruster(ent,thrusterComp);
+            if (!thrusterComp.IsOn)
+            {
+                _thrusterSystem.EnableThruster(ent, thrusterComp);
+            }
+
             return true;
         }
 
-        if(thrusterComp.IsOn)
-            _thrusterSystem.DisableThruster(ent,thrusterComp);
+        if (thrusterComp.IsOn)
+        {
+            _thrusterSystem.DisableThruster(ent, thrusterComp);
+        }
 
         return false;
     }

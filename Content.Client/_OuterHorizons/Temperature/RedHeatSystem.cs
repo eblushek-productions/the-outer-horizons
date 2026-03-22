@@ -16,7 +16,7 @@ public sealed class RedHeatSystem : EntitySystem
 
     private void OnAppearanceChange(Entity<RedHeatComponent> ent, ref AppearanceChangeEvent args)
     {
-        if(!_appearanceSystem.TryGetData<string>(ent, RedHeadVisualLayers.Main, out var layerName, args.Component))
+        if (!_appearanceSystem.TryGetData<string>(ent, RedHeadVisualLayers.Main, out var layerName, args.Component))
             return;
 
         SetLayer(ent, layerName);

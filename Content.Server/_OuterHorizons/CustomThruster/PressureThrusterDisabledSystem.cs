@@ -12,7 +12,7 @@ public sealed class PressureThrusterDisabledSystem : EntitySystem
 
     private void OnCheck(Entity<PressureThrusterDisabledComponent> ent, ref PressureThrusterCheckEventArgs args)
     {
-        if(!args.Cancelled)
+        if (!args.Cancelled)
             args.Cancel();
     }
 }

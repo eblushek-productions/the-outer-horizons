@@ -18,52 +18,52 @@ public sealed class ShuttleThrusterInfoSystem : EntitySystem
         base.Update(frameTime);
 
         var shuttleQuery = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
-	    while (shuttleQuery.MoveNext(out var consoleUid, out var shuttleConsoleComponent, out var xform))
-	    {
-	        var shuttleUid = xform.GridUid;
+        while (shuttleQuery.MoveNext(out var consoleUid, out var shuttleConsoleComponent, out var xform))
+        {
+            var shuttleUid = xform.GridUid;
 
-	        if(!TryComp<ShuttleComponent>(shuttleUid, out var shuttleComponent))
-	            continue;
+            if (!TryComp<ShuttleComponent>(shuttleUid, out var shuttleComponent))
+                continue;
 
-	        var shuttleInfo = EnsureComp<ShuttleInfoComponent>(shuttleUid.Value);
+            var shuttleInfo = EnsureComp<ShuttleInfoComponent>(shuttleUid.Value);
 
-	        if(shuttleInfo.NextTimeout > _gameTiming.CurTime)
-	            return;
+            if (shuttleInfo.NextTimeout > _gameTiming.CurTime)
+                return;
 
-	        shuttleInfo.NextTimeout = _gameTiming.CurTime + shuttleInfo.Timeout;
+            shuttleInfo.NextTimeout = _gameTiming.CurTime + shuttleInfo.Timeout;
 
-	        var thrusterData = new List<ThrusterUnitData>();
+            var thrusterData = new List<ThrusterUnitData>();
 
-	        for (var i = 0; i < 4; i++)
-	        {
-	            var thrusterList = shuttleComponent.LinearThrusters[i];
-	            var direction = (Direction)(i * 2);
+            for (var i = 0; i < 4; i++)
+            {
+                var thrusterList = shuttleComponent.LinearThrusters[i];
+                var direction = (Direction)(i * 2);
 
-	            foreach (var thrusterUid in thrusterList)
-	            {
-	                if(!TryComp<TemperatureComponent>(thrusterUid, out var temperatureComponent) ||
-	                   !TryComp<PressureThrusterComponent>(thrusterUid, out var pressureThrusterComponent) ||
-	                   !TryComp<TemperatureDamageComponent>(thrusterUid, out var containerTemperatureComponent))
-	                    continue;
+                foreach (var thrusterUid in thrusterList)
+                {
+                    if (!TryComp<TemperatureComponent>(thrusterUid, out var temperatureComponent) ||
+                       !TryComp<PressureThrusterComponent>(thrusterUid, out var pressureThrusterComponent) ||
+                       !TryComp<TemperatureDamageComponent>(thrusterUid, out var containerTemperatureComponent))
+                        continue;
 
-	                var oneData = new ThrusterUnitData(
-	                    GetNetEntity(thrusterUid),
-	                    GetNetCoordinates(Transform(thrusterUid).Coordinates),
-	                    direction,
-	                    pressureThrusterComponent.Inlet.Air.Pressure,
-	                    temperatureComponent.CurrentTemperature,
-	                    containerTemperatureComponent.HeatDamageThreshold);
+                    var oneData = new ThrusterUnitData(
+                        GetNetEntity(thrusterUid),
+                        GetNetCoordinates(Transform(thrusterUid).Coordinates),
+                        direction,
+                        pressureThrusterComponent.Inlet.Air.Pressure,
+                        temperatureComponent.CurrentTemperature,
+                        containerTemperatureComponent.HeatDamageThreshold);
 
-	                thrusterData.Add(oneData);
-	            }
-	        }
+                    thrusterData.Add(oneData);
+                }
+            }
 
-	        var message = new ThrusterChangedMessage(new ThrusterInfoInterfaceState(thrusterData));
+            var message = new ThrusterChangedMessage(new ThrusterInfoInterfaceState(thrusterData));
 
-	        if (_ui.HasUi(consoleUid, ShuttleConsoleUiKey.Key))
-	        {
-	            _ui.ServerSendUiMessage(consoleUid, ShuttleConsoleUiKey.Key, message);
-	        }
-	    }
+            if (_ui.HasUi(consoleUid, ShuttleConsoleUiKey.Key))
+            {
+                _ui.ServerSendUiMessage(consoleUid, ShuttleConsoleUiKey.Key, message);
+            }
+        }
     }
 }
