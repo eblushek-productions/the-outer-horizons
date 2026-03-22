@@ -7,6 +7,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
+using Robust.Shared.Audio.Systems; // OH14-Changes, for sfx
 
 namespace Content.Client.Movement.Systems;
 
@@ -16,6 +17,7 @@ public sealed class JetpackSystem : SharedJetpackSystem
     [Dependency] private readonly ClothingSystem _clothing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!; // OH14-Changes, for sfx
 
     public override void Initialize()
     {
@@ -60,6 +62,8 @@ public sealed class JetpackSystem : SharedJetpackSystem
             comp.TargetTime = _timing.CurTime + TimeSpan.FromSeconds(comp.EffectCooldown);
 
             CreateParticles(uid);
+
+            _audio.PlayPvs(comp.JetSound, uid); // OH14-Changes, for sfx
         }
     }
 
@@ -90,6 +94,6 @@ public sealed class JetpackSystem : SharedJetpackSystem
             return;
         }
 
-        Spawn("JetpackEffect", coordinates);
+        Spawn("OH14_JetpackEffect", coordinates); // OH14-Changes
     }
 }

@@ -1,0 +1,13 @@
+- type: soundCollection
+  id: OH14_Screwdriver
+  files:
+  - /Audio/_OuterHorizons/Items/Using/screwdriver1.ogg
+  - /Audio/_OuterHorizons/Items/Using/screwdriver2.ogg
+  - /Audio/_OuterHorizons/Items/Using/screwdriver3.ogg
+  - /Audio/_OuterHorizons/Items/Using/screwdriver4.ogg
+
+- type: soundCollection
+  id: OH14_Wirecutter
+  files:
+  - /Audio/_OuterHorizons/Items/Using/wirecutter1.ogg
+  - /Audio/_OuterHorizons/Items/Using/wirecutter2.ogg

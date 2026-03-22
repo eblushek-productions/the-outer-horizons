@@ -1,0 +1,28 @@
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_TileSteel
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Tiles/tiles.rsi", state: steel }
+  spawn: OH14_TileItemSteel
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_TileSteelWhite
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Tiles/tiles.rsi", state: steel }
+  spawn: OH14_TileItemSteelWhite
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_TileSteelDark
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Tiles/tiles.rsi", state: steel }
+  spawn: OH14_TileItemSteelDark
+
+
+- type: stack
+  parent: OH14_BaseMediumStack
+  id: OH14_TileGlass
+  name: stack-tile
+  icon: { sprite: "_OuterHorizons/Objects/Tiles/tiles.rsi", state: steel }
+  spawn: OH14_TileItemGlass

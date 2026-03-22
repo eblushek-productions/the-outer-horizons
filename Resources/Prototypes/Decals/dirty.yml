@@ -2,6 +2,7 @@
 
 - type: decal
   id: Dirt
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -10,6 +11,7 @@
 
 - type: decal
   id: DirtLight
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -18,6 +20,7 @@
 
 - type: decal
   id: DirtMedium
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -26,6 +29,7 @@
 
 - type: decal
   id: DirtHeavy
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -34,6 +38,7 @@
 
 - type: decal
   id: DirtHeavyMonotile
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -42,6 +47,7 @@
 
 - type: decal
   id: DirtLightVerticalSlats
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -50,6 +56,7 @@
 
 - type: decal
   id: DirtHeavyVerticalSlats
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -58,6 +65,7 @@
 
 - type: decal
   id: DirtLightHorizontalSlats
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -66,6 +74,7 @@
 
 - type: decal
   id: DirtHeavyHorizontalSlats
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -74,6 +83,7 @@
 
 - type: decal
   id: Damaged
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -82,6 +92,7 @@
 
 - type: decal
   id: Remains
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:
@@ -90,6 +101,7 @@
 
 - type: decal
   id: Rust
+  showMenu: true # OH14-Changes
   tags: ["station", "dirty"]
   defaultCleanable: true
   sprite:

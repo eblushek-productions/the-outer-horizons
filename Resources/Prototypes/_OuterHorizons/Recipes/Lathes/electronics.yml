@@ -13,3 +13,19 @@
   materials:
     OH14_Materials: 1000
     OH14_Components: 1000
+
+- type: latheRecipe
+  id: OH14_PowerCellMedium
+  completetime: 3
+  result: OH14_PowerCellMediumEmpty
+  materials:
+    OH14_Materials: 100
+    OH14_Components: 100
+
+- type: latheRecipe
+  id: OH14_PowerCellBig
+  completetime: 3
+  result: OH14_PowerCellBigEmpty
+  materials:
+    OH14_Materials: 300
+    OH14_Components: 200

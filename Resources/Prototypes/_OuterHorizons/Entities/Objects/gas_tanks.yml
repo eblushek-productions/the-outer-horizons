@@ -1,19 +1,10 @@
 - type: entity
   abstract: true
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXMetallic, OH14_BaseItem ]
   id: OH14_GasTankBase
   name: газовый баллон
   description: Ручной газовый баллон, который можно носить с собой. Любые теории того что вы дышите воздухом из огнетушителя - ложь.
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tanks/white.rsi
     state: icon

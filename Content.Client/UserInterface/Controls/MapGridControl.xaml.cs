@@ -20,7 +20,7 @@ public partial class MapGridControl : LayoutContainer
     [Dependency] protected readonly IEntityManager EntManager = default!;
     [Dependency] protected readonly IGameTiming Timing = default!;
 
-    protected static readonly Color BackingColor = new Color(0.08f, 0.08f, 0.08f);
+    protected static readonly Color BackingColor = new Color(0.0706f, 0.1686f, 0.1882f, 0.2f); // OH14-Changes
 
     private Font _largerFont;
 
@@ -48,7 +48,7 @@ public partial class MapGridControl : LayoutContainer
     /// <summary>
     /// UI pixel radius.
     /// </summary>
-    public const int UIDisplayRadius = 320;
+    public int UIDisplayRadius { get; set; } = 320;
     protected const int MinimapMargin = 4;
 
     protected float WorldMinRange;
@@ -208,7 +208,7 @@ public partial class MapGridControl : LayoutContainer
 
     protected void DrawNoSignal(DrawingHandleScreen handle)
     {
-        var greyColor = Color.FromHex("#474F52");
+        var greyColor = Color.FromHex("#4bb2b5"); // OH14-Changes
 
         // Draw funny lines
         var lineCount = 4f;

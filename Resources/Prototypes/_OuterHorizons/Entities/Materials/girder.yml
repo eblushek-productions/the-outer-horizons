@@ -1,24 +1,15 @@
 - type: entity
-  parent: OH14_SheetBase
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
   id: OH14_SheetGirder
   name: Каркасы
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Girders: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Girders
     baseLayer: base
     layerStates:
@@ -50,26 +41,17 @@
     count: 1
 
 - type: entity
-  parent: OH14_SheetBase
+  parent:  [ OH14_ItemSFXLowMetallic, OH14_SheetBase ]
   id: OH14_SheetPipes
   name: Трубки
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/pipe_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/pipe_kick.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/pipe_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Piping: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Piping
     baseLayer: base
     layerStates:
@@ -84,6 +66,7 @@
       map: ["base"]
   - type: Item
     heldPrefix: girder
+    size: Small
   - type: Appearance
 
 - type: entity

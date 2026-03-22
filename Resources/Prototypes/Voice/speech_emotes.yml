@@ -25,6 +25,17 @@
     - yells
     - yelled
     - yelling
+    # OH14-Changes start, locale
+    - кричит
+    - кричит.
+    - кричит!
+    - орёт
+    - орёт.
+    - орёт!
+    - визжит
+    - визжит.
+    - визжит!
+    # OH14-Changes end, locale
 
 - type: emote
   id: Laugh
@@ -54,6 +65,15 @@
     - chortle
     - chortles
     - chortling
+    # OH14-Changes start, locale
+    - смеется
+    - смеётся
+    - хохочет
+    - хихикает
+    - хихикнул
+    - хихикнула
+    - ржёт
+    # OH14-Changes end, locale
 
 - type: emote
   id: Honk
@@ -72,6 +92,9 @@
     - honks
     - honked
     - honking
+    # OH14-Changes start, locale
+    - хонк
+    # OH14-Changes end, locale
 
 - type: emote
   id: Sigh
@@ -89,6 +112,11 @@
     - sigh
     - sighs
     - sighed
+    # OH14-Changes start, locale
+    - вздыхает
+    - вздохнул
+    - вздохнула
+    # OH14-Changes end, locale
 
 - type: emote
   id: Whistle
@@ -106,6 +134,10 @@
     - whistle
     - whistles
     - whistleblowing
+    # OH14-Changes start, locale
+    - свистит
+    - свистнул
+    # OH14-Changes end, locale
 
 - type: emote
   id: Crying
@@ -126,6 +158,10 @@
     - sob
     - sobs
     - sobbing
+    # OH14-Changes start, locale
+    - плачет
+    - рыдает
+    # OH14-Changes end, locale
 
 - type: emote
   id: Squish
@@ -144,6 +180,9 @@
     - squish
     - squishing
     - squishes
+    # OH14-Changes start, locale
+    - хлюпает
+    # OH14-Changes end, locale
 
 - type: emote
   id: Chitter
@@ -162,6 +201,9 @@
    - chitter
    - chitters
    - chittered
+   # OH14-Changes start, locale
+   - стрекочет
+   # OH14-Changes end, locale
 
 - type: emote
   id: Squeak
@@ -180,6 +222,9 @@
    - squeak
    - squeaks
    - squeaked
+   # OH14-Changes start, locale
+   - пищит
+   # OH14-Changes end, locale
 
 - type: emote
   id: Click
@@ -197,6 +242,10 @@
   chatTriggers:
    - click
    - clicks
+   # OH14-Changes start, locale
+   - клац
+   - клацает
+   # OH14-Changes end, locale
 
 # Vulpkanin
 - type: emote
@@ -270,6 +319,14 @@
   - howls
   - howling
   - howled
+# OH14-Changes start, locale
+  - воет
+  - воет.
+  - воет!
+  - завывает
+  - завывает.
+  - завывает!
+# OH14-Changes end, locale
 
 - type: emote
   id: Growl
@@ -288,6 +345,11 @@
   - growls
   - growled
   - growling
+  # OH14-Changes start, locale
+  - рычит
+  - рычит.
+  - рычит!
+  # OH14-Changes end, locale
 
 # hand emotes
 - type: emote
@@ -306,6 +368,15 @@
     - claps
     - clapping
     - clapped
+    # OH14-Changes start, locale
+    - хлопает
+    - хлопнул
+    - хлопнула
+    - хлопает в ладоши
+    - хлопнул в ладоши
+    - хлопнула в ладоши
+    - апплодирует
+    # OH14-Changes end, locale
 
 - type: emote
   id: ClapSingle
@@ -351,6 +422,20 @@
     - snaps its fingers
     - snapping fingers
     - snapped fingers
+    # OH14-Changes start, locale
+    - щелкает
+    - щелкнул
+    - щелкнула
+    - щёлкает
+    - щёлкнул
+    - щёлкнула
+    - щелкает пальцами
+    - щелкнул пальцами
+    - щелкнула пальцами
+    - щёлкает пальцами
+    - щёлкнул пальцами
+    - щёлкнула пальцами
+    # OH14-Changes end, locale
 
 - type: emote
   id: Thump
@@ -376,6 +461,13 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
+    # OH14-Changes start, locale
+    - стучит хвостом
+    - стукнул хвостом
+    - стукнула хвостом
+    - стукнул своим хвостом
+    - стукнула своим хвостом
+    # OH14-Changes end, locale
 
 - type: emote
   id: Salute
@@ -392,6 +484,12 @@
   chatTriggers:
     - salute
     - salutes
+    # OH14-Changes start, locale
+    - салютует
+    - отдаёт честь
+    - отдал честь
+    - отдала честь
+    # OH14-Changes end, locale
 
 - type: emote
   id: Gasp
@@ -445,6 +543,11 @@
     - buzz
     - buzzed
     - buzzes
+    # OH14-Changes start, locale
+    - жужжит
+    - зажужжал
+    - зажужжала
+    # OH14-Changes end, locale
 
 - type: emote
   id: Weh
@@ -479,6 +582,9 @@
     - chirps
     - chirped
     - chirping
+    # OH14-Changes start, locale
+    - чирикает
+    # OH14-Changes end, locale
 
 # Machine Emotes
 - type: emote
@@ -498,6 +604,9 @@
     - beeps
     - beeped
     - beeping
+    # OH14-Changes start, locale
+    - бип
+    # OH14-Changes end, locale
 
 - type: emote
   id: Chime
@@ -516,6 +625,9 @@
     - chimes
     - chimed
     - chiming
+    # OH14-Changes start, locale
+    - дзынь
+    # OH14-Changes end, locale
 
 - type: emote
   id: Buzz-Two
@@ -540,6 +652,14 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+    # OH14-Changes start, locale
+    - бипбуп
+    - бип буп
+    - бип-буп
+    - бипбип
+    - бип бип
+    - бип-бип
+    # OH14-Changes end, locale
 
 - type: emote
   id: Ping
@@ -558,3 +678,6 @@
     - pings
     - pinged
     - pinging
+    # OH14-Changes start, locale
+    - пинг
+    # OH14-Changes end, locale

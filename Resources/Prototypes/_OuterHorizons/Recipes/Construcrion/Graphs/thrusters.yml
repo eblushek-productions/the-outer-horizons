@@ -35,8 +35,6 @@
             - material: OH14_Materials
               amount: 2
               doAfter: 1
-            - tool: Screwing
-              doAfter: 1
     - node: frame2
       actions:
       - !type:AppearanceChange
@@ -57,8 +55,6 @@
           steps:
             - material: OH14_Components
               amount: 5
-              doAfter: 1
-            - tool: Screwing
               doAfter: 1
     - node: frame3
       actions:
@@ -81,8 +77,6 @@
             - material: OH14_Materials
               amount: 5
               doAfter: 1
-            - tool: Screwing
-              doAfter: 1
     - node: OH14_ThrusterR
       entity: OH14_ThrusterPressureRed
       edges:
@@ -99,3 +93,80 @@
               doAfter: 2
             - tool: Prying
               doAfter: 5
+
+# Гиро
+
+- type: constructionGraph
+  id: OH14_Gyroscope
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: frame1
+      entity: OH14_FrameGyroscope
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetGirder1
+              amount: 1
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Materials
+              amount: 2
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_FrameGyroscope
+      edges:
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: OH14_Gyroscope
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Components
+              amount: 4
+              doAfter: 1
+    - node: OH14_Gyroscope
+      entity: OH14_Gyroscope
+      edges:
+        - to: frame2
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 4
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 3

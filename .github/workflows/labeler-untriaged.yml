@@ -1,16 +1,16 @@
-﻿name: "Labels: Untriaged"
+﻿# name: "Labels: Untriaged"
 
-on:
-  issues:
-    types: [opened]
-  pull_request_target:
-    types: [opened]
+# on:
+#   issues:
+#     types: [opened]
+#   pull_request_target:
+#     types: [opened]
 
-jobs:
-  add_label:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions-ecosystem/action-add-labels@v1
-      if: join(github.event.issue.labels) == ''
-      with:
-        labels: "S: Untriaged"
+# jobs:
+#   add_label:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions-ecosystem/action-add-labels@v1
+#       if: join(github.event.issue.labels) == ''
+#       with:
+#         labels: "S: Untriaged"

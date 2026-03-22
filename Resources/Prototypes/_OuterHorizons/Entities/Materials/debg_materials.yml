@@ -27,26 +27,17 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
   id: OH14_SheetMaterials
   name: Материалы
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Materials: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Materials
     baseLayer: base
     layerStates:
@@ -83,12 +74,16 @@
   name: Компоненты
   suffix: Full
   components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Components: 100
   - type: Stack
-    count: 10
+    count: 8
     stackType: OH14_Components
     baseLayer: base
     layerStates:
@@ -102,7 +97,19 @@
       map: ["base"]
   - type: Item
     heldPrefix: mechanic
+    size: Tiny
   - type: Appearance
+
+- type: entity
+  parent: OH14_SheetComponents
+  id: OH14_SheetComponents5
+  suffix: Single
+  components:
+  - type: Sprite
+    state: mechanic
+  - type: Stack
+    stackType: OH14_Components
+    count: 5
 
 - type: entity
   parent: OH14_SheetComponents
@@ -121,12 +128,16 @@
   name: Электроника
   suffix: Full
   components:
+  - type: Tag
+    tags:
+    - OH14_Sheet
+    - OH14_Tools
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Electronics: 100
   - type: Stack
-    count: 10
+    count: 8
     stackType: OH14_Electronic
     baseLayer: base
     layerStates:
@@ -140,7 +151,19 @@
       map: ["base"]
   - type: Item
     heldPrefix: electronic
+    size: Tiny
   - type: Appearance
+
+- type: entity
+  parent: OH14_SheetElectronics
+  id: OH14_SheetElectronics5
+  suffix: Single
+  components:
+  - type: Sprite
+    state: electronic
+  - type: Stack
+    stackType: OH14_Electronic
+    count: 5
 
 - type: entity
   parent: OH14_SheetElectronics
@@ -154,26 +177,17 @@
     count: 1
 
 - type: entity
-  parent: OH14_SheetBase
+  parent: [ OH14_ItemSFXMetallic, OH14_SheetBase ]
   id: OH14_SheetIngot
   name: Слиток
   suffix: Full
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       OH14_Materials: 300
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Ingot
     baseLayer: base
     layerStates:
@@ -211,7 +225,7 @@
     materialComposition:
       OH14_Ore: 100
   - type: Stack
-    count: 10
+    count: 16
     stackType: OH14_Ore
     baseLayer: base
     layerStates:

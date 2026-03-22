@@ -9,11 +9,13 @@ using Robust.Shared.Map;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Linq;
+using System.Numerics;
+using Robust.Client.UserInterface.CustomControls;
 
 namespace Content.Client.Power;
 
 [GenerateTypedNameReferences]
-public sealed partial class PowerMonitoringWindow : FancyWindow
+public sealed partial class PowerMonitoringWindow : BaseWindow
 {
     [Dependency] private IEntityManager _entManager = default!;
     private readonly SpriteSystem _spriteSystem;
@@ -40,6 +42,7 @@ public sealed partial class PowerMonitoringWindow : FancyWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
+        CloseButton.OnPressed += _ => Close();
         _spriteSystem = _entManager.System<SpriteSystem>();
 
         // Set trackable entity selected action
@@ -296,6 +299,11 @@ public sealed partial class PowerMonitoringWindow : FancyWindow
             return 1;
 
         return x.MetaData.Value.EntityName.CompareTo(y.MetaData.Value.EntityName);
+    }
+
+    protected override DragMode GetDragModeFor(Vector2 relativeMousePos)
+    {
+        return DragMode.Move;
     }
 }
 

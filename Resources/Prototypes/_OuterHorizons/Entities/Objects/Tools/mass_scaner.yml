@@ -1,0 +1,56 @@
+- type: entity
+  name: ручной сканер масс
+  parent: [ OH14_BaseItem, BaseHandheldComputer ]
+  id: OH14_ToolMassScanner
+  description: Я это добавил сугубо чтобы ты не потерялся в космосе, окей?
+  components:
+  - type: Item
+    sprite: _OuterHorizons/Objects/inhands.rsi
+    heldPrefix: m
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tools/mass_scaner.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: icon_unshaded
+        shader: unshaded
+        visible: false
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: RadarConsole
+    maxRange: 256
+    followEntity: true
+  - type: Appearance
+  - type: BatteryVisuals
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryVisuals.State:
+        enum.PowerDeviceVisualLayers.Powered:
+          Full: { visible: true }
+          Neither: { visible: true }
+          Empty: { visible: false }
+  - type: PowerCellDraw
+    drawRate: 1
+  - type: ToggleCellDraw
+  - type: ActivatableUI
+    key: enum.RadarConsoleUiKey.Key
+    inHandsOnly: true
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: OH14_PowerCellMedium
+
+- type: entity
+  id: OH14_ToolMassScannerEmpty
+  parent: OH14_ToolMassScanner
+  suffix: Пустой
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

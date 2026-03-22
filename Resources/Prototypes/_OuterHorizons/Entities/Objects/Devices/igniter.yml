@@ -29,4 +29,5 @@
   - type: UseDelay # prevent sound spam
   - type: Tag
     tags:
+    - OH14_Tools
     - Igniter

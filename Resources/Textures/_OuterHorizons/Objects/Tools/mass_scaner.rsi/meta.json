@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon_unshaded",
+      "delays": [
+        [
+          0.4,
+          0.2,
+          0.4,
+          0.2
+        ]
+      ]
+    }
+  ]
+}

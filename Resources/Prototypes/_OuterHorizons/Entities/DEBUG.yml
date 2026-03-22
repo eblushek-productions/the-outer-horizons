@@ -1,8 +1,7 @@
 - type: entity
   name: DEBUG1
   id: OH14_DEBUG1
-  parent: BaseStructure
-  categories: [ ForkFiltered ]
+  parent: OH14_BaseStructure
   components:
   - type: Sprite
     sprite: _OuterHorizons/DEBUG.rsi
@@ -26,8 +25,7 @@
 - type: entity
   name: DEBUG2
   id: OH14_DEBUG2
-  parent: BaseStructure
-  categories: [ ForkFiltered ]
+  parent: OH14_BaseStructure
   components:
   - type: Sprite
     sprite: _OuterHorizons/DEBUG.rsi

@@ -1,5 +1,6 @@
 - type: entity
   id: OH14_AlwaysPoweredWallLight
+  parent: BaseWallmountGlass
   categories: [ ForkFiltered ]
   name: большой светильник
   description: Пока вы веселитесь в свету, кто-то умирает в темноте.
@@ -18,7 +19,7 @@
     node: OH14_PoweredlightEmpty
   - type: Sprite
     sprite: _OuterHorizons/Structures/Wallmounts/Lighting/light_tube.rsi
-    offset: "0, 0.2"
+    # offset: "0, -0.8"
     drawdepth: WallMountedItems
     layers:
     - map: ["enum.PoweredLightLayers.Base"]
@@ -32,7 +33,7 @@
     energy: 0.8
     radius: 10
     softness: 1
-    offset: "0, -0.5"
+    offset: "0, -0.6"
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
@@ -152,8 +153,28 @@
   suffix: "Теплый"
   parent: OH14_Poweredlight
   components:
+  - type: PointLight
+    color: "#E48B57" # FFE4CE > e4a877
+    energy: 0.8
+    radius: 10
+    softness: 0.5
+    offset: "0, -0.6"
   - type: PoweredLight
     hasLampOnSpawn: OH14_LightTubeWarm
+
+- type: entity
+  id: OH14_PoweredlightGreen
+  suffix: "Зеленый"
+  parent: OH14_Poweredlight
+  components:
+  - type: PointLight
+    color: "#69b68f"
+    energy: 0.8
+    radius: 8
+    softness: 1.5
+    offset: "0, -0.6"
+  - type: PoweredLight
+    hasLampOnSpawn: OH14_LightTubeGreen
 
 #Small lights
 - type: entity
@@ -229,7 +250,7 @@
     enabled: false
   - type: PointLight
     enabled: false
-    offset: "0, -0.5"
+    offset: "0, -0.6"
   - type: ContainerContainer
     containers:
       light_bulb: !type:ContainerSlot
@@ -275,6 +296,27 @@
     enabled: true
   - type: PoweredLight
     hasLampOnSpawn: OH14_LightBulb
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+
+- type: entity
+  id: OH14_PoweredSmallLightRed
+  suffix: "Красный"
+  parent: OH14_PoweredSmallLightEmpty
+  components:
+  - type: PointLight
+    color: "#C71A1C"
+    energy: 1.5
+    radius: 5
+    softness: 1.5
+    offset: "0, -0.6"
+  - type: Sprite
+    state: base
+  - type: PoweredLight
+    hasLampOnSpawn: OH14_LightBulbRed
   - type: DamageOnInteract
     damage:
       types:

@@ -1,0 +1,143 @@
+# Огнетушитель
+
+- type: entity
+  parent: BaseWallmountCabinet
+  id: OH14_CabinetExtinguisher
+  name: шкаф для огнетушителя
+  description: A small wall mounted cabinet designed to hold a fire extinguisher.
+  categories: [ ForkFiltered ]
+  components:
+    - type: Openable
+      openOnActivate: true
+      closeable: true
+      sound:
+        path: /Audio/_OuterHorizons/Storage/wallcabinet_open.ogg
+      closeSound:
+        path: /Audio/_OuterHorizons/Storage/wallcabinet_close.ogg
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Wallmounts/extinguisher_cabinet.rsi
+      noRot: true
+      layers:
+      - state: frame
+      - state: fill
+        map: ["enum.ItemCabinetVisuals.Layer"]
+        visible: true
+      - state: closed
+        map: ["enum.OpenableVisuals.Layer"]
+    - type: ItemSlots
+      slots:
+        ItemCabinet:
+          ejectOnInteract: true
+          whitelist:
+            components:
+            - SpraySafety
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 80
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 40
+          behaviors:
+            - !type:EmptyAllContainersBehaviour
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+                params:
+                  volume: -4
+
+- type: entity
+  parent: OH14_CabinetExtinguisher
+  id: OH14_CabinetExtinguisherOpen
+  suffix: Открыт
+  components:
+  - type: Openable
+    opened: true
+
+- type: entity
+  parent: OH14_CabinetExtinguisher
+  id: OH14_CabinetExtinguisherFilled
+  suffix: Заполнен
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - OH14_FireExtinguisher
+
+# Дефиб
+
+- type: entity
+  parent: BaseWallmountCabinet
+  id: OH14_CabinetDefibrillator
+  name: шкаф для дефиблилятора
+  description: A small wall mounted cabinet designed to hold a fire extinguisher.
+  categories: [ ForkFiltered ]
+  components:
+    - type: Openable
+      openOnActivate: true
+      closeable: true
+      sound:
+        path: /Audio/_OuterHorizons/Storage/wallcabinet_open.ogg
+      closeSound:
+        path: /Audio/_OuterHorizons/Storage/wallcabinet_close.ogg
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Wallmounts/defib_cabinet.rsi
+      noRot: true
+      layers:
+      - state: frame
+      - state: fill
+        map: ["enum.ItemCabinetVisuals.Layer"]
+        visible: true
+      - state: closed
+        map: ["enum.OpenableVisuals.Layer"]
+    - type: ItemSlots
+      slots:
+        ItemCabinet:
+          ejectOnInteract: true
+          whitelist:
+            components:
+            - Defibrillator
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 80
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 40
+          behaviors:
+            - !type:EmptyAllContainersBehaviour
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+                params:
+                  volume: -4
+
+- type: entity
+  parent: OH14_CabinetDefibrillator
+  id: OH14_CabinetDefibrillatorOpen
+  suffix: Открыт
+  components:
+  - type: Openable
+    opened: true
+
+- type: entity
+  parent: OH14_CabinetDefibrillator
+  id: OH14_CabinetDefibrillatorFilled
+  suffix: Заполнен
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - OH14_Defibrillator

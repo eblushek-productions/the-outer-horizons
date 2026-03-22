@@ -3,6 +3,9 @@
   parent: OH14_FrameBasic
   name: каркас ракетного двигателя
   components:
+  - type: Transform
+    anchored: false
+    noRot: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -26,7 +29,44 @@
           frame2: { state: r2 }
           frame3: { state: r3 }
   - type: Sprite
+    noRot: false
     sprite: _OuterHorizons/Structures/Shuttles/frames.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: r1
+      map: [ "enum.ConstructionVisuals.Layer" ]
+
+- type: entity
+  id: OH14_FrameGyroscope
+  parent: OH14_FrameBasic
+  name: каркас гиродина
+  components:
+  - type: Construction
+    graph: OH14_Gyroscope
+    node: frame1
+  - type: Transform
+    anchored: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame1: { state: frame0 }
+          frame2: { state: frame1 }
+  - type: Sprite
+    noRot: true
+    sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi
+    layers:
+    - state: frame0
       map: [ "enum.ConstructionVisuals.Layer" ]

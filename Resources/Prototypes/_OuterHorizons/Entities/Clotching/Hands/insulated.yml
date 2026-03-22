@@ -1,0 +1,20 @@
+- type: entity
+  parent: [ OH14_ItemSFXFabric, OH14_BaseItem, ClothingHandsBase ]
+  id: ClothingHandsInsulatedGloves
+  name: изолированные перчатки
+  description: Низачто не поверишь, но они спасут тебя от удара молнии нахуй.
+  components:
+  - type: FingerprintMask
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Hands/lessinsuls.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Hands/lessinsuls.rsi
+    equipSound: /Audio/_OuterHorizons/Clothing/insuls_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/insuls_un.ogg
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-yellow
+  - type: Tag
+    tags:
+    - OH14_Tools

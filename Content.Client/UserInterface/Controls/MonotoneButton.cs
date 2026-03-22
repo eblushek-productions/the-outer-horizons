@@ -20,7 +20,7 @@ public sealed class MonotoneButton : Button
         RemoveStyleClass("button");
         UpdateAppearance();
     }
-
+    
     private void UpdateAppearance()
     {
         // Recolor the label

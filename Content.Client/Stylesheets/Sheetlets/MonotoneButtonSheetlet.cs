@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Client.Power;
 using Content.Client.Stylesheets.Stylesheets;
 using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.UserInterface.Controls;
@@ -100,6 +101,35 @@ public sealed class MonotoneButtonSheetlet<T> : Sheetlet<T> where T : IButtonCon
                 .PseudoPressed()
                 .Box(monotoneFilledButtonOpenBoth)
                 .Prop(Button.StylePropertyModulateSelf, Color.White),
+
+            // Custom
+            E<BaseButton>()
+                .Class(StyleClass.ButtonMonotone, StyleClass.ButtonOpenBoth)
+                .Box(monotoneButtonOpenBoth),
+            E<BaseButton>()
+                .Class(StyleClass.ButtonMonotone, StyleClass.ButtonOpenLeft)
+                .Box(monotoneButtonOpenLeft),
+
+            E<BaseButton>()
+                .Class(StyleClass.ButtonMonotone, StyleClass.ButtonOpenBoth)
+                .PseudoPressed()
+                .Box(monotoneButtonOpenBoth)
+                .Prop(Control.StylePropertyModulateSelf, Color.White),
+            E<BaseButton>()
+                .Class(StyleClass.ButtonMonotone, StyleClass.ButtonOpenLeft, ContainerButton.StylePseudoClassPressed)
+                .Box(monotoneButtonOpenLeft)
+                .Prop(Control.StylePropertyModulateSelf, Color.White),
+
+            // Parented custom
+            E<PowerMonitoringConsoleNavMapControl>()
+                .ParentOf(E<BoxContainer>())
+                .ParentOf(E<MonotoneButton>())
+                .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#4bb2b5")),
+
+            E<PowerMonitoringConsoleNavMapControl>()
+                .ParentOf(E<BoxContainer>())
+                .ParentOf(E<Label>())
+                .FontColor(Color.FromHex("#4bb2b5")),
         ];
     }
 }

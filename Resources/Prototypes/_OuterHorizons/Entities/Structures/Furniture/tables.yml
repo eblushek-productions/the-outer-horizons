@@ -40,9 +40,9 @@
   - type: IconSmooth
     key: metaltable
     base: state_
-  # - type: Construction
-  #   graph: Table
-  #   node: Table
+  - type: Construction
+    graph: OH14_Table
+    node: OH14_Table
 
 - type: entity
   id: OH14_TableMetalAlt
@@ -56,14 +56,14 @@
   - type: Icon
     sprite: _OuterHorizons/Structures/Decoration/Tables/generic_alt.rsi
     state: full
-  # - type: Construction
-  #   graph: Table
-  #   node: Table
+  - type: Construction
+    graph: OH14_Table
+    node: OH14_Table
 
 - type: entity
   id: OH14_TableFrame
   categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: каркас стола
   description: Металлический каркас стола, у меня нет идеи для этого описания.
   components:
@@ -108,6 +108,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  # - type: Construction
-  #   graph: Table
-  #   node: TableFrame
+  - type: Construction
+    graph: OH14_Table
+    node: TableFrame

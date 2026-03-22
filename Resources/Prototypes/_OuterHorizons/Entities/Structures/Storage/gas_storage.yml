@@ -1,33 +1,56 @@
 - type: entity
-  parent: BaseStructure
-  categories: [ ForkFiltered ]
+  parent: OH14_BaseStructure
   id: OH14_BaseGasStorage
   abstract: true
-  name: газовое хранилище
-  description: Большое хранилище для хранения газов, переносу не подлежит.
+  name: цистерна
+  description: Большое хранилище для хранения газов. Переносу не подлежит.
   components:
+    - type: Appearance
+    - type: PipeColorVisuals
+    - type: AtmosPipeColor
+    - type: AtmosPipeLayers
+      # spriteRsiPaths: {}
+      spriteLayersRsiPaths:
+        enum.PipeVisualLayers.Pipe:
+          Primary: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          Secondary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt1.rsi
+          Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/pipe_alt2.rsi
+    - type: DeviceNetwork
+      deviceNetId: AtmosDevices
+      receiveFrequencyId: AtmosMonitor
+      transmitFrequencyId: AtmosMonitor
+      sendBroadcastAttemptEvent: true
+      examinableAddress: true
+    - type: AtmosDevice
+      joinSystem: true
+    - type: Anchorable
     - type: InteractionOutline
     - type: Transform
-      noRot: true
-    - type: Appearance
+      # noRot: true
     - type: Damageable
       damageContainer: Inorganic
       damageModifierSet: Metallic
-    - type: AtmosDevice
-      requireAnchored: false
-      joinSystem: true
+    - type: Construction
+      graph: OH14_GasStorage
+      node: OH14_GasStorage
     - type: NodeContainer
       nodes:
         port:
           !type:PortablePipeNode
           nodeGroupID: Pipe
-          pipeDirection: Fourway
-          volume: 1
+          pipeDirection: South
+          # volume: 1
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasVentOpening
     - type: Sprite
-      noRot: true
+      # noRot: true
       sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
       layers:
+        - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+          state: pipeConnector
+          map: [ "enum.PipeVisualLayers.Pipe" ]
         - state: yellow
+          # map: [ "enum.SubfloorLayers.FirstLayer" ]
     - type: GasCanister
       gasMixture:
         volume: 5000
@@ -41,7 +64,7 @@
           - 0 # Ammonia
           - 0 # N2O
           - 0 # Frezon
-        temperature: 293.15
+        temperature: 273.15
     - type: Destructible
       thresholds:
       - trigger:
@@ -64,54 +87,74 @@
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageGrey
-  suffix: Пусто, Серый
+  suffix: Пусто, Пустой
   components:
    - type: Sprite
      layers:
-       - state: grey
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: grey
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageYellow
-  suffix: Пусто, Желтый
+  suffix: Пусто, Смеси
   components:
    - type: Sprite
      layers:
-       - state: yellow
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: yellow
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageBlue
-  suffix: Пусто, Синий
+  suffix: Пусто, Кислород
   components:
    - type: Sprite
      layers:
-       - state: blue
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: blue
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageRed
-  suffix: Пусто, Красный
+  suffix: Пусто, Азот
   components:
    - type: Sprite
      layers:
-       - state: red
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: red
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 - type: entity
   parent: OH14_BaseGasStorage
   id: OH14_GasStorageOrange
-  suffix: Пусто, Оранжевый
+  suffix: Пусто, Плазма
   components:
    - type: Sprite
      layers:
-       - state: orange
+      - sprite: _OuterHorizons/Structures/Misc/Atmospherics/pipe.rsi
+        state: pipeConnector
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: orange
+        # map: [ "enum.SubfloorLayers.FirstLayer" ]
 
 # ----------------- Заполенное
 
 - type: entity
   parent: OH14_GasStorageBlue
   id: OH14_GasStorageBlueFilled
-  suffix: Заполнен, Синий
+  suffix: Заполнен, Кислород
   components:
    - type: GasCanister
      gasMixture:
@@ -126,12 +169,12 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
 
 - type: entity
   parent: OH14_GasStorageRed
   id: OH14_GasStorageRedFilled
-  suffix: Заполнен, Красный
+  suffix: Заполнен, Азот
   components:
    - type: GasCanister
      gasMixture:
@@ -146,12 +189,12 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
 
 - type: entity
   parent: OH14_GasStorageOrange
   id: OH14_GasStorageOrangeFilled
-  suffix: Заполнен, Оранжевый
+  suffix: Заполнен, Плазма
   components:
    - type: GasCanister
      gasMixture:
@@ -166,4 +209,49 @@
         - 0 # Ammonia
         - 0 # N2O
         - 0 # Frezon
-      temperature: 293.15
+      temperature: 273.15
+
+- type: entity
+  id: OH14_GasStorageFrame
+  parent: OH14_BaseStructureDynamic
+  name: каркас цистерны
+  description: Каркас вашего газового хранилища, ветхий и не надежный.
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/gas_storage.rsi
+    state: frame
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+  - type: Construction
+    graph: OH14_GasStorage
+    node: frame

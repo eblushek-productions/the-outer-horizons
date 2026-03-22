@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "glass"
+    },
+    {
+      "name": "steel"
+    },
+    {
+      "name": "dark"
+    },
+    {
+      "name": "white"
+    },
+    {
+      "name": "steel_plastic"
+    },
+    {
+      "name": "dark_plastic"
+    },
+    {
+      "name": "white_plastic"
+    },
+    {
+      "name": "steel_mono"
+    },
+    {
+      "name": "dark_mono"
+    },
+    {
+      "name": "white_mono"
+    }
+  ]
+}

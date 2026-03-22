@@ -1,0 +1,155 @@
+- type: entity
+  id: OH14_StorageTank
+  parent: OH14_BaseStructureDynamic
+  name: резервуар
+  description: Было бы не плохо сделать из этого кегу.
+  abstract: true
+  components:
+  - type: Climbable
+  - type: Animateable
+  - type: Sprite
+    noRot: true
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 155
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        - InteractImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: tank
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Piercing
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: tank
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:SpillBehavior
+        solution: tank
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 1500
+  - type: DrainableSolution
+    solution: tank
+  - type: ReagentTank
+  - type: Transform
+    noRot: true
+
+# Основное
+
+- type: entity
+  id: OH14_StorageTankFuel
+  parent: [OH14_StorageTank, OH14_StructureWheeled]
+  name: резервуар топлива
+  description: Ничего плохого ведь не произойдет, если заправить из него включенную сварку?)))0)0)0)))
+  suffix: Пустая
+  components:
+  - type: StaticPrice
+    price: 750
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/tanks.rsi
+    layers:
+      - state: fueltank-2
+      - state: fueltank-2-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fueltank-2-
+  - type: ExaminableSolution
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+  - type: DamageOnToolInteract
+    tools: Welding
+    weldingDamage:
+      types:
+        Heat: 10
+  - type: PacifismDangerousAttack
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 100
+
+- type: entity
+  id: OH14_StorageTankFuelFull
+  parent: OH14_StorageTankFuel
+  suffix: Полная
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1500
+
+# Водичк
+
+- type: entity
+  id: OH14_StorageTankWater
+  parent: [OH14_StorageTank, OH14_StructureWheeled]
+  name: резервуар воды
+  description: Цистерна для воды, выглядит как прототип корпуса ТЭТа.
+  suffix: Пустая
+  components:
+  - type: StaticPrice
+    price: 500
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/tanks.rsi
+    layers:
+      - state: watertank-2
+      - state: watertank-2-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: watertank-2-
+  - type: ExaminableSolution
+    solution: tank
+
+- type: entity
+  parent: OH14_StorageTankWater
+  id: OH14_StorageTankWaterFull
+  suffix: Полная
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: Water
+          Quantity: 1500

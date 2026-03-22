@@ -1,0 +1,68 @@
+- type: entity
+  parent: BaseWallmountMetallic
+  id: OH14_WallCabinetBasic
+  categories: [ ForkFiltered ]
+  # abstract: true
+  name: настенный шкаф
+  description: ТЕПЕРЬ ОН В СТЕНАХ.
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        top:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ResistLocker
+  - type: Weldable
+  - type: Sprite
+    drawdepth: WallMountedItems
+    noRot: true
+    sprite: _OuterHorizons/Structures/Storage/cabinet_wallmount.rsi
+    layers:
+    - state: basic
+    - state: basic_open
+      map: [ top ]
+      visible: false
+  - type: Storage
+    storageOpenSound: /Audio/_OuterHorizons/Storage/cabinet_open.ogg
+    storageCloseSound: /Audio/_OuterHorizons/Storage/cabinet_close.ogg
+    storageInsertSound: /Audio/_OuterHorizons/Items/drop.ogg # TODO, звуки предметов под замену
+    storageRemoveSound: /Audio/_OuterHorizons/Items/pickup.ogg
+    grid:
+    - 0,0,4,2
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
+  - type: Appearance
+  - type: Construction
+    graph: OH14_CabinetWallmount
+    node: OH14_CabinetWallmount

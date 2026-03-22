@@ -2,11 +2,12 @@
   abstract: true
   id: OH14_BasicGenerator
   categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   components:
     # Basic properties
-    # - type: Transform
-    #   anchored: true
+    - type: Transform
+      anchored: true
+    - type: Anchorable
     # - type: Physics
     #   bodyType: Dynamic
     - type: InteractionOutline
@@ -39,7 +40,9 @@
     # Visuals
     - type: Appearance
     # Construction, interaction
-    - type: WiresPanel
+    # - type: WiresPanel
+    #   screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    #   screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
     - type: UserInterface
       interfaces:
         enum.GeneratorComponentUiKey.Key:

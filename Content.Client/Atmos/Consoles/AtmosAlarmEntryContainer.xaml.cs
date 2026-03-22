@@ -22,6 +22,9 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
 
     private readonly IEntityManager _entManager;
     private readonly IResourceCache _cache;
+    private readonly Color _defaultColor = Color.FromHex("#A9A9A9");
+    private readonly Color _safeColor = Color.FromHex("#7BC722");
+    private readonly Color _dangerousColor = Color.FromHex("#E03131");
 
     private Dictionary<AtmosAlarmType, string> _alarmStrings = new Dictionary<AtmosAlarmType, string>()
     {
@@ -132,7 +135,7 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
                     {
                         Text = Loc.GetString("atmos-alerts-window-other-gases-value-nil"),
                         FontOverride = normalFont,
-                        FontColorOverride = StyleNano.DisabledFore,
+                        FontColorOverride = _defaultColor,
                         HorizontalAlignment = HAlignment.Center,
                         VerticalAlignment = VAlignment.Center,
                         HorizontalExpand = true,
@@ -188,13 +191,13 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
         switch (alarmType)
         {
             case AtmosAlarmType.Normal:
-                return StyleNano.GoodGreenFore;
+                return _safeColor;
             case AtmosAlarmType.Warning:
                 return StyleNano.ConcerningOrangeFore;
             case AtmosAlarmType.Danger:
-                return StyleNano.DangerousRedFore;
+                return _dangerousColor;
         }
 
-        return StyleNano.DisabledFore;
+        return _defaultColor;
     }
 }

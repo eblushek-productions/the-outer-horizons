@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_Girder
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   name: каркас
   description: Большая заготовка для самого интересного что есть в этой игре - ебучие текстурки стенок.
   components:
@@ -14,9 +13,9 @@
     fixtures:
       fix1:
         shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
         mask:
         - TableMask
         layer:

@@ -14,7 +14,7 @@
     supplyRampTolerance: 500
 
 - type: entity
-  name: КМП Ядерный Реактор Мк1
+  name: КМП-ЯР
   description: Комически маленький портативный ядерный реактор (КМП-ЯР). 2 стрежня, 2 гига.
   parent: OH14_BasicGeneratorSwitchable
   id: OH14_GeneratorMiniNuclearReactor
@@ -72,3 +72,100 @@
     - type: PowerSupplier
       supplyRampRate: 7500
       supplyRampTolerance: 2500
+
+- type: entity
+  name: ТЭТ Генератор
+  description: Термоэлектрический Топлевный Генератор. В отличие от своих твердотопливных аналогов, потребляет горючее в литрах.
+  parent: OH14_BasicGeneratorSwitchable
+  id: OH14_GeneratorTEF
+  suffix: Топливо, 20 kW
+  components:
+    - type: Construction
+      graph: OH14_GeneratorTEF
+      node: OH14_GeneratorTEF
+    - type: AmbientSound
+      range: 4
+      volume: -5
+      sound:
+        path: /Audio/Ambience/Objects/engine_hum.ogg
+      enabled: false
+    - type: Sprite
+      sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
+      noRot: true
+      layers:
+        - state: icon
+        - state: on_unshaded
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+          visible: false
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Unlit:
+            True: { visible: true }
+            False: { visible: false }
+    - type: FuelGenerator
+      targetPower: 5000
+      minTargetPower: 4000
+      optimalPower: 20000
+      maxTargetPower: 20000
+      # 7.5 minutes at full tank.
+      optimalBurnRate: 0.11111111
+      # Shallow curve that allows you to just barely eek out 12 minutes at lowest.
+      fuelEfficiencyConstant: 0.3
+    - type: ChemicalFuelGeneratorAdapter
+      solution: tank
+      reagents:
+        WeldingFuel: 1
+    - type: SolutionContainerManager
+      solutions:
+        tank:
+          maxVol: 100
+    - type: RefillableSolution
+      solution: tank
+    - type: PortableGenerator
+      startSoundEmpty: { collection: GeneratorTugEmpty }
+      startSound: { collection: GeneratorTug }
+      startChance: 1
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+    - type: PowerSupplier
+      supplyRampTolerance: 2000
+    - type: GeneratorExhaustGas
+      gasType: CarbonDioxide
+      # Full tank is 25 moles of gas
+      moleRatio: 0.5
+    - type: Explosive
+      explosionType: Default
+      tileBreakScale: 0
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 200
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:SpillBehavior
+              solution: tank
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: machineFrame
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+        - trigger:
+            !type:DamageTypeTrigger
+            damageType: Piercing
+            damage: 75
+          behaviors:
+            - !type:SolutionExplosionBehavior
+              solution: tank

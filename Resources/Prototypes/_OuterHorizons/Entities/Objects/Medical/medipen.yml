@@ -1,0 +1,87 @@
+- type: entity
+  parent: [ OH14_BaseItem, BaseHypospray ]
+  id: OH14_BasicMedipen
+  abstract: true
+  name: медипен
+  description: Одноразовый автоинъектор дозы лекарств, что в критической ситуации могут спасти жизнь. ПРЕДУПРЕЖДЕНИЕ! Производитель не несет ответственности за случайные передозировки.
+  components:
+  - type: Tag
+    tags:
+    - OH14_Medicines
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Specific/Medical/medipen.rsi
+    heldPrefix: medipen
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+  - type: ExaminableSolution
+    solution: pen
+  - type: Injector
+    solutionName: pen
+    currentTransferAmount: null
+    activeModeProtoId: HyposprayInjectMode
+    allowedModes:
+    - HyposprayInjectMode
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen-open
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: SpaceGarbage
+  - type: TrashOnSolutionEmpty
+    solution: pen
+
+- type: entity
+  parent: OH14_BasicMedipen
+  id: OH14_MedipenEmergency
+  name: экстренный медипен
+  components:
+  - type: Sprite
+    layers:
+    - state: medipen_oxygen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_oxygen-open
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Epinephrine
+          Quantity: 12
+        - ReagentId: TranexamicAcid
+          Quantity: 3
+
+- type: entity
+  parent: OH14_BasicMedipen
+  id: OH14_MedipenPuncturase
+  name: кровоостанавливающий медипен
+  components:
+  - type: Sprite
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen-open
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Puncturase
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 5

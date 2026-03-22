@@ -1,0 +1,248 @@
+# Большие шкафы
+
+- type: entity
+  parent: OH14_CabinetSpacesuits
+  id: OH14_CabinetBigFillEVAUco
+  suffix: Заполнен, ЕВА UCO
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_ClothingHeadHelmetUCO
+          amount: 2
+        - id: OH14_ClothingOuterHardsuitUCO
+          amount: 2
+        # - id: OH14_OxygenTankWhiteFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
+
+- type: entity
+  parent: OH14_CabinetSpacesuits
+  id: OH14_CabinetBigFillEVARre
+  suffix: Заполнен, ЕВА RRE
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_ClothingHeadHelmetEVABasic
+          amount: 2
+        - id: OH14_ClothingOuterHardsuitEVABasic
+          amount: 2
+        # - id: OH14_OxygenTankRedFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
+
+- type: entity
+  parent: OH14_CabinetSpacesuits
+  id: OH14_CabinetBigFillJetpacks
+  suffix: Заполнен, УКПМ Джетта
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_OxygenTankWhiteFilled
+          amount: 2
+        - id: OH14_JetpackWhite
+          amount: 2
+        # - id: OH14_OxygenTankWhiteFilled
+        #   amount: 2
+        # - id: OH14_MedkitBasicFilled
+        #   prob: 0.4
+        # - id: OH14_ToolboxRedFilled
+        #   prob: 0.4
+
+# Обычные шкафы
+
+- type: entity
+  parent: OH14_CabinetMedical
+  id: OH14_CabinetBasicFillHeals
+  suffix: Заполнен, Медикаменты
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_Ointment
+        - id: OH14_Ointment
+          prob: 0.4
+        - id: OH14_Brutepack
+        - id: OH14_Brutepack
+          prob: 0.8
+        - id: OH14_Bloodpack
+        - id: OH14_Gauze
+          amount: 2
+        - id: OH14_Gauze
+          prob: 0.5
+        - id: OH14_MedipenEmergency
+          amount: 4
+        - id: OH14_MedipenPuncturase
+          amount: 4
+
+- type: entity
+  parent: OH14_CabinetEngi
+  id: OH14_CabinetBasicFillResources
+  suffix: Заполнен, Ресурсы
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_SheetGirder
+        - id: OH14_SheetGirder
+          prob: 0.4
+        - id: OH14_SheetPipes
+          prob: 0.8
+        - id: OH14_SheetMaterials
+        - id: OH14_SheetMaterials
+          prob: 0.4
+        - id: OH14_SheetComponents5
+          prob: 0.5
+        - id: OH14_SheetElectronics5
+          prob: 0.5
+
+- type: entity
+  parent: OH14_CabinetFreezer
+  id: OH14_CabinetBasicFillFood
+  suffix: Заполнен, Провиант
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_DrinkBottleWaterFull
+          amount: 6
+        - id: OH14_DrinkBottleWater
+          amount: 2
+        - id: OH14_FoodHrumka
+          amount: 16
+
+- type: entity
+  parent: OH14_CabinetEngi
+  id: OH14_CabinetBasicFillTools
+  suffix: Заполнен, Инструменты
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_FlashlightFilled
+        - id: OH14_CrowbarBasic
+          amount: 2
+        - id: OH14_WrenchBasic
+          amount: 2
+        - id: OH14_WirecutterBasic
+          amount: 2
+        - id: OH14_ScrewdriverBasic
+          amount: 2
+        - id: OH14_MultitoolBasic
+          prob: 0.2
+        - id: OH14_GeigerCounter
+        - id: OH14_NuclearRod
+          prob: 0.1
+        - id: OH14_ToolboxBlueFilled
+          prob: 0.2
+        - id: OH14_ToolboxYellowFilled
+          prob: 0.2
+
+# Ящики
+
+- type: entity
+  parent: OH14_Crate
+  id: OH14_CrateFillMaterials
+  suffix: Заполнен, Материалы
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_SheetGirder
+          prob: 0.2
+        - id: OH14_SheetPipes
+          prob: 0.2
+        - id: OH14_SheetMaterials
+          prob: 0.2
+
+# Ящики с замком
+
+- type: entity
+  parent: OH14_CrateSec
+  id: OH14_CrateSecFillHeals
+  suffix: Заполнен, Медикаменты
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_MedkitBasicFilled
+        - id: OH14_MedkitBasicFilled
+          prob: 0.9
+        - id: OH14_MedkitBasicFilled
+          prob: 0.8
+        - id: OH14_MedkitBasicFilled
+          prob: 0.7
+        - id: OH14_MedkitBasicFilled
+          prob: 0.6
+
+- type: entity
+  parent: OH14_CrateSec
+  id: OH14_CrateSecFillWeapons
+  suffix: Заполнен, Вооружение
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_WeaponSMGAtarch
+        - id: OH14_WeaponSMGAtarch
+          prob: 0.9
+        - id: OH14_WeaponSMGAtarch
+          prob: 0.8
+        - id: OH14_MagazineSMGAtarch
+          amount: 3
+
+# Полки
+
+- type: entity
+  parent: OH14_RackAlt
+  id: OH14_RackAltFillLoot
+  suffix: Заполнен, Разное
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_NuclearRod
+          prob: 0.3
+        - id: OH14_MedkitBasicFilled
+          prob: 0.3
+        - id: OH14_ToolboxRedFilled
+          prob: 0.3
+        - id: OH14_DrinkBottleWater
+          prob: 0.5
+        - id: OH14_FoodHrumkaTrash
+          prob: 0.4
+        - id: OH14_PowerCellMediumEmpty
+          prob: 0.5
+        - id: OH14_PowerCellMediumEmpty
+          prob: 0.4
+        - id: OH14_PowerCellMediumEmpty
+          prob: 0.3
+        - id: ClothingHandsInsulatedGloves
+          prob: 0.2
+        - id: OH14_FireExtinguisher
+          prob: 0.4
+        - id: OH14_Paper
+          prob: 0.5
+        - id: OH14_Paper
+          prob: 0.5
+        - id: OH14_Pen
+          prob: 0.5

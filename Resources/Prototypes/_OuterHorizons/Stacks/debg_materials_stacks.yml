@@ -1,33 +1,33 @@
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_Materials
   name: stack-materials
   icon: { sprite: "_OuterHorizons/Objects/Materials/DEBUG_materials.rsi", state: material_3 }
   spawn: OH14_SheetMaterials1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseSmallStack
   id: OH14_Components
   name: stack-mechanic
   icon: { sprite: "_OuterHorizons/Objects/Materials/DEBUG_materials.rsi", state: mechanic_3 }
   spawn: OH14_SheetComponents1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseSmallStack
   id: OH14_Electronic
   name: stack-electronic
   icon: { sprite: "_OuterHorizons/Objects/Materials/DEBUG_materials.rsi", state: electronic_3 }
   spawn: OH14_SheetElectronics1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_Ingot
   name: stack-ingot
   icon: { sprite: "_OuterHorizons/Objects/Materials/DEBUG_materials.rsi", state: ingot_3 }
   spawn: OH14_SheetIngot1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_Ore
   name: stack-ore
   icon: { sprite: "_OuterHorizons/Objects/Materials/DEBUG_materials.rsi", state: ore_3 }

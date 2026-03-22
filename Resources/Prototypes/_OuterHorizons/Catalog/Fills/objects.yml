@@ -1,0 +1,62 @@
+- type: entity
+  parent: OH14_MedkitBasic
+  id: OH14_MedkitBasicFilled
+  suffix: Заполнен
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_Ointment
+        - id: OH14_Gauze
+        - id: OH14_Brutepack
+        - id: OH14_Bloodpack
+          prob: 0.5
+        - id: OH14_MedipenEmergency
+        - id: OH14_MedipenPuncturase
+          prob: 0.5
+
+- type: entity
+  parent: OH14_ToolboxRed
+  id: OH14_ToolboxRedFilled
+  suffix: Заполнен
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_FlashlightFilled
+        - id: OH14_SheetComponents1
+          prob: 0.2
+        - id: OH14_CrowbarBasic
+
+- type: entity
+  parent: OH14_ToolboxBlue
+  id: OH14_ToolboxBlueFilled
+  suffix: Заполнен
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_WelderBasic
+        - id: OH14_ClothingHeadWeldingMask
+          prob: 0.8
+        - id: OH14_CrowbarBasic
+        - id: OH14_WrenchBasic
+
+- type: entity
+  parent: OH14_ToolboxYellow
+  id: OH14_ToolboxYellowFilled
+  suffix: Заполнен
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_ScrewdriverBasic
+        - id: OH14_WirecutterBasic
+        - id: OH14_CableCoilLV
+        - id: OH14_CableCoilMV
+        - id: ClothingHandsInsulatedGloves
+          prob: 0.8

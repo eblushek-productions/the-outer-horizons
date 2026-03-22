@@ -1,0 +1,206 @@
+- type: decal
+  id: OH14_FullTileOverlayGreyscale
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: fulltile_overlay
+
+- type: decal
+  id: OH14_BrickCornerOverlayNE
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_corner_ne
+
+- type: decal
+  id: OH14_BrickCornerOverlayNW
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_corner_nw
+
+- type: decal
+  id: OH14_BrickCornerOverlaySE
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_corner_se
+
+- type: decal
+  id: OH14_BrickCornerOverlaySW
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_corner_sw
+
+- type: decal
+  id: OH14_BrickLineOverlayE
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_line_e
+
+- type: decal
+  id: OH14_BrickLineOverlayN
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_line_n
+
+- type: decal
+  id: OH14_BrickLineOverlayS
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_line_s
+
+- type: decal
+  id: OH14_BrickLineOverlayW
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: brick_line_w
+
+- type: decal
+  id: OH14_HalfTileOverlayGreyscale
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: halftile_overlay
+
+- type: decal
+  id: OH14_HalfTileOverlayGreyscale90
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: halftile_overlay_90
+
+- type: decal
+  id: OH14_HalfTileOverlayGreyscale180
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: halftile_overlay_180
+
+- type: decal
+  id: OH14_HalfTileOverlayGreyscale270
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: halftile_overlay_270
+
+- type: decal
+  id: OH14_QuarterTileOverlayGreyscale
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: quartertile_overlay
+
+- type: decal
+  id: OH14_QuarterTileOverlayGreyscale90
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: quartertile_overlay_90
+
+- type: decal
+  id: OH14_QuarterTileOverlayGreyscale180
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: quartertile_overlay_180
+
+- type: decal
+  id: OH14_QuarterTileOverlayGreyscale270
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: quartertile_overlay_270
+
+- type: decal
+  id: OH14_ThreeQuarterTileOverlayGreyscale
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: threequartertile_overlay
+
+- type: decal
+  id: OH14_ThreeQuarterTileOverlayGreyscale90
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: threequartertile_overlay_90
+
+- type: decal
+  id: OH14_ThreeQuarterTileOverlayGreyscale180
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: threequartertile_overlay_180
+
+- type: decal
+  id: OH14_ThreeQuarterTileOverlayGreyscale270
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: threequartertile_overlay_270
+
+- type: decal
+  id: OH14_CheckerNESW
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: checkerNESW
+
+- type: decal
+  id: OH14_CheckerNWSE
+  tags: ["station", "overlay"]
+  defaultCustomColor: true
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/greyscale.rsi
+    state: checkerNWSE

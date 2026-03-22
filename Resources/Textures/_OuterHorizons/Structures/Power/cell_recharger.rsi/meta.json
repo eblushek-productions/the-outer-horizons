@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-NC-SA-4.0",
-    "copyright": "Taken from https://github.com/Artea-Station/Artea-Station-Server",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
     "states": [
         {
             "name": "light-off"
@@ -23,30 +23,16 @@
             "name": "light-charging",
             "delays": [
                 [
-                    0.3,
-                    0.3,
-                    0.3,
-                    0.3
+                    0.5,
+                    0.5
                 ]
             ]
         },
         {
-            "name": "light-charged",
-            "delays": [
-                [
-                    0.6,
-                    0.6
-                ]
-            ]
+            "name": "light-charged"
         },
         {
-            "name": "light-empty",
-            "delays": [
-                [
-                    0.8,
-                    0.8
-                ]
-            ]
+            "name": "light-empty"
         }
     ]
 }

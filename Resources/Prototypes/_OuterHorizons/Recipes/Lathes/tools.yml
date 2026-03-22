@@ -80,7 +80,7 @@
   completetime: 3
   result: OH14_GeigerCounter
   materials:
-    OH14_Materials: 300
+    OH14_Materials: 200
     OH14_Components: 100
     OH14_Electronics: 100
 
@@ -92,3 +92,20 @@
   materials:
     OH14_Materials: 300
     OH14_Components: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: OH14_ToolMassScanner
+  completetime: 3
+  result: OH14_ToolMassScannerEmpty
+  materials:
+    OH14_Materials: 200
+    OH14_Components: 100
+    OH14_Electronics: 100
+
+- type: latheRecipe
+  id: OH14_Knife
+  completetime: 3
+  result: OH14_Knife
+  materials:
+    OH14_Materials: 300

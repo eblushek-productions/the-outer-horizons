@@ -1,10 +1,12 @@
 - type: entity
-  parent: BaseWall
+  parent: [ BaseDeltaPressurePlasmaQuarter, BaseWall ]
   id: OH14_BaseWall
   categories: [ ForkFiltered ]
   name: обыкновенная стена
   description: Держит экипаж внутри и грейтайдов снаружи.
   components:
+  - type: ExaminableDamage
+    messages: OH14_WallMessages
   - type: Construction
     graph: OH14_Girder
     node: OH14_Wall
@@ -44,7 +46,7 @@
     base: wall
 
 - type: entity
-  parent: WallDiagonalBase
+  parent: [ BaseDeltaPressureReinforcedGlass, WallDiagonalBase ]
   id: OH14_WallDiagonal
   categories: [ ForkFiltered ]
   name: диагональная стена
@@ -70,7 +72,7 @@
             collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 100
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: OH14_Girder
@@ -81,7 +83,7 @@
         acts: ["Destruction"]
 
 - type: entity
-  parent: OH14_BaseWall
+  parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
   id: OH14_WallReinforced
   categories: [ ForkFiltered ]
   name: укрепленная стена
@@ -150,3 +152,90 @@
         layer:
         - WallLayer
         density: 2000
+
+- type: entity
+  parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
+  id: OH14_WallShuttle
+  name: стена шаттла
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
+    state: full
+  - type: Construction
+    graph: OH14_Girder
+    node: OH14_Wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: OH14_Girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: OH14_WallDiagonal
+  id: OH14_WallShuttleDiagonal
+  name: диагональная стена шаттла
+  description: Держит экипаж внутри и грейтайдов снаружи. Теперь с аеродинамическими приколами!
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal.rsi
+    state: state0
+
+- type: entity
+  parent: OH14_WallDiagonal
+  id: OH14_WallShuttleDiagonalAlt
+  name: диагональная стена шаттла
+  description: Держит экипаж внутри и грейтайдов снаружи. Теперь с аеродинамическими приколами!
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal_alt.rsi
+    state: state0
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal_alt.rsi
+    state: state0
+
+- type: entity
+  parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
+  id: OH14_WallAluminum
+  name: легкая стена
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/aluminum.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/aluminum.rsi
+    state: full
+
+- type: entity
+  parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
+  id: OH14_WallAluminumOrange
+  name: легкая стена
+  suffix: Оранжевая
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/aluminum_orange.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/aluminum_orange.rsi
+    state: full

@@ -6,6 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: PowerSwitch
   - type: Animateable
   - type: MeleeSound
     soundGroups:
@@ -79,6 +80,8 @@
     enabled: false
     usesApcPower: true
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: WiresVisuals
   - type: Wires
     boardName: wires-board-name-computer
@@ -104,7 +107,7 @@
   - type: PointLight
     color: "#45b1af"
   - type: Computer
-    board: PowerComputerCircuitboard
+    board: OH14_CircuitboardPower
   - type: PowerMonitoringConsole
   - type: PowerMonitoringCableNetworks
   - type: NodeContainer
@@ -143,7 +146,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: panel_open
   - type: Computer
-    board: AlertsComputerCircuitboard
+    board: OH14_CircuitboardAtmos
   - type: AtmosAlertsComputer
   - type: ActivatableUI
     singleUser: true
@@ -186,9 +189,11 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: Computer
-    board: RadarConsoleCircuitboard
+    board: OH14_CircuitboardRadar
   - type: PointLight
     color: "#45b1af"
+
+# Шаттл
 
 - type: entity
   parent: OH14_BaseConsole
@@ -203,12 +208,8 @@
     layers:
     - map: ["computerLayerBody"]
       state: computer_shuttle
-    # - map: ["computerLayerKeyboard"]
-    #   state: keyboard
     - map: ["computerLayerScreen"]
       state: screen_shuttle
-    # - map: ["computerLayerKeys"]
-    #   state: screen
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: panel_open
   - type: ShuttleConsole
@@ -259,3 +260,74 @@
   - type: DeviceList
   - type: DeviceNetworkRequiresPower
   - type: AtmosDevice
+  - type: Computer
+    board: OH14_CircuitboardShuttle
+
+# Связь
+
+- type: entity
+  parent: OH14_BaseConsole
+  id: OH14_BasicConsoleComms
+  name: консоль связи
+  description: Позволит вам общаться со своими кентами в самых разных уголках космоса.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Machines/consoles.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: keyboard
+    - map: ["computerLayerScreen"]
+      state: screen_radar
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: panel_open
+  - type: Computer
+    board: OH14_CircuitboardComms
+  - type: PointLight
+    color: "#45b1af"
+  - type: ActivatableUI
+    key: enum.IntercomUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.IntercomUiKey.Key:
+        type: IntercomBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  # Интеркомное
+  - type: TelecomExempt
+  - type: EncryptionKeyHolder
+    keySlots: 3
+    keysExtractionMethod: Prying
+  - type: RadioMicrophone
+    powerRequired: true
+    unobstructedRequired: true
+    listenRange: 2
+    toggleOnInteract: false
+  - type: RadioSpeaker
+    toggleOnInteract: false
+  - type: Intercom
+  - type: Speech
+    speechVerb: Robotic
+  - type: VoiceOverride # This is for the wire that makes an electricity zapping noise.
+    speechVerbOverride: Electricity
+    enabled: false
+  # Контейнера
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+        ents: []
+      key_slots: !type:Container
+        ents: []
+
+- type: entity
+  parent: OH14_BasicConsoleComms
+  id: OH14_ConsoleCommsFilled
+  suffix: Заполнен
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+

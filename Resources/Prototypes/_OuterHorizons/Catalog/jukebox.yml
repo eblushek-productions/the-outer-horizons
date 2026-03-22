@@ -9,3 +9,45 @@
   name: Distant Running
   path:
     path: /Audio/_OuterHorizons/Jukebox/distantrun.ogg
+
+- type: jukebox
+  id: SpaceCalm
+  name: Space Calm
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/space_calm.ogg
+
+- type: jukebox
+  id: SpaceAsshole
+  name: Space Asshole
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/space_asshole.ogg
+
+- type: jukebox
+  id: SET_UP_UR_COMPUTRR
+  name: SET UP UR COMPUTRR
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/SET_UP_UR_COMPUTRR.ogg
+
+- type: jukebox
+  id: SaturnRings
+  name: Saturn Rings
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/saturn_rings.ogg
+
+- type: jukebox
+  id: NaOrbite
+  name: On orbit of the time
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/na_orbite.ogg
+
+- type: jukebox
+  id: DeepSpace
+  name: Deep Space
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/deep_space.ogg
+
+- type: jukebox
+  id: Buran
+  name: Buran
+  path:
+    path: /Audio/_OuterHorizons/Jukebox/buran.ogg

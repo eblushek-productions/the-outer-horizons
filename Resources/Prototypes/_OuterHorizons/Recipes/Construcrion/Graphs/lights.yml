@@ -9,7 +9,7 @@
         - to: OH14_PoweredlightEmpty
           steps:
             - material: OH14_Materials
-              amount: 2
+              amount: 1
               doAfter: 1
         - to: OH14_PoweredSmallLightEmpty
           steps:
@@ -23,7 +23,7 @@
           completed:
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 2
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 1

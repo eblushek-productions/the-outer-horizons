@@ -6,19 +6,35 @@
       actions:
         - !type:DestroyEntity {}
       edges:
-        - to: OH14_WallDirectional
+        - to: frame
           steps:
-            - material: OH14_Materials
-              amount: 2
+            - material: OH14_Girders
+              amount: 1
               doAfter: 2
-    - node: OH14_WallDirectional
-      entity: OH14_WallDirectional
+    - node: frame
+      entity: OH14_WallDirectionalFrame
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
+                prototype: OH14_SheetGirder1
+                amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_WallDirectional
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+    - node: OH14_WallDirectional
+      entity: OH14_WallDirectional
+      edges:
+        - to: frame
+          completed:
+            - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
-              amount: 2
+              amount: 1
           steps:
             - tool: Screwing
               doAfter: 2

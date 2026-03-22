@@ -13,6 +13,12 @@
             "name": "icon"
         },
         {
+            "name": "frame0"
+        },
+        {
+            "name": "frame1"
+        },
+        {
             "name": "on_unshaded",
             "delays": [
                 [

@@ -1,6 +1,6 @@
 - type: entity
   id: OH14_BasicStructureConsole
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   categories: [ ForkFiltered ]
   abstract: true
   components:

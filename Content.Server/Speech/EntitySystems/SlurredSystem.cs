@@ -81,6 +81,12 @@ public sealed class SlurredSystem : SharedSlurredSystem
                     'a' => "ah",
                     'u' => "oo",
                     'c' => "k",
+                    // // OH14-Changes start, locale
+                    'о' => "а",
+                    'к' => "кх",
+                    'щ' => "шч",
+                    'ц' => "тс",
+                    // // OH14-Changes end, locale
                     _ => $"{character}",
                 };
 

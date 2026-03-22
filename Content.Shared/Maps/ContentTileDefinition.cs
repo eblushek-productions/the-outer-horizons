@@ -97,7 +97,7 @@ namespace Content.Shared.Maps
         [DataField("heatCapacity")] public float HeatCapacity = Atmospherics.MinimumHeatCapacity;
 
         [DataField("itemDrop", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
-        public string ItemDropPrototypeName { get; private set; } = "FloorTileItemSteel";
+        public string? ItemDropPrototypeName { get; private set; } //CrystallEdge nullable
 
         // TODO rename data-field in yaml
         /// <summary>
@@ -132,7 +132,7 @@ namespace Content.Shared.Maps
         /// <summary>
         ///     Hide this tile in the tile placement editor.
         /// </summary>
-        [DataField] public bool EditorHidden { get; private set; } = false;
+        [DataField] public bool EditorHidden { get; private set; } = true; // OH14-Changes
 
         public void AssignTileId(ushort id)
         {

@@ -7,8 +7,9 @@
   - type: Tag
     tags:
     - CableCoil
+    - OH14_Tools
   - type: Stack
-    count: 10
+    count: 16
     stackType: Cable
   - type: Sprite
     sprite: _OuterHorizons/Objects/Materials/cable_coils.rsi

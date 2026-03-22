@@ -22,14 +22,14 @@
         Piercing: 2
     attackRate: 2 #open and close that shit on their arm like hell! because you sure aren't doing any damage with this
     soundHit:
-      path: "/Audio/Items/wirecutter.ogg"
+      collection: OH14_Wirecutter
   - type: Tool
     qualities:
       - Cutting
     useSound:
-      path: /Audio/Items/wirecutter.ogg
+      collection: OH14_Wirecutter
   - type: Item
-    sprite: Objects/Tools/wirecutters.rsi
+    sprite: _OuterHorizons/Objects/Tools/wirecutters.rsi
     storedRotation: -90
   - type: ToolTileCompatible
   - type: PhysicalComposition
@@ -69,7 +69,7 @@
     qualities:
       - Screwing
     useSound:
-      collection: Screwdriver
+      collection: OH14_Screwdriver
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -78,7 +78,7 @@
 
 - type: entity
   name: гаечный ключ
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXTool, OH14_BaseItem ]
   id: OH14_WrenchBasic
   description: Универсальный инструмент для закрепа и открепа вашего оборудования.
   components:

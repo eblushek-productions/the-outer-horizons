@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [ OH14_ItemSFXFabric, Clothing ]
   id: OH14_ClothingShirtBase
   categories: [ ForkFiltered ]
   components:
@@ -8,8 +8,8 @@
     state: icon
   - type: Clothing
     slots: [innerclothing]
-    equipSound: /Audio/_OuterHorizons/Items/shirt_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/shirt_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/shirt_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/shirt_un.ogg
     equipDelay: 1
     unequipDelay: 0.5
   - type: Butcherable
@@ -37,7 +37,7 @@
 
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [ OH14_ItemSFXFabric, Clothing ]
   categories: [ ForkFiltered ]
   id: OH14_ClothingPantsBase
   components:
@@ -45,8 +45,8 @@
     state: icon
   - type: Clothing
     slots: [pants]
-    equipSound: /Audio/_OuterHorizons/Items/shirt_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/shirt_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/shirt_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/shirt_un.ogg
     equipDelay: 1.5
     unequipDelay: 1
   - type: Butcherable

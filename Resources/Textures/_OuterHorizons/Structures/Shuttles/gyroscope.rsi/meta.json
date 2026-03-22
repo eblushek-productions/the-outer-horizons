@@ -12,6 +12,14 @@
       "directions": 1
     },
     {
+      "name": "frame0",
+      "directions": 1
+    },
+    {
+      "name": "frame1",
+      "directions": 1
+    },
+    {
       "name": "thrust",
       "directions": 1
     },

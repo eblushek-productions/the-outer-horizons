@@ -1,8 +1,9 @@
 - type: entity
-  parent: Window
+  parent: [ BaseDeltaPressureGlassQuarter, Window ]
   id: OH14_BaseWindow
   categories: [ ForkFiltered ]
   name: обыкновенное окно
+  description: Не бить, очень обидчивое, может разбиться.
   components:
   - type: Construction
     graph: OH14_Window
@@ -25,9 +26,176 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           OH14_SheetMaterials1:
-            min: 1
-            max: 2
+            min: 0
+            max: 1
       - !type:PlaySoundBehavior
         sound:
           collection: WindowShatter
           volume: -5
+
+# Укреп
+
+- type: entity
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, OH14_BaseWindow ]
+  id: OH14_WindowReinforced
+  name: укрепленное окно
+  description: И... И это все укрепленное окно?! Но это же просто окно с укрепленной рамкой-...
+  components:
+  - type: Construction
+    graph: OH14_Window
+    node: OH14_Window
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Windows/reinforced.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/reinforced.rsi
+  - type: IconSmooth
+    key: walls
+    base: wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+          volume: -5
+
+- type: entity
+  parent: OH14_WindowReinforced
+  id: OH14_WindowReinforcedDiagonal
+  suffix: Диагональное
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _OuterHorizons/Structures/Windows/basic_diagonal.rsi
+    state: state0
+  - type: Tag
+    tags:
+    - Diagonal
+    - Window
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls
+    base: state
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/basic_diagonal.rsi
+    state: state0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: DamageVisuals
+    damageOverlay:
+      sprite: Structures/Windows/cracks_diagonal.rsi
+  # - type: Construction
+  #   graph: WindowDiagonal
+  #   node: reinforcedWindowDiagonal
+
+# Шаттл
+
+- type: entity
+  parent: OH14_WindowReinforced
+  id: OH14_WindowShuttle
+  name: окно шаттла
+  description: И... И это все окно шаттла?! Но это же просто стена с дырками для стеклянных панелей-...
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Windows/shuttle.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/shuttle.rsi
+  - type: IconSmooth
+    key: walls
+    base: wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 0
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+          volume: -5
+
+- type: entity
+  parent: OH14_WindowShuttle
+  id: OH14_WindowShuttleDiagonal
+  suffix: Диагональное
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _OuterHorizons/Structures/Windows/diagonal_shuttle.rsi
+    state: state0
+  - type: Tag
+    tags:
+    - Diagonal
+    - Window
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls
+    base: state
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Windows/diagonal_shuttle.rsi
+    state: state0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: DamageVisuals
+    damageOverlay:
+      sprite: Structures/Windows/cracks_diagonal.rsi
+  # - type: Construction
+  #   graph: WindowDiagonal
+  #   node: reinforcedWindowDiagonal

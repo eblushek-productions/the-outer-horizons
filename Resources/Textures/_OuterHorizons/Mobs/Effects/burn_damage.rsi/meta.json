@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+	"size": {"x": 32, "y": 32},
+	"states": [
+		{"name": "Overlay_Burn_15", "directions": 4},
+        {"name": "Overlay_Burn_30", "directions": 4},
+        {"name": "Overlay_Burn_45", "directions": 4},
+        {"name": "Overlay_Burn_60", "directions": 4},
+        {"name": "Overlay_Burn_75", "directions": 4}
+	]
+}

@@ -5,6 +5,7 @@
   name: атмос терминал
   description: Терминал для работы с вентиляцией и датчиками газа, не вайбовостью.
   components:
+  - type: PowerSwitch
   - type: StationAiWhitelist
   - type: Electrified
     enabled: false
@@ -61,6 +62,8 @@
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: Wires
     boardName: wires-board-name-airalarm
     layoutId: AirAlarm

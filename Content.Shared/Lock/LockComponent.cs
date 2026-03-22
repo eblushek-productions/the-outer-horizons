@@ -81,18 +81,18 @@ public sealed partial class LockComponent : Component
     /// The sound played when unlocked.
     /// </summary>
     [DataField("unlockingSound"), ViewVariables(VVAccess.ReadWrite)]
-    public SoundSpecifier? UnlockSound = new SoundPathSpecifier("/Audio/Machines/door_lock_off.ogg")
+    public SoundSpecifier? UnlockSound = new SoundPathSpecifier("/Audio/_OuterHorizons/Storage/unlocked.ogg") // OH14-Changes, new SFX
     {
-        Params = AudioParams.Default.WithVolume(-5f),
+        Params = AudioParams.Default.WithVolume(-1f), // OH14-Changes, -5f > -1f
     };
 
     /// <summary>
     /// The sound played when locked.
     /// </summary>
     [DataField("lockingSound"), ViewVariables(VVAccess.ReadWrite)]
-    public SoundSpecifier? LockSound = new SoundPathSpecifier("/Audio/Machines/door_lock_on.ogg")
+    public SoundSpecifier? LockSound = new SoundPathSpecifier("/Audio/_OuterHorizons/Storage/locked.ogg") // OH14-Changes, new SFX
     {
-        Params = AudioParams.Default.WithVolume(-5f)
+        Params = AudioParams.Default.WithVolume(-1f) // OH14-Changes, -5f > -1f
     };
 
     /// <summary>

@@ -76,6 +76,7 @@
   description: Имеет порт для батареек МКП3 класса, крайне не рекомендуется совать в него пальцы и вилки.
   components:
   - type: Sprite
+    offset: "0, 0.2"
     sprite: _OuterHorizons/Structures/Power/cell_recharger.rsi
     layers:
     - map: ["enum.PowerChargerVisualLayers.Base"]
@@ -89,6 +90,8 @@
   - type: Machine
     board: CellRechargerCircuitboard
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: GenericVisualizer
     visuals:
       enum.WiresVisuals.MaintenancePanelState:

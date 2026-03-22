@@ -29,3 +29,11 @@
   materials:
     OH14_Components: 100
     OH14_Electronics: 250
+
+- type: latheRecipe
+  id: OH14_CircuitboardComms
+  completetime: 5
+  result: OH14_CircuitboardComms
+  materials:
+    OH14_Components: 100
+    OH14_Electronics: 100

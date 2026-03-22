@@ -1,0 +1,71 @@
+- type: entity
+  id: OH14_BasicDefibrillator
+  parent: OH14_BaseItem
+  name: дефиблилятор
+  description: РАЗРЯД! БЗЗ-З-з-з!-
+  abstract: true
+  components:
+    - type: PowerCellSlot
+      cellSlotId: cell_slot
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: OH14_PowerCellMedium
+    - type: Sprite
+      sprite: _OuterHorizons/Objects/Specific/Medical/defib.rsi
+      layers:
+        - state: icon
+        - state: screen
+          map: [ "enum.ToggleableVisuals.Layer" ]
+          visible: false
+          shader: unshaded
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Item
+      size: Normal
+    - type: Speech
+      speechVerb: Robotic
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Items/Defib/defib_safety_on.ogg
+      soundDeactivate:
+        path: /Audio/Items/Defib/defib_safety_off.ogg
+    - type: Defibrillator
+      zapHeal:
+        types:
+          Asphyxiation: -40
+    - type: DoAfter
+    - type: UseDelay
+    - type: StaticPrice
+      price: 30
+    - type: GuideHelp
+      guides:
+      - MedicalDoctor
+
+- type: entity
+  id: OH14_Defibrillator
+  parent: OH14_BasicDefibrillator
+  components:
+  - type: MultiHandedItem
+  - type: ToggleCellDraw
+  - type: PowerCellDraw
+    useCharge: 100
+
+- type: entity
+  id: OH14_DefibrillatorEmpty
+  parent: OH14_Defibrillator
+  suffix: Пустой
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

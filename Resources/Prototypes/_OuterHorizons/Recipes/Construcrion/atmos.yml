@@ -208,3 +208,27 @@
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+
+# Хранилища
+
+- type: construction
+  hide: false
+  id: OH14_GasStorage
+  graph: OH14_GasStorage
+  startNode: start
+  targetNode: OH14_GasStorage
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_GasCanister
+  graph: OH14_GasCanister
+  startNode: start
+  targetNode: OH14_GasCanister
+  category: construction-category-utilities
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false

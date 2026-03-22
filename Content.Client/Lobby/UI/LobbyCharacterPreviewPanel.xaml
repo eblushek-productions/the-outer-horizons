@@ -4,9 +4,9 @@
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls">
     <BoxContainer Name="VBox" Orientation="Vertical">
-        <controls:NanoHeading Name="Header" Text="{Loc 'lobby-character-preview-panel-header'}">
+        <!-- <controls:NanoHeading Name="Header" Text="{Loc 'lobby-character-preview-panel-header'}">
 
-        </controls:NanoHeading>
+        </controls:NanoHeading> -->
         <BoxContainer Name="Loaded" Orientation="Vertical"
                       Visible="False">
             <Label Name="Summary" HorizontalAlignment="Center" Margin="3 3"/>
@@ -19,9 +19,8 @@
                                                   Access="Public" />
             </BoxContainer>
             <controls:VSpacer/>
-            <Button Name="CharacterSetup" Text="{Loc 'lobby-character-preview-panel-character-setup-button'}"
-                    HorizontalAlignment="Center"
-                    Margin="0 5 0 0"/>
+            <controls:MonotoneButton Name="CharacterSetup" Margin="5 5" StyleClasses="OpenBoth" TextAlign="Center" Access="Public"
+            Text="{Loc 'lobby-character-preview-panel-character-setup-button'}" MinWidth="150" MaxWidth="150" />
         </BoxContainer>
         <Label Name="Unloaded" Text="{Loc 'lobby-character-preview-panel-unloaded-preferences-label'}"/>
     </BoxContainer>

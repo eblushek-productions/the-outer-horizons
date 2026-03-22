@@ -39,12 +39,16 @@ public sealed class ProgressColorSystem : EntitySystem
         {
             if (progress >= 1.0f)
             {
-                return new Color(0f, 1f, 0f);
+                return new Color(0.196f, 0.518f, 0.6f); // OH14-Changes, UI recolor
             }
 
             // lerp
-            var hue = 5f / 18f * progress;
-            return Color.FromHsv(new Vector4(hue, 1f, 0.75f, 1f));
+
+            // var hue = 5f / 18f * progress;
+            // return Color.FromHsv(new Vector4(hue, 1f, 0.75f, 1f));
+
+            return new Color(0.196f, 0.518f, 0.6f, MathHelper.Lerp(0.4f, 0.8f, progress)); // OH14-Changes, UI recolor
+
         }
 
         return InterpolateColorGaussian(Plasma, progress);

@@ -12,6 +12,30 @@
     },
     {
       "name": "basic_open"
+    },
+    {
+      "name": "freezer"
+    },
+    {
+      "name": "freezer_open"
+    },
+    {
+      "name": "spacesuit"
+    },
+    {
+      "name": "spacesuit_open"
+    },
+    {
+      "name": "medical"
+    },
+    {
+      "name": "medical_open"
+    },
+    {
+      "name": "engi"
+    },
+    {
+      "name": "engi_open"
     }
   ]
 }

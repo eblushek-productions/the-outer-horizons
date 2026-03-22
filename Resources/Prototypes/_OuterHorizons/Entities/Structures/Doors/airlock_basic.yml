@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_Airlock
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: шлюз
   description: Он открывается, он закрывается, он давит неосторожных грейтайдов.
   components:
@@ -66,10 +65,12 @@
   - type: Door
     bumpOpen: true
     clickOpen: true
-    closeTimeOne: 0.1
-    closeTimeTwo: 0.8
-    openTimeOne: 0.8
-    openTimeTwo: 0.1
+    # closeTimeOne: 0.3
+    # closeTimeTwo: 0.6
+    # openTimeOne: 0.3
+    # openTimeTwo: 0.6
+    openingAnimationTime: 1
+    closingAnimationTime: 1
     crushDamage:
       types:
         Blunt: 15
@@ -86,6 +87,7 @@
     fuel: 5
     time: 3
   - type: Airlock
+    openPanelVisible: true
   - type: NavMapDoor
   - type: DoorBolt
   - type: Appearance
@@ -104,6 +106,8 @@
     enabled: false
     usesApcPower: true
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: WiresPanelSecurity
   - type: Wires
     boardName: wires-board-name-airlock
@@ -146,7 +150,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 150
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -270,7 +274,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2500
+        damage: 200
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]

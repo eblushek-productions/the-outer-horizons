@@ -1,0 +1,23 @@
+- type: entity
+  parent: OH14_BaseStorageOpenClose
+  id: OH14_BasicBox
+  name: коробка
+  description: Дап.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Misc/storage_box.rsi
+    state: icon
+  - type: Item
+    sprite: _OuterHorizons/Objects/inhands.rsi
+    heldPrefix: m
+    size: Normal
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,2,2
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: icon }

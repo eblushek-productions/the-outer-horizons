@@ -1,7 +1,7 @@
 - type: entity
   name: монтировка
   description: Инновационная вещь в сфере вскрытия шлюзов и черепушек!
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXTool, OH14_BaseItem ]
   id: OH14_BaseCrowbar
   abstract: true
   components:

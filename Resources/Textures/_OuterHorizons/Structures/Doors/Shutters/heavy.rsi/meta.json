@@ -1,0 +1,87 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "frame",
+            "directions": 4
+        },
+        {
+            "name": "open",
+            "directions": 4
+        },
+        {
+            "name": "closed",
+            "directions": 4
+        },
+        {
+            "name": "welded",
+            "directions": 4
+        },
+        {
+            "name": "closing",
+            "directions": 4,
+      "delays": [
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+        },
+        {
+            "name": "opening",
+            "directions": 4,
+      "delays": [
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+        }
+    ]
+}

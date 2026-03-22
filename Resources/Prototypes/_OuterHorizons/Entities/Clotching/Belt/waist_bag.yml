@@ -1,0 +1,14 @@
+- type: entity
+  parent: OH14_ClothingBeltStorageBase
+  id: OH14_ClothingBeltWaistbag
+  name: подсумки
+  description: Пояс с подсумками для ваших вещей.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Belt/basic.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Belt/basic.rsi
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    - 4,0,6,1

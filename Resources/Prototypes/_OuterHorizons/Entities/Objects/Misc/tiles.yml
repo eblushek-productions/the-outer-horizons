@@ -1,0 +1,97 @@
+- type: entity
+  parent: OH14_BaseItem
+  id: OH14_BasicTileItem
+  name: плитка
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tiles/tiles.rsi
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tiles/tiles.rsi
+    size: Normal
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Stack
+    count: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: GuideHelp
+    guides:
+    - ExpandingRepairingStation
+
+# Обычное
+
+- type: entity
+  parent: OH14_BasicTileItem
+  id: OH14_TileItemSteel
+  components:
+  - type: Sprite
+    state: steel
+  - type: FloorTile
+    outputs:
+      - OH14_FloorSteel
+  - type: Stack
+    stackType: OH14_TileSteel
+
+- type: entity
+  parent: OH14_BasicTileItem
+  id: OH14_TileItemSteelWhite
+  components:
+  - type: Sprite
+    state: white
+  - type: FloorTile
+    outputs:
+      - OH14_FloorSteelWhite
+  - type: Stack
+    stackType: OH14_TileSteelWhite
+
+- type: entity
+  parent: OH14_BasicTileItem
+  id: OH14_TileItemSteelDark
+  components:
+  - type: Sprite
+    state: dark
+  - type: FloorTile
+    outputs:
+      - OH14_FloorSteelDark
+  - type: Stack
+    stackType: OH14_TileSteelDark
+
+# Стекло
+
+- type: entity
+  parent: OH14_BasicTileItem
+  id: OH14_TileItemGlass
+  components:
+  - type: Sprite
+    state: glass
+  - type: FloorTile
+    outputs:
+      - OH14_FloorGlass
+  - type: Stack
+    stackType: OH14_TileGlass

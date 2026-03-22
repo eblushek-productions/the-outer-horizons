@@ -89,6 +89,8 @@
     - state: screen
       shader: unshaded
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   # - type: WiresVisuals
   - type: Battery
     maxCharge: 2500000

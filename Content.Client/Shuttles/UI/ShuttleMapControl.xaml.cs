@@ -156,10 +156,10 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         var tex = _shuttles.GetTexture(shuttleXform.MapUid.Value);
 
         // Size of the texture in world units.
-        var size = tex.Size * MinimapScale * 1f;
+        var size = tex.Size * MinimapScale * 1.8f;
 
         var position = ScalePosition(new Vector2(-Offset.X, Offset.Y));
-        var slowness = 1f;
+        var slowness = 0.5f;
 
         // The "home" position is the effective origin of this layer.
         // Parallax shifting is relative to the home, and shifts away from the home and towards the Eye centre.

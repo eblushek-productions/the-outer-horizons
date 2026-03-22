@@ -11,13 +11,11 @@
       map: ["enum.OpenableVisuals.Layer"]
 
 - type: entity
-  abstract: true
-  parent: DrinkBottlePlasticBaseFull
+  parent: [ OH14_BaseItem, DrinkBottlePlasticBaseFull ]
   id: OH14_DrinkBottleWater
-  suffix: Еда
+  suffix: Провиант
   name: бутылка
   description: Небольшая бутылка для жидкостей, с навороченой крышкой для питья. Роскошь.
-  categories: [ ForkFiltered ]
   components:
   - type: Item
     size: Small
@@ -33,6 +31,7 @@
 - type: entity
   parent: [OH14_DrinkVisualsAllFilled, OH14_DrinkBottleWater]
   id: OH14_DrinkBottleWaterFull
+  suffix: Провиант, Заполнен
   components:
   - type: SolutionContainerManager
     solutions:
@@ -44,3 +43,54 @@
     sprite: _OuterHorizons/Objects/Consumable/Drinks/waterbottle.rsi
   - type: Label
     currentLabel: reagent-name-water
+
+- type: entity
+  parent: [ OH14_BaseItem, DrinkBottlePlasticBaseFull ]
+  id: OH14_DrinkCanister
+  suffix: Пусто
+  name: канистра
+  description: Большая канистра для жидкостей, большая как ваша мать.
+  categories: [ ForkFiltered ]
+  components:
+  - type: Item
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 120
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
+  - type: FitsInDispenser
+    solution: drink
+
+- type: entity
+  parent: [OH14_DrinkVisualsAllFilled, OH14_DrinkCanister]
+  id: OH14_DrinkCanisterFullWater
+  suffix: Вода
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 120
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
+  - type: Label
+    currentLabel: reagent-name-water
+
+- type: entity
+  parent: [OH14_DrinkVisualsAllFilled, OH14_DrinkCanister]
+  id: OH14_DrinkCanisterFullFuel
+  suffix: Топливо
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 120
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Consumable/Drinks/canister.rsi
+  - type: Label
+    currentLabel: reagent-name-welding-fuel

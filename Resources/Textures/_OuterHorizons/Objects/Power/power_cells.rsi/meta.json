@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project.",
+    "states": [
+        {
+            "name": "small"
+        },
+        {
+            "name": "small_o1"
+        },
+        {
+            "name": "small_o2"
+        },
+        {
+            "name": "medium"
+        },
+        {
+            "name": "medium_o1"
+        },
+        {
+            "name": "medium_o2"
+        },
+        {
+            "name": "medium-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "medium-inhand-right",
+            "directions": 4
+        }
+    ]
+}

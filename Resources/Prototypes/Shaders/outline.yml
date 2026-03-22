@@ -3,7 +3,7 @@
   kind: source
   path: "/Textures/Shaders/outline.swsl"
   params:
-    outline_color: "#FF000055"
+    outline_color: "#0F7073" # OH14-Changes, UI recolor
     light_boost: 2
     light_gamma: 1.5
     light_whitepoint: 48
@@ -13,7 +13,7 @@
   kind: source
   path: "/Textures/Shaders/outline.swsl"
   params:
-    outline_color: "#00FF0055"
+    outline_color: "#328499" # OH14-Changes, UI recolor
     light_boost: 2
     light_gamma: 0.9
     light_whitepoint: 1

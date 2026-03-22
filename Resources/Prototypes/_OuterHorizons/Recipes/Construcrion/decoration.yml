@@ -13,6 +13,19 @@
 
 - type: construction
   hide: false
+  id: OH14_Racks
+  graph: OH14_Racks
+  startNode: start
+  targetNode: OH14_Racks
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
   id: OH14_Crate
   graph: OH14_Crate
   startNode: start
@@ -41,10 +54,37 @@
 
 - type: construction
   hide: false
+  id: OH14_CabinetWallmount
+  graph: OH14_CabinetWallmount
+  startNode: start
+  targetNode: OH14_CabinetWallmount
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  hide: false
   id: OH14_CabinetBig
   graph: OH14_CabinetBig
   startNode: start
   targetNode: OH14_CabinetBig
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  hide: false
+  id: OH14_Table
+  graph: OH14_Table
+  startNode: start
+  targetNode: OH14_Table
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter

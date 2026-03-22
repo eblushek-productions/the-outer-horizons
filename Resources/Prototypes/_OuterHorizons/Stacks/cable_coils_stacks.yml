@@ -1,19 +1,19 @@
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_CableCoilHV
   name: stack-cablecoil-hv
   icon: { sprite: "_OuterHorizons/Objects/Materials/cable_coils.rsi", state: coilhv-30 }
   spawn: OH14_CableCoilHV1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_CableCoilMV
   name: stack-cablecoil-mv
   icon: { sprite: "_OuterHorizons/Objects/Materials/cable_coils.rsi", state: coilmv-30 }
   spawn: OH14_CableCoilMV1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_CableCoilLV
   name: stack-cablecoil-lv
   icon: { sprite: "_OuterHorizons/Objects/Materials/cable_coils.rsi", state: coillv-30 }

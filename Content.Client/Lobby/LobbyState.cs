@@ -59,12 +59,14 @@ namespace Content.Client.Lobby
             var lobbyNameCvar = _cfg.GetCVar(CCVars.ServerLobbyName);
             var serverName = _baseClient.GameInfo?.ServerName ?? string.Empty;
 
-            Lobby.ServerName.Text = string.IsNullOrEmpty(lobbyNameCvar)
-                ? Loc.GetString("ui-lobby-title", ("serverName", serverName))
-                : lobbyNameCvar;
+            // OH14-Changes start, new lobby UI
+            // Lobby.ServerName.Text = string.IsNullOrEmpty(lobbyNameCvar)
+            //     ? Loc.GetString("ui-lobby-title", ("serverName", serverName))
+            //     : lobbyNameCvar;
 
-            var width = _cfg.GetCVar(CCVars.ServerLobbyRightPanelWidth);
-            Lobby.RightSide.SetWidth = width;
+            // var width = _cfg.GetCVar(CCVars.ServerLobbyRightPanelWidth);
+            // Lobby.RightSide.SetWidth = width;
+            // OH14-Changes end, new lobby UI
 
             UpdateLobbyUi();
 
@@ -75,6 +77,11 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+
+            // OH14-Changes start, new lobby UI
+            var logoTexture = _resourceCache.GetResource<TextureResource>("/Textures/_OuterHorizons/Logo/text_logo.png");
+            Lobby!.Logo.Texture = logoTexture;
+            // OH14-Changes end, new lobby UI
         }
 
         protected override void Shutdown()

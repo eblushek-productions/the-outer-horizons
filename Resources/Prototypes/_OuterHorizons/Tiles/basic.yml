@@ -1,6 +1,20 @@
 - type: tile
+  id: OH14_BaseStationTile
+  abstract: true
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 10000
+  baseTurf: OH14_Plating
+  itemDrop: OH14_TileItemSteel
+  baseWhitelist:
+  - OH14_IceMoon
+
+- type: tile
   id: OH14_FloorSteel
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: серая плитка
   sprite: /Textures/_OuterHorizons/Tiles/steel.png
   variants: 4
@@ -14,12 +28,13 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_TileItemSteel
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorSteelWhite
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: белая плитка
   sprite: /Textures/_OuterHorizons/Tiles/white.png
   variants: 4
@@ -33,12 +48,13 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_TileItemSteelWhite
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorSteelDark
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: черная плитка
   sprite: /Textures/_OuterHorizons/Tiles/dark.png
   variants: 4
@@ -52,7 +68,7 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_TileItemSteelDark
   heatCapacity: 250
 
 # Plastic
@@ -60,6 +76,7 @@
 - type: tile
   id: OH14_FloorPlastic
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: пластиковая серая плитка
   sprite: /Textures/_OuterHorizons/Tiles/plastic.png
   variants: 4
@@ -73,12 +90,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 150
 
 - type: tile
   id: OH14_FloorPlasticWhite
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: пластиковая белая плитка
   sprite: /Textures/_OuterHorizons/Tiles/white_plastic.png
   variants: 4
@@ -92,12 +109,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 150
 
 - type: tile
   id: OH14_FloorPlasticDark
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: пластиковая черная плитка
   sprite: /Textures/_OuterHorizons/Tiles/dark_plastic.png
   variants: 4
@@ -111,7 +128,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 150
 
 # Mono
@@ -119,6 +135,7 @@
 - type: tile
   id: OH14_FloorSteelMono
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: стальная моно-плитка
   sprite: /Textures/_OuterHorizons/Tiles/steel_mono.png
   baseTurf: OH14_Plating
@@ -126,12 +143,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorDarkMono
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: темная моно-плитка
   sprite: /Textures/_OuterHorizons/Tiles/dark_mono.png
   baseTurf: OH14_Plating
@@ -139,12 +156,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorWhiteMono
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: белая моно-плитка
   sprite: /Textures/_OuterHorizons/Tiles/white_mono.png
   baseTurf: OH14_Plating
@@ -152,7 +169,252 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  heatCapacity: 250
+
+# Mini
+
+- type: tile
+  id: OH14_FloorSteelMini
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkMini
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhiteMini
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+# Mini diagonal
+
+- type: tile
+  id: OH14_FloorSteelMiniDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_diagonal_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkMiniDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_diagonal_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhiteMiniDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая мини-плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_diagonal_mini.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+# Diagonal
+
+- type: tile
+  id: OH14_FloorSteelDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_diagonal.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_diagonal.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhiteDiagonal
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_diagonal.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+# Herringbone
+
+- type: tile
+  id: OH14_FloorSteelHerringbone
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_herringbone.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkHerringbone
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_herringbone.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhiteHerringbone
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_herringbone.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+# Pavement
+
+- type: tile
+  id: OH14_FloorSteelPavement
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_pavement.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkPavement
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_pavement.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhitePavement
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_pavement.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+# Pavement vertical
+
+- type: tile
+  id: OH14_FloorSteelPavementVertical
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: стальная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/steel_pavement_vertical.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorDarkPavementVertical
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: темная кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/dark_pavement_vertical.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorWhitePavementVertical
+  editorHidden: false
+  parent: OH14_BaseStationTile
+  name: белая кирпичная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/white_pavement_vertical.png
+  baseTurf: OH14_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
   heatCapacity: 250
 
 # Glass
@@ -160,6 +422,7 @@
 - type: tile
   id: OH14_FloorGlass
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: стеклянный пол
   sprite: /Textures/_OuterHorizons/Tiles/glass.png
   baseTurf: OH14_PlatingLattice
@@ -167,12 +430,13 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_TileItemGlass
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorGlassReinf
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: укрепленный стеклянный пол
   sprite: /Textures/_OuterHorizons/Tiles/reinf_glass.png
   baseTurf: OH14_PlatingLattice
@@ -180,7 +444,7 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
+  itemDrop: OH14_TileItemGlass
   heatCapacity: 250
 
 # Maint
@@ -188,6 +452,7 @@
 - type: tile
   id: OH14_FloorSteelMaint
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: техническая плитка
   sprite: /Textures/_OuterHorizons/Tiles/steel_maint.png
   baseTurf: OH14_Plating
@@ -195,12 +460,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 250
 
 - type: tile
   id: OH14_FloorTechMaint
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: техническая плитка
   sprite: /Textures/_OuterHorizons/Tiles/tech_maint.png
   baseTurf: OH14_Plating
@@ -208,7 +473,6 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 250
 
 # Misc
@@ -216,6 +480,7 @@
 - type: tile
   id: OH14_FloorService
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: кухонная плитка
   sprite: /Textures/_OuterHorizons/Tiles/service.png
   variants: 4
@@ -229,12 +494,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 200
 
 - type: tile
   id: OH14_FloorCheckerDark
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: шахматная плитка
   sprite: /Textures/_OuterHorizons/Tiles/checker_dark.png
   variants: 4
@@ -248,12 +513,12 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 200
 
 - type: tile
   id: OH14_FloorCheckerWhite
   editorHidden: false
+  parent: OH14_BaseStationTile
   name: шахматная плитка
   sprite: /Textures/_OuterHorizons/Tiles/checker_white.png
   variants: 4
@@ -267,5 +532,4 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: OH14_SheetMaterials1
   heatCapacity: 200

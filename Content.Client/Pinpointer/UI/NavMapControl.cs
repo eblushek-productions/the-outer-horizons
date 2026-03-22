@@ -100,6 +100,7 @@ public partial class NavMapControl : MapGridControl
         HorizontalAlignment = HAlignment.Right,
         HorizontalExpand = true,
         Margin = new Thickness(8f, 4f),
+        StyleClasses = { StyleClass.ButtonOpenBoth },
         Disabled = true,
     };
 

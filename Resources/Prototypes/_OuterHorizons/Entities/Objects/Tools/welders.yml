@@ -1,6 +1,6 @@
 - type: entity
   name: ваккумная сварка
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXAlt, OH14_BaseItem ]
   id: OH14_WelderBasic
   description: Скажи похуй внешним условиям ваккума!
   components:

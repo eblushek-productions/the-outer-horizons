@@ -11,14 +11,17 @@
 - type: startingGear
   id: OH14_RreGear
   equipment:
+    belt: OH14_ClothingBeltWaistbag
+    outerClothing: OH14_ClothingOuterCoatRre
     jumpsuit: OH14_ClothingJumpsuitXimura
     pants: OH14_ClothingPantsBasic
-    back: OH14_ClothingBackpackBasic
+    tailbag: ClothingBackpackSatchelBasic
     shoes: OH14_ClothingShoesBasic
-    pocket1: OH14_IDCardBasic
-  storage:
-    back:
-    - OH14_CrowbarBasic
+    pocket1: OH14_PDA
+    pocket2: OH14_ClothingMaskGas
+  # storage:
+  #   tailbag:
+  #   - OH14_CrowbarBasic
 
 - type: playTimeTracker
   id: OH14_RreRole

@@ -8,13 +8,13 @@ public sealed partial class CCVars
     /// The sound played when clicking a UI button
     /// </summary>
     public static readonly CVarDef<string> UIClickSound =
-        CVarDef.Create("interface.click_sound", "/Audio/UserInterface/click.ogg", CVar.REPLICATED);
+        CVarDef.Create("interface.click_sound", "/Audio/_OuterHorizons/UserInterface/click.ogg", CVar.REPLICATED); // OH14-Changes, new UI
 
     /// <summary>
     /// The sound played when the mouse hovers over a clickable UI element
     /// </summary>
     public static readonly CVarDef<string> UIHoverSound =
-        CVarDef.Create("interface.hover_sound", "/Audio/UserInterface/hover.ogg", CVar.REPLICATED);
+        CVarDef.Create("interface.hover_sound", "/Audio/_OuterHorizons/UserInterface/hover.ogg", CVar.REPLICATED); // OH14-Changes, new UI
 
     /// <summary>
     /// The layout style of the UI

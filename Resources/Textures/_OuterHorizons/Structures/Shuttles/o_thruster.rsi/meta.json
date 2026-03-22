@@ -11,6 +11,10 @@
       "name": "base"
     },
     {
+      "name": "pipe",
+      "directions": 4
+    },
+    {
       "name": "thrust"
     },
     {

@@ -1,21 +1,25 @@
 - type: entity
-  parent: ClothingHeadEVAHelmetBase
+  parent: [ ClothingHeadEVAHelmetBase, OH14_BaseItem ]
   id: OH14_ClothingHeadHelmetEVABasic
   categories: [ ForkFiltered ]
   name: шлем ЕВА "Пилигримм"
   description: Интерфейс в комплект не входит.
   components:
+  - type: Item
+    storedRotation: 0
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/eva.rsi
-    equipSound: /Audio/_OuterHorizons/Items/helmet_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/helmet_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
     equipDelay: 0.2
     unequipDelay: 0.5
   - type: Tag
     tags:
     - HelmetEVA
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying.png"
 
 - type: entity
   parent: OH14_ClothingHeadHelmetEVABasic
@@ -26,7 +30,9 @@
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
   - type: Clothing
     sprite: _OuterHorizons/Clothing/Head/Hardsuits/uco.rsi
-    equipSound: /Audio/_OuterHorizons/Items/helmet_eq.ogg
-    unequipSound: /Audio/_OuterHorizons/Items/helmet_un.ogg
+    equipSound: /Audio/_OuterHorizons/Clothing/helmet_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/helmet_un.ogg
     equipDelay: 0.2
     unequipDelay: 0.5
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying2.png"

@@ -1,6 +1,6 @@
 - type: entity
   id: OH14_ToolboxBase
-  parent: OH14_BaseStorageOpenClose
+  parent: [ OH14_ItemSFXAlt, OH14_BaseStorageOpenClose ]
   abstract: true
   components:
   - type: Sprite

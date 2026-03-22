@@ -5,6 +5,9 @@
   description: Простецкая зеленая плата для консолей или оборудования.
   abstract: true
   components:
+    - type: Tag
+      tags:
+      - OH14_Tools
     - type: ComputerBoard
     - type: Sprite
       sprite: _OuterHorizons/Objects/Materials/circuitboard.rsi
@@ -49,3 +52,11 @@
   components:
     - type: ComputerBoard
       prototype: OH14_ConsolePower
+
+- type: entity
+  parent: OH14_BasicCircuitboard
+  id: OH14_CircuitboardComms
+  name: плата связи
+  components:
+    - type: ComputerBoard
+      prototype: OH14_ConsoleCommsFilled

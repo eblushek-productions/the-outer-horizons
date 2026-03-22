@@ -64,7 +64,6 @@ public sealed partial class ShuttleDockControl : BaseShuttleControl
         _dockSystem = EntManager.System<DockingSystem>();
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _xformSystem = EntManager.System<SharedTransformSystem>();
-        MinSize = new Vector2(SizeFull, SizeFull);
     }
 
     public void SetViewedDock(DockingPortState? dockState)

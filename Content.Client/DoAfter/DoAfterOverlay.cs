@@ -31,10 +31,10 @@ public sealed class DoAfterOverlay : Overlay
     /// <summary>
     ///     Flash time for cancelled DoAfters
     /// </summary>
-    private const float FlashTime = 0.125f;
+    private const float FlashTime = 0.25f; // OH14-Changes, UI recolor
 
     // Hardcoded width of the progress bar because it doesn't match the texture.
-    private const float StartX = 2;
+    private const float StartX = 2; // OH14-Changes, UI recolor
     private const float EndX = 22f;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;

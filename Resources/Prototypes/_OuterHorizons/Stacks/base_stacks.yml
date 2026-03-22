@@ -1,0 +1,9 @@
+- type: stack
+  abstract: true
+  id: OH14_BaseSmallStack
+  maxCount: 8
+
+- type: stack
+  abstract: true
+  id: OH14_BaseMediumStack
+  maxCount: 16

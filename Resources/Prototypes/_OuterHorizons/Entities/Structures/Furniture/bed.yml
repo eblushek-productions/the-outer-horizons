@@ -1,8 +1,7 @@
 - type: entity
   name: кровать
   id: OH14_Bed
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   description: Используется для сна, не ерп, суки.
   components:
   - type: HealOnBuckle
@@ -18,7 +17,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.45,-0.45,0.45,0.05"
-        density: 190
+        density: 250
         mask:
         - TableMask
   - type: Sprite
@@ -57,7 +56,7 @@
             max: 2
   - type: Transform
     anchored: true
-    noRot: true
+    # noRot: true
   - type: Anchorable
   - type: Pullable
 

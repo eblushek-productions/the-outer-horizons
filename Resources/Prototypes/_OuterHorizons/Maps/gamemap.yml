@@ -1,7 +1,7 @@
 - type: gameMap
   id: OH14_GameMap
   mapName: OH14_GameMap
-  mapPath: /Maps/_OuterHorizons/_GameStationMap.yml
+  mapPath: /Maps/_OuterHorizons/_NeoGamemap.yml
   maxRandomOffset: 50
   minPlayers: 0
   stations:

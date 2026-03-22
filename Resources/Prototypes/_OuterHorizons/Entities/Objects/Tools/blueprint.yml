@@ -1,5 +1,5 @@
 - type: entity
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXPaper, OH14_BaseItem ]
   id: OH14_BaseBlueprint
   name: чертеж
   description: Старый-синий чертеж, возможно в нем есть что-нибудь полезное.
@@ -21,6 +21,7 @@
   - type: Tag
     tags:
     - BlueprintAutolathe
+    - OH14_Tools
 
 - type: entity
   parent: OH14_BaseBlueprint

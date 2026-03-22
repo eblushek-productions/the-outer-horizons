@@ -3,6 +3,9 @@
   id: OH14_BaseHealingItem
   abstract: true
   components:
+  - type: Healing
+    delay: 1
+    selfHealPenaltyMultiplier: 1.5
   - type: Appearance
   - type: Sprite
     sprite: _OuterHorizons/Objects/Specific/Medical/medical.rsi
@@ -40,7 +43,7 @@
     - ointment
     - ointment_2
     - ointment_3
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: ointment
     storedRotation: 90
@@ -100,7 +103,7 @@
     - brutepack-2
     - brutepack-1
     - brutepack
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: brutepack
   - type: Healing
@@ -131,56 +134,67 @@
     stackType: OH14_Brutepack
     count: 1
 
-# - type: entity
-#   name: blood pack
-#   description: Contains a groundbreaking universal blood replacement created by Nanotrasen's advanced medical science.
-#   parent: OH14_BaseHealingItem
-#   id: Bloodpack
-#   suffix: Full
-#   components:
-#   - type: Item
-#     heldPrefix: bloodpack
-#   - type: Tag
-#     tags:
-#     - Bloodpack
-#   - type: Sprite
-#     state: bloodpack
-#   - type: Healing
-#     damageContainers:
-#       - Biological
-#     damage:
-#       types:
-#         Bloodloss: -0.5 #lowers bloodloss damage
-#     modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
-#     healingBeginSound:
-#       path: "/Audio/Items/Medical/brutepack_begin.ogg"
-#       params:
-#         volume: 1.0
-#         variation: 0.125
-#     healingEndSound:
-#       path: "/Audio/Items/Medical/brutepack_end.ogg"
-#       params:
-#         volume: 1.0
-#         variation: 0.125
-#   - type: Stack
-#     stackType: OH14_ Bloodpack
-#     count: 10
-#   - type: StackPrice
-#     price: 10
+- type: entity
+  name: пакет крови
+  description: До недавнего времени Тарра использовали синтетически-синтезированную кровь, однако после инцидента с массовым кровяным отторжением, синтетическая кровь была выведена из эксплуатации.
+  parent: OH14_BaseHealingItem
+  id: OH14_Bloodpack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+    - OH14_Medicines
+  - type: Sprite
+    layers:
+    - state: bloodpack-liquid-5
+      map: ["base"]
+    - state: bloodpack-empty
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: OH14_Bloodpack
+    baseLayer: base
+    layerStates:
+    - bloodpack-liquid-1
+    - bloodpack-liquid-2
+    - bloodpack-liquid-3
+    - bloodpack-liquid-4
+    - bloodpack-liquid-5
+    count: 8
+  - type: StackPrice
+    price: 10
 
-# - type: entity
-#   parent: Bloodpack
-#   id: Bloodpack1
-#   suffix: Single
-#   components:
-#   - type: Stack
-#     stackType: OH14_ Bloodpack
-#     count: 1
+- type: entity
+  parent: OH14_Bloodpack
+  id: OH14_Bloodpack1
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: OH14_Bloodpack
+    count: 1
 
 - type: entity
   name: бинты
   description: Кучка грязных тряпок, лечящих внутряк и порезы. Да чувак, я тоже в ахуе.
-  parent: OH14_BaseHealingItem
+  parent: [ OH14_ItemSFXFabric, OH14_BaseHealingItem ]
   id: OH14_Gauze
   suffix: Full
   components:
@@ -200,7 +214,7 @@
     - gauze-2
     - gauze-1
     - gauze
-    count: 10
+    count: 8
   - type: Item
     heldPrefix: gauze
   - type: Construction

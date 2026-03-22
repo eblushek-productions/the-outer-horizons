@@ -1,0 +1,43 @@
+- type: entity
+  abstract: true
+  parent: [ OH14_ItemSFXFabric, Clothing ]
+  categories: [ ForkFiltered ]
+  id: OH14_ClothingBeltBase
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    slots: [belt]
+    equipSound:
+      path: /Audio/Items/belt_equip.ogg
+    quickEquip: false
+    equipDelay: 0.5
+    unequipDelay: 0.2
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
+
+- type: entity
+  abstract: true
+  parent: OH14_ClothingBeltBase
+  id: OH14_ClothingBeltStorageBase
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,5,1
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,2
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface

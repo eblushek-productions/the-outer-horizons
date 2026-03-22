@@ -1,0 +1,25 @@
+- type: entity
+  parent: OH14_ClothingBackpackBasic
+  id: ClothingBackpackSatchelBasic
+  name: сумка
+  description: Изначально тарра использовали свой хвост для ношения различных сумок и рюкзачков, но в конце концов, они догадались что это можно носить и на спине.
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+    - tailbag
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Back/Satchels/satchel.rsi
+  - type: Storage
+    # maxItemSize: Normal
+    grid:
+    - 0,0,5,2
+
+- type: entity
+  parent: ClothingBackpackSatchelBasic
+  id: ClothingBackpackSatchelUco
+  name: бордовая сумка
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Back/Satchels/satchel_uco.rsi

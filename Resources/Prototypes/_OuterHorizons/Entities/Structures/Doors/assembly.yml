@@ -32,7 +32,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 50
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]

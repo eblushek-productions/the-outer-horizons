@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "halftile_overlay"
+        },
+        {
+            "name": "halftile_overlay_90"
+        },
+        {
+            "name": "halftile_overlay_180"
+        },
+        {
+            "name": "halftile_overlay_270"
+        },
+        {
+            "name": "quartertile_overlay"
+        },
+        {
+            "name": "quartertile_overlay_90"
+        },
+        {
+            "name": "quartertile_overlay_180"
+        },
+        {
+            "name": "quartertile_overlay_270"
+        },
+        {
+            "name": "threequartertile_overlay"
+        },
+        {
+            "name": "threequartertile_overlay_90"
+        },
+        {
+            "name": "threequartertile_overlay_180"
+        },
+        {
+            "name": "threequartertile_overlay_270"
+        },
+        {
+            "name": "brick_corner_ne"
+        },
+        {
+            "name": "brick_corner_nw"
+        },
+        {
+            "name": "brick_corner_se"
+        },
+        {
+            "name": "brick_corner_sw"
+        },
+        {
+            "name": "brick_line_e"
+        },
+        {
+            "name": "brick_line_n"
+        },
+        {
+            "name": "brick_line_s"
+        },
+        {
+            "name": "brick_line_w"
+        },
+        {
+            "name": "checkerNESW"
+        },
+        {
+            "name": "checkerNWSE"
+        },
+        {
+            "name": "fulltile_overlay"
+        }
+    ]
+}

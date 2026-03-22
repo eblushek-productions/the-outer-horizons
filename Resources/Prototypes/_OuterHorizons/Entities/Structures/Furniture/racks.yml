@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   id: OH14_RackBasic
   categories: [ ForkFiltered ]
   name: стойка
@@ -11,23 +11,23 @@
       Brute:
         path:
           "/Audio/Weapons/dodgeball.ogg"
-  # - type: Construction
-  #   graph: Rack
-  #   node: Rack
+  - type: Construction
+    graph: OH14_Racks
+    node: OH14_Racks
   - type: Anchorable
   - type: InteractionOutline
   - type: PlaceableSurface
   - type: Sprite
     sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
     state: rack
-    snapCardinals: true
+    noRot: true
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
           bounds: "-0.3,-0.3,0.3,0.3"
-        density: 140
+        density: 300
         mask:
         - TableMask
         layer:
@@ -84,12 +84,82 @@
     snapCardinals: true
 
 - type: entity
-  parent: OH14_RackBasic
+  parent: OH14_BaseStructure
   id: OH14_RackAlt
   name: полки
   description: Устали от скучных стоек для инструментов? А что насчет двухэтажной?!
   components:
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: racks
+  - type: Storage
+    storageInsertSound: /Audio/_OuterHorizons/Items/drop.ogg # TODO, звуки предметов под замену
+    storageRemoveSound: /Audio/_OuterHorizons/Items/pickup.ogg
+    grid:
+    - 0,0,6,1
+    - 0,3,6,4
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
   - type: Sprite
     sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
-    state: racks
+    layers:
+      - state: racks
+      - state: racks-0
+      - map: ["enum.StorageFillLayers.Fill"]
     snapCardinals: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Climbable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        density: 450
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/dodgeball.ogg"
+  - type: Construction
+    graph: OH14_Racks
+    node: OH14_Racks
+  - type: Anchorable
+  - type: InteractionOutline

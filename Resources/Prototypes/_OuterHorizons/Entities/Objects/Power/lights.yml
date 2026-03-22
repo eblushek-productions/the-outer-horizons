@@ -1,5 +1,5 @@
 - type: entity
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXGlass, OH14_BaseItem ]
   id: OH14_BasicLightBulb
   name: лампа
   description: Светящаяся лапочка.
@@ -59,6 +59,7 @@
   - type: Tag
     tags:
     - Trash
+    - OH14_Tools
   # - type: PhysicalComposition
   #   materialComposition:
   #     Glass: 25
@@ -105,6 +106,8 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
+# Мелкое
+
 - type: entity
   parent: OH14_BasicLightBulb
   id: OH14_LightBulb
@@ -119,6 +122,27 @@
     tags:
     - LightBulb
     - Trash
+    - OH14_Tools
+
+- type: entity
+  name: красная лампа
+  parent: OH14_BasicLightBulb
+  id: OH14_LightBulbRed
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#C71A1C"
+    lightEnergy: 1.5
+    lightRadius: 4
+    lightSoftness: 1.5
+    PowerUse: 20
+  - type: Tag
+    tags:
+    - LightBulb
+    - Trash
+    - OH14_Tools
+
+# Обычное
 
 - type: entity
   parent: OH14_BasicLightTube
@@ -126,10 +150,10 @@
   name: теплая лампа-трубка
   components:
   - type: LightBulb
-    color: "#c5967e" # dabeab > c5967e
+    color: "#E48B57" # dabeab > e4a877
     lightEnergy: 0.8
     lightRadius: 10
-    lightSoftness: 1
+    lightSoftness: 0.5
     PowerUse: 25
 
 - type: entity
@@ -141,4 +165,16 @@
     lightEnergy: 0.8
     lightRadius: 10
     lightSoftness: 1
+    PowerUse: 25
+
+- type: entity
+  parent: OH14_BasicLightTube
+  id: OH14_LightTubeGreen
+  name: зеленая лампа-трубка
+  components:
+  - type: LightBulb
+    color: "#69b68f" # dabeab > e4a877
+    lightEnergy: 0.8
+    lightRadius: 8
+    lightSoftness: 1.5
     PowerUse: 25

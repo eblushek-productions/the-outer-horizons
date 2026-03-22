@@ -1,11 +1,35 @@
-<controls:FancyWindow xmlns="https://spacestation14.io"
-                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-                      xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
-                      Title="{Loc 'radar-console-window-title'}"
-                      SetSize="648 648"
-                      MinSize="256 256">
-    <ui:ShuttleNavControl Name="RadarScreen"
-                     Margin="4"
-                     HorizontalExpand = "True"
-                     VerticalExpand = "True"/>
-</controls:FancyWindow>
+<ui:RadarConsoleWindow
+    xmlns="https://spacestation14.io"
+    xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    SetSize="566 588"
+    MinSize="256 256"
+    Resizable="False"
+    MouseFilter="Stop">
+    <PanelContainer Name="Background" StyleClasses="PdaBackgroundRect" ModulateSelfOverride="#22232e"/>
+    <PanelContainer Name="Border" StyleClasses="PdaBorderRect"/>
+
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+        <!-- Крестик для выхода -->
+        <BoxContainer SetHeight="26" Margin="16 6" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextureButton Name="CloseButton" StyleClasses="windowCloseButton" Modulate="#646464" VerticalAlignment="Center" Margin="0 4 0 0"/>
+        </BoxContainer>
+        <!-- Содержимое -->
+        <Control Margin="16 0 16 16" RectClipContent="True" VerticalExpand="True" HorizontalExpand="True">
+
+            <!-- Контрастный цвет -->
+            <PanelContainer ModulateSelfOverride="#FFFFFF" StyleClasses="PdaBackground">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#050c0d" BorderColor="#1d1e27" BorderThickness="3"/>
+                </PanelContainer.PanelOverride>
+            </PanelContainer>
+            <ui:ShuttleNavControl
+                Name="RadarScreen"
+                Margin="4"
+                HorizontalExpand="True"
+                VerticalExpand="True"
+                UIDisplayRadius="264"
+                SetSize="528 528"/>
+        </Control>
+    </BoxContainer>
+</ui:RadarConsoleWindow>

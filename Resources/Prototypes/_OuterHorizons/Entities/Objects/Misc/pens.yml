@@ -1,0 +1,54 @@
+- type: entity
+  name: ручка
+  parent: OH14_BaseItem
+  id: OH14_Pen
+  description: После изобретения разноцветных вариаций ручек, акции компании БюрократКо сильно увеличились, однако конкуренты, копировав их идею, не оставили им и шанса
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Misc/pens.rsi
+    layers:
+    - state: 1
+      map: ["color"]
+  - type: RandomSprite
+    available:
+      - color:
+          1: ""
+          2: ""
+          3: ""
+          4: ""
+          5: ""
+          6: ""
+          7: ""
+  - type: Item
+    sprite: Objects/Misc/pens.rsi
+    heldPrefix: pen
+    size: Tiny
+  - type: Tag
+    tags:
+    - Write
+    - Pen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/pen_click.ogg
+      params:
+        volume: -4
+        maxDistance: 2
+  - type: UseDelay
+    delay: 0.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+          - -0.3,0.1
+          - -0.1,0.3
+          - 0.3,-0.1
+          - 0.1,-0.3
+        density: 20 # derived from base_item
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2

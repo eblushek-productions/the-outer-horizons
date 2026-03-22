@@ -1,11 +1,13 @@
 - type: entity
   id: OH14_FrameBasic
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   abstract: true
   name: каркас
   description: Каркас вашего оборудования, ветхий и не надежный.
   components:
+  - type: Transform
+    anchored: false
+    noRot: true
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
@@ -15,6 +17,7 @@
           frame3: { state: frame2 }
   - type: Appearance
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Structures/Machines/autolathe.rsi
     state: frame0
   - type: Damageable
@@ -146,3 +149,51 @@
     graph: OH14_SubstationWallmount
     node: subFrame
   - type: WallMount
+
+# Аккумы
+
+- type: entity
+  id: OH14_BatteryArrayFrame
+  parent: OH14_FrameBasic
+  name: каркас массива аккамуляторов
+  components:
+  - type: ContainerContainer
+    containers:
+      powercell: !type:Container
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame1: { state: frame }
+          frame2: { state: empty }
+          # frame3: { state: fill1 }
+          # frame4: { state: fill2 }
+          # frame5: { state: fill3 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/smes.rsi
+    layers:
+    - state: frame
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_BatteryArray
+    node: frame1
+
+- type: entity
+  id: OH14_GeneratorTEFFrame
+  parent: OH14_FrameBasic
+  name: каркас ТЭТ Генератора
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ConstructionVisuals.Key:
+        enum.ConstructionVisuals.Layer:
+          frame: { state: frame0 }
+          frame2: { state: frame1 }
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
+    layers:
+    - state: frame0
+      map: [ "enum.ConstructionVisuals.Layer" ]
+  - type: Construction
+    graph: OH14_GeneratorTEF
+    node: frame

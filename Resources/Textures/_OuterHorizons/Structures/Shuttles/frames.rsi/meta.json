@@ -11,6 +11,10 @@
       "name": "r1"
     },
     {
+      "name": "pipe",
+      "directions": 4
+    },
+    {
       "name": "r2"
     },
     {

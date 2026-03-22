@@ -1,6 +1,7 @@
-using System.Linq;
 using System.Numerics;
 using Content.Client.Shuttles.Systems;
+using Content.Client.Stylesheets;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
@@ -15,7 +16,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
-using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -118,7 +118,7 @@ public sealed partial class MapScreen : BoxContainer
         {
             case FTLState.Available:
                 SetFTLAllowed(true);
-                _ftlStyle.BackgroundColor = Color.FromHex("#80C71F");
+                _ftlStyle.BackgroundColor = Color.FromHex("#FFFFFF");
                 MapRadar.InFtl = false;
                 break;
             case FTLState.Starting:
@@ -277,7 +277,8 @@ public sealed partial class MapScreen : BoxContainer
             var heading = new CollapsibleHeading(mapName);
 
             heading.MinHeight = 32f;
-            heading.AddStyleClass(ContainerButton.StyleClassButton);
+            heading.AddStyleClass(StyleClass.ButtonMonotone);
+            heading.AddStyleClass(StyleClass.ButtonOpenBoth);
             heading.HorizontalAlignment = HAlignment.Stretch;
             heading.Label.HorizontalAlignment = HAlignment.Center;
             heading.Label.HorizontalExpand = true;
@@ -447,10 +448,11 @@ public sealed partial class MapScreen : BoxContainer
 
         var gridContents = _mapHeadings[mapId];
 
-        var gridButton = new Button()
+        var gridButton = new MonotoneButton
         {
             Text = mapObj.Name,
             HorizontalExpand = true,
+            StyleClasses = { StyleClass.ButtonOpenBoth },
         };
 
         var gridContainer = new BoxContainer()

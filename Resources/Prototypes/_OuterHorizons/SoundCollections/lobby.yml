@@ -1,8 +1,5 @@
 - type: soundCollection
   id: OH14_LobbyMusic
   files:
-    # - /Audio/_OuterHorizons/Soundtracks/lobby1.ogg
-    # - /Audio/_OuterHorizons/Soundtracks/lobby2.ogg
-    # - /Audio/_OuterHorizons/Soundtracks/lobby3.ogg
-    # - /Audio/_OuterHorizons/Soundtracks/lobby4.ogg
     - /Audio/_OuterHorizons/Soundtracks/main_theme.ogg
+    - /Audio/_OuterHorizons/Soundtracks/bar.ogg

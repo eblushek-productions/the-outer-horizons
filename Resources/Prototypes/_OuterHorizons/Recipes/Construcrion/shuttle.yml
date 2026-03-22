@@ -7,3 +7,14 @@
   category: construction-category-machines
   placementMode: SnapgridCenter
   canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_Gyroscope
+  graph: OH14_Gyroscope
+  startNode: start
+  targetNode: OH14_Gyroscope
+  category: construction-category-machines
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false

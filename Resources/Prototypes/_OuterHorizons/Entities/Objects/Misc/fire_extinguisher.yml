@@ -1,18 +1,9 @@
 - type: entity
   name: огнетушитель
-  parent: OH14_BaseItem
+  parent: [ OH14_ItemSFXMetallic, OH14_BaseItem ]
   id: OH14_FireExtinguisher
   description: О! Это же этот, как его... Ах да! Наипростейший реактивный двигатель!
   components:
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_pickup.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_OuterHorizons/Items/metal_drop.ogg
   - type: Sprite
     sprite: _OuterHorizons/Objects/Misc/fire_extinguisher.rsi
     layers:

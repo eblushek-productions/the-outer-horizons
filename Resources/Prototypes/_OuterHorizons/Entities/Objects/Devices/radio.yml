@@ -1,0 +1,26 @@
+- type: entity
+  name: рация
+  description: Без понятия КАК вы используете это в ваккуме и на больших расстояниях, но окей.
+  parent: OH14_BaseItem
+  id: OH14_Radio
+  components:
+  - type: TelecomExempt
+  - type: RadioMicrophone
+    broadcastChannel: Handheld
+  - type: RadioSpeaker
+    channels:
+    - Handheld
+  - type: Speech
+    speechVerb: Robotic
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Devices/radio.rsi
+    layers:
+    - state: icon
+    - state: icon_unshaded
+      shader: unshaded
+    state: walkietalkie
+  - type: Item
+    sprite: _OuterHorizons/Objects/Devices/radio.rsi
+  - type: Tag
+    tags:
+    - Radio

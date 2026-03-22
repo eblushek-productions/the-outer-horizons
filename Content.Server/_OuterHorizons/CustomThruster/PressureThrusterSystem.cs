@@ -1,4 +1,4 @@
-﻿using Content.Server.NodeContainer.EntitySystems;
+using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.Components;
 using Content.Server.Shuttles.Components;

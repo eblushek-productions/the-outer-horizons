@@ -1,7 +1,6 @@
 - type: entity
   id: OH14_Grille
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: решетка
   description: Эй друг, видишь провод подомной? Не бойся! Иди ко мне, обними меня! :3
   components:
@@ -15,7 +14,7 @@
     - type: CanBuildWindowOnTop
     - type: Sprite
       drawdepth: Walls
-      sprite: _OuterHorizons/Structures/Walls/grille.rsi
+      sprite: _OuterHorizons/Structures/grille.rsi
       layers:
         - state: grille
         - state: electrified
@@ -24,7 +23,7 @@
           shader: unshaded
           visible: false
     - type: Icon
-      sprite: _OuterHorizons/Structures/Walls/grille.rsi
+      sprite: _OuterHorizons/Structures/grille.rsi
       state: grille
     - type: Construction
       graph: OH14_Grille
@@ -88,8 +87,7 @@
 - type: entity
   id: OH14_GrilleBroken
   suffix: Сломаная
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   name: решетка
   description: Она просто хотела чтобы ее обняли.
   components:
@@ -100,10 +98,10 @@
           "/Audio/Weapons/grille_hit.ogg"
   - type: Sprite
     drawdepth: Walls
-    sprite: _OuterHorizons/Structures/Walls/grille.rsi
+    sprite: _OuterHorizons/Structures/grille.rsi
     state: broken
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/grille.rsi
+    sprite: _OuterHorizons/Structures/grille.rsi
     state: broken
   - type: Construction
     graph: OH14_Grille
@@ -129,3 +127,42 @@
         node: start
       - !type:DoActsBehavior
         acts: ["Destruction"]
+
+- type: entity
+  id: OH14_GrilleDiagonal
+  parent: OH14_Grille
+  name: диагональная решетка
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _OuterHorizons/Structures/grille.rsi
+    layers:
+    - state: grille_diagonal
+    - state: electrified_diagonal
+      sprite: Effects/electricity.rsi
+      map: ["enum.ElectrifiedLayers.Sparks"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    sprite: _OuterHorizons/Structures/grille.rsi
+    state: grille_diagonal
+  - type: Tag
+    tags:
+    - Diagonal
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Construction
+    graph: OH14_Grille
+    node: grille
+    deconstructionTarget: start

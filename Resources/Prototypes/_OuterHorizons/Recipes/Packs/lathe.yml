@@ -4,7 +4,7 @@
   - OH14_Crowbar
   - OH14_Flashlight
   - OH14_Welder
-  - OH14_SolderingIron
+  # - OH14_SolderingIron # TODO
   - OH14_Wirecutter
   - OH14_Screwdriver
   - OH14_Wrench
@@ -12,6 +12,9 @@
   - OH14_Drill
   - OH14_GeigerCounter
   - OH14_Pickaxe
+  - OH14_ToolMassScanner
+  - OH14_Knife
+  - OH14_Radio
 
 - type: latheRecipePack
   id: OH14_MaterialsStatic
@@ -32,7 +35,10 @@
   - OH14_CircuitboardRadar
   - OH14_CircuitboardAtmos
   - OH14_CircuitboardPower
+  - OH14_CircuitboardComms
   - OH14_NuclearRod # ВРЕМЕННО
+  - OH14_PowerCellMedium
+  - OH14_PowerCellBig
 
 - type: latheRecipePack
   id: OH14_MiscStatic
@@ -44,6 +50,9 @@
   - OH14_LightTubeWarm
   - OH14_LightBulb
   - OH14_Igniter
+  - OH14_PowerCellMedium
+  - OH14_ClothingHeadWeldingMask
+  - OH14_DrinkCanister
 
 - type: latheRecipePack
   id: OH14_OreStatic

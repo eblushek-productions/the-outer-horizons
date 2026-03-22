@@ -8,22 +8,32 @@
   },
   "states": [
     {
-      "name": "frame"
+      "name": "frame",
+      "directions": 4
     },
     {
-      "name": "blue"
+      "name": "pipe",
+      "directions": 4
     },
     {
-      "name": "grey"
+      "name": "blue",
+      "directions": 4
     },
     {
-      "name": "orange"
+      "name": "grey",
+      "directions": 4
     },
     {
-      "name": "red"
+      "name": "orange",
+      "directions": 4
     },
     {
-      "name": "yellow"
+      "name": "red",
+      "directions": 4
+    },
+    {
+      "name": "yellow",
+      "directions": 4
     }
   ]
 }

@@ -1,29 +1,29 @@
 # Topical medicines
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseSmallStack
   id: OH14_Ointment
   name: stack-ointment
   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: ointment_3 }
   spawn: OH14_Ointment1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseSmallStack
   id: OH14_Gauze
   name: stack-gauze
   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: gauze }
   spawn: OH14_Gauze1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseSmallStack
   id: OH14_Brutepack
   name: stack-brutepack
   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: brutepack }
   spawn: OH14_Brutepack1
 
-# - type: stack
-#   parent: BaseSmallStack
-#   id: OH14_Bloodpack
-#   name: stack-bloodpack
-#   icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: bloodpack }
-#   spawn: OH14_Bloodpack1
+- type: stack
+  parent: OH14_BaseSmallStack
+  id: OH14_Bloodpack
+  name: stack-bloodpack
+  icon: { sprite: "_OuterHorizons/Objects/Specific/Medical/medical.rsi", state: bloodpack }
+  spawn: OH14_Bloodpack1

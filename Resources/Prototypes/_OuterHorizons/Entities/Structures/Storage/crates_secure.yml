@@ -1,0 +1,51 @@
+- type: entity
+  id: OH14_CrateSec
+  parent: OH14_CabinetBasic
+  name: грузовой ящик
+  description: Маленькое хранилище для особо не ценного груза, использовался для межпланетной перевозки. Не хотели бы сыграть в ящик?.
+  components:
+  - type: AccessReader
+    # access: [["Captain"]]
+  - type: Lock
+  - type: LockVisuals
+  - type: LockedStorage
+  - type: Appearance
+  - type: Construction
+    graph: OH14_Crate
+    node: OH14_Crate
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/crate_sec.rsi
+    layers:
+    - state: basic
+    - state: basic_open
+      map: [ top ]
+      visible: false
+    - state: basic_1
+      map: ["number"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+  - type: RandomSprite
+    available:
+      - number:
+          basic_1: ""
+          basic_2: ""
+          basic_3: ""
+          basic_4: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 200
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+  - type: Storage
+    maxItemSize: Huge
+    storageOpenSound: /Audio/_OuterHorizons/Storage/cabinet_open.ogg # TODO, оба под замену
+    storageCloseSound: /Audio/_OuterHorizons/Storage/cabinet_close.ogg
+    grid:
+    - 0,0,5,3

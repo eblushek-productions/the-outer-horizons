@@ -2,8 +2,7 @@
 - type: entity
   id: OH14_BaseThruster
   suffix: "Двигатель"
-  categories: [ ForkFiltered ]
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructure
   name: ракетный двигатель
   abstract: true
   components:
@@ -33,6 +32,7 @@
   - type: Rotatable
     # rotateWhileAnchored: true
   - type: Thruster
+    canToggle: false
     damage:
       types:
         Heat: 40
@@ -100,24 +100,27 @@
   name: ракетный двигатель
   abstract: true
   components:
+  - type: AtmosDevice
+    joinSystem: true
   - type: PointLight
     rotation: 180
     autoRot: true
-    radius: 15
-    energy: 15
+    radius: 8
+    energy: 8
     color: "#4677ff"
     offset: "0, 0.2"
     # castShadows: true
     enabled: false
     mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_alt.png
-  # - type: PressureThruster
-  #   inletName: inlet
+  - type: PressureThruster
+    inletName: inlet
   - type: NodeContainer
     nodes:
       inlet:
         !type:PipeNode
         nodeGroupID: Pipe
         pipeDirection: South
+        volume: 50
 
 # ------------------------ Разгонные двигла
 
@@ -129,12 +132,14 @@
   components:
   - type: Thruster
     thrust: 250
-  # - type: PressureThruster
-  #   inletName: inlet
-  #   pressureСonsumption: 40
+  - type: PressureThruster
+    inletName: inlet
+    pressureСonsumption: 25
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/b_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -170,7 +175,7 @@
   - type: PointLight
     color: "#eca664"
   - type: Thruster
-    thrust: 125
+    thrust: 150
   - type: PressureThruster
     inletName: inlet
     moleMaxOutletLimit: 40
@@ -179,6 +184,8 @@
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/r_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -211,7 +218,7 @@
   - type: PointLight
     color: "#eca664"
   - type: Thruster
-    thrust: 500
+    thrust: 450
   - type: PressureThruster
     inletName: inlet
     moleMaxOutletLimit: 100
@@ -220,6 +227,8 @@
   - type: Sprite
     sprite: _OuterHorizons/Structures/Shuttles/o_thruster.rsi
     layers:
+    - state: pipe
+      offset: "0, -0.1"
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
@@ -257,7 +266,6 @@
   - type: Thruster
     thrust: 60
   - type: PressureThruster
-    inletName: inlet
     moleMaxOutletLimit: 100
     moleMinOutletLimit: 30
     accelerationEfficiency: 1.0
@@ -290,7 +298,6 @@
   - type: Thruster
     thrust: 30
   - type: PressureThruster
-    inletName: inlet
     moleMaxOutletLimit: 120
     moleMinOutletLimit: 60
     accelerationEfficiency: 1.0
@@ -318,10 +325,19 @@
 - type: entity
   id: OH14_Gyroscope
   categories: [ ForkFiltered ]
-  parent: [ OH14_BaseThruster, ConstructibleMachine ]
+  parent: OH14_BaseThruster
   name: гиродин
   description: 2 вращающихся механизма, иронично вращающих вас.
   components:
+  - type: AmbientSound
+    enabled: false
+    range: 5
+    volume: -8
+    sound:
+      path: /Audio/_OuterHorizons/Machines/rokit.ogg
+  - type: Construction
+    graph: OH14_Gyroscope
+    node: OH14_Gyroscope
   - type: Sprite
     # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
     sprite: _OuterHorizons/Structures/Shuttles/gyroscope.rsi

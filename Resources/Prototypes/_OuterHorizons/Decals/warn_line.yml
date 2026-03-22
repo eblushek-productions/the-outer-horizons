@@ -1,95 +1,246 @@
 - type: decal
-  id: OH14_WarnLineCornerNe
-  showMenu: true
+  id: OH14_FullWarnFull
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_corner_ne
+    state: warn_full
 
 - type: decal
-  id: OH14_WarnLineCornerSe
-  showMenu: true
+  id: OH14_FullWarnFullGreyscale
   tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_corner_se
+    state: warn_full_greyscale
+
+# TODO: remove from here down to...
 
 - type: decal
-  id: OH14_WarnLineCornerNw
-  showMenu: true
+  id: OH14_FullWarningLine
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_corner_nw
+    state: warningline
 
 - type: decal
-  id: OH14_WarnLineCornerSw
-  showMenu: true
+  id: OH14_FullWarningLineGreyscale
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_corner_sw
+    state: warningline_greyscale
 
 - type: decal
-  id: OH14_WarnLineInnerNe
-  showMenu: true
+  id: OH14_FullWarnCorner
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_inner_ne
+    state: warn_corner
 
 - type: decal
-  id: OH14_WarnLineInnerSe
-  showMenu: true
+  id: OH14_FullWarnCornerGreyscaleNE
   tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_inner_se
+    state: warn_corner_greyscale_ne
 
 - type: decal
-  id: OH14_WarnLineInnerNw
-  showMenu: true
+  id: OH14_FullWarnCornerGreyscaleNW
   tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_inner_nw
+    state: warn_corner_greyscale_nw
 
 - type: decal
-  id: OH14_WarnLineInnerSw
-  showMenu: true
+  id: OH14_FullWarnCornerGreyscaleSE
   tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_inner_sw
+    state: warn_corner_greyscale_se
 
 - type: decal
-  id: OH14_WarnLineLineN
-  showMenu: true
+  id: OH14_FullWarnCornerGreyscaleSW
   tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_line_n
+    state: warn_corner_greyscale_sw
 
 - type: decal
-  id: OH14_WarnLineLineE
-  showMenu: true
+  id: OH14_FullWarnCornerNE
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_line_e
+    state: warn_corner_ne
 
 - type: decal
-  id: OH14_WarnLineLineS
-  showMenu: true
+  id: OH14_FullWarnCornerNW
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_line_s
+    state: warn_corner_nw
 
 - type: decal
-  id: OH14_WarnLineLineW
-  showMenu: true
+  id: OH14_FullWarnCornerSE
   tags: ["station", "markings"]
+  showMenu: true
   sprite:
     sprite: _OuterHorizons/Decals/warn_line.rsi
-    state: thin_line_w
+    state: warn_corner_se
+
+- type: decal
+  id: OH14_FullWarnCornerSW
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_sw
+
+- type: decal
+  id: OH14_FullWarnCornerSmallGreyscaleNE
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_greyscale_ne
+
+- type: decal
+  id: OH14_FullWarnCornerSmallGreyscaleNW
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_greyscale_nw
+
+- type: decal
+  id: OH14_FullWarnCornerSmallGreyscaleSE
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_greyscale_se
+
+- type: decal
+  id: OH14_FullWarnCornerSmallGreyscaleSW
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_greyscale_sw
+
+- type: decal
+  id: OH14_FullWarnCornerSmallNE
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_ne
+
+- type: decal
+  id: OH14_FullWarnCornerSmallNW
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_nw
+
+- type: decal
+  id: OH14_FullWarnCornerSmallSE
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_se
+
+- type: decal
+  id: OH14_FullWarnCornerSmallSW
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_corner_small_sw
+
+- type: decal
+  id: OH14_FullWarnLineE
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_e
+
+- type: decal
+  id: OH14_FullWarnLineW
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_n
+
+- type: decal
+  id: OH14_FullWarnLineN
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_s
+
+- type: decal
+  id: OH14_FullWarnLineS
+  tags: ["station", "markings"]
+  showMenu: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_w
+
+- type: decal
+  id: OH14_FullWarnLineGreyscaleE
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_greyscale_e
+
+- type: decal
+  id: OH14_FullWarnLineGreyscaleN
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_greyscale_n
+
+- type: decal
+  id: OH14_FullWarnLineGreyscaleS
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_greyscale_s
+
+- type: decal
+  id: OH14_FullWarnLineGreyscaleW
+  tags: ["station", "markings"]
+  showMenu: true
+  defaultCustomColor: true
+  sprite:
+    sprite: _OuterHorizons/Decals/warn_line.rsi
+    state: warn_line_greyscale_w

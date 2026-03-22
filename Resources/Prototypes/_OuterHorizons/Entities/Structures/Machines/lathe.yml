@@ -6,6 +6,7 @@
   abstract: true
   name: lathe
   components:
+  - type: PowerSwitch
   - type: Appearance
   # - type: WiresVisuals
   - type: Fixtures

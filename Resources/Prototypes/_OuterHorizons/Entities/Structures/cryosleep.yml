@@ -1,7 +1,6 @@
 - type: entity
-  parent: BaseStructure
+  parent: OH14_BaseStructure
   id: OH14_CryogenicSleepUnit
-  categories: [ ForkFiltered ]
   name: капсула криосна
   description: Капсула криосна, способная защитить вас от самых разных внешних невзгод, пока вы заморожены. Хотели бы сыграть в ящик?
   components:

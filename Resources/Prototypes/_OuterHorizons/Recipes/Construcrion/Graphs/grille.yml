@@ -6,9 +6,9 @@
       edges:
         - to: grille
           completed:
-            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-              message: "Construction"
-              impact: High
+            # - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            #   message: "Construction"
+            #   impact: High
             - !type:SnapToGrid
               southRotation: true
           steps:
@@ -21,15 +21,15 @@
       edges:
         - to: start
           completed:
-            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-              message: "A grille was cut"
+            # - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            #   message: "A grille was cut"
             - !type:SpawnPrototype
               prototype: OH14_SheetMaterials1
               amount: 1
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 0.25
+              doAfter: 1
 
     - node: grilleBroken
       entity: OH14_GrilleBroken
@@ -42,8 +42,9 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
+              doAfter: 1
         - to: grille
           steps:
             - material: OH14_Materials
               amount: 1
-              doAfter: 0.5
+              doAfter: 1

@@ -1,0 +1,16 @@
+# Base post-processing
+- type: shader
+  id: BasePostProcess
+  kind: source
+  path: "/Textures/_CP14/Shaders/base_postprocess.swsl"
+  params:
+    CircleRadius: 300.0
+    CircleMinDist: 0.0
+    CirclePow: 1.0
+    CircleMax: 3.0
+    CircleMult: 0.25
+    FalloffClampMin: 0.9
+    FalloffClampMax: 5.0
+    FalloffStrength: 0.25
+    FalloffPow: 3.0
+    HDR: 1.5

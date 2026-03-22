@@ -1,0 +1,43 @@
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  priority: 0
+  id: OH14_Welcome
+  name: Outer Horizons
+  text: "/ServerInfo/_OuterHorizons/Welcome.xml"
+  children:
+  - OH14_GuideShuttles
+  - OH14_GuideLore
+  - OH14_GuideResources
+
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_GuideShuttles
+  name: Шаттлостроение
+  text: "/ServerInfo/_OuterHorizons/Guides/Shuttles.xml"
+
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_GuideResources
+  name: Ресурсы
+  text: "/ServerInfo/_OuterHorizons/Guides/Resources.xml"
+
+# Лорное
+
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_GuideLore
+  name: Лор
+  text: "/ServerInfo/_OuterHorizons/Guides/Lore.xml"
+  children:
+  - OH14_GuideCharacter
+
+- type: guideEntry
+  hidden: false
+  locFilter: "ru-RU"
+  id: OH14_GuideCharacter
+  name: Кто ты такой
+  text: "/ServerInfo/_OuterHorizons/Guides/Character.xml"

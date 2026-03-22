@@ -92,6 +92,8 @@
     supplyRampRate: 500
   - type: WallMount
   - type: WiresPanel
+    screwdriverOpenSound: /Audio/_OuterHorizons/Machines/panel_open.ogg
+    screwdriverCloseSound: /Audio/_OuterHorizons/Machines/panel_close.ogg
   - type: Wires
     alwaysRandomize: true
     boardName: wires-board-name-apc

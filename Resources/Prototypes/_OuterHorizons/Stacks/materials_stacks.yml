@@ -1,12 +1,12 @@
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_Girders
   name: stack-girders
   icon: { sprite: "_OuterHorizons/Objects/Materials/girder.rsi", state: girder_3 }
   spawn: OH14_SheetGirder1
 
 - type: stack
-  parent: BaseSmallStack
+  parent: OH14_BaseMediumStack
   id: OH14_Piping
   name: stack-piping
   icon: { sprite: "_OuterHorizons/Objects/Materials/piping.rsi", state: girder_3 }

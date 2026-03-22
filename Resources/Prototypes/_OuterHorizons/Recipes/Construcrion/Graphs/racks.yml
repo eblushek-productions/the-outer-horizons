@@ -1,0 +1,25 @@
+- type: constructionGraph
+  id: OH14_Racks
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_Racks
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+    - node: OH14_Racks
+      entity: OH14_RackBasic
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+          steps:
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 1

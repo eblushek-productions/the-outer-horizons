@@ -1,0 +1,117 @@
+- type: entity
+  id: OH14_JetpackEffect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 1
+  - type: Sprite
+    drawdepth: SmallMobs
+    noRot: true
+    layers:
+    # - shader: unshaded
+    - map: ["enum.EffectLayers.Unshaded"]
+      sprite: Effects/atmospherics.rsi
+      state: water_vapor_old
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+  - type: AnimationPlayer
+
+- type: entity
+  parent: [ OH14_BaseItem, OH14_GasTankBase ]
+  abstract: true
+  id: OH14_BasicJetpack
+  name: УПМК "Джетта"
+  description: Один из простейших прототипов УПМК, использовался на малых небесных телах, для улучшения мобильности экипажей. Крайне спецефичен для использования в кольцах.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+    layers:
+    - state: icon
+      map: ["enum.JetpackVisuals.Layer"]
+  - type: Item
+    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+    size: Huge
+    shape:
+    - 0,0,3,2
+  - type: UserInterface
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+  - type: UseDelay
+    delays:
+      gasTank:
+        length: 1.0
+  - type: Clothing
+    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+    quickEquip: false
+    slots:
+    - Back
+    equipDelay: 1
+    unequipDelay: 0.5
+    equipSound: /Audio/_OuterHorizons/Clothing/suit_eq.ogg
+    unequipSound: /Audio/_OuterHorizons/Clothing/suit_un.ogg
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      volume: 5
+      temperature: 293.15
+  - type: Jetpack
+    # acceleration: 3
+    # friction: 0.05
+    # moleUsage: 0.00185
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.JetpackVisuals.Enabled:
+        enum.JetpackVisuals.Layer:
+          True: {state: icon-on}
+          False: {state: icon}
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseAction
+  id: OH14_ActionToggleJetpack
+  name: Переключить УПМК
+  description: Убедись что под ногами нет гравитации и лети.
+  components:
+  - type: Action
+    icon:
+      sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+      state: icon
+    iconOn:
+      sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+      state: icon-on
+    useDelay: 1.0
+  - type: InstantAction
+    event: !type:ToggleJetpackEvent
+
+#Empty main
+- type: entity
+  id: OH14_JetpackWhite
+  parent: OH14_BasicJetpack
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Objects/Tanks/jetpack.rsi
+    slots:
+      - Back
+
+# Filled main
+- type: entity
+  id: OH14_JetpackWhiteFilled
+  parent: OH14_JetpackWhite
+  suffix: Полный
+  components:
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 13 minutes of thrust
+      volume: 5
+      temperature: 293.15
+      moles:
+        Nitrogen: 1.025689525 # nitrogen

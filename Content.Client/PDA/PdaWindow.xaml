@@ -18,8 +18,9 @@
                  HorizontalExpand="True">
             <PanelContainer Name="ContentBorder" StyleClasses="PdaBackground"/>
             <Control Margin="3 3">
-                <PanelContainer Name="ContentBackground" StyleClasses="PdaContentBackground"/>
+                <PanelContainer Name="ContentBackground" StyleClasses="PdaContentBackground" Modulate="#5197aa">
                 <BoxContainer Access="Public" Name="ContentsContainer" Orientation="Vertical" StyleClasses="PdaContent"/>
+                </PanelContainer>
 
             </Control>
         </Control>

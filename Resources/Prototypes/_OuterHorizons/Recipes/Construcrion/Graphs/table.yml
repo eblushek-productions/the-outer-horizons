@@ -1,0 +1,43 @@
+- type: constructionGraph
+  id: OH14_Table
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DeleteEntity {}
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 1
+    - node: TableFrame
+      entity: OH14_TableFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+                prototype: OH14_SheetGirder1
+                amount: 1
+          steps:
+            - tool: Anchoring
+              doAfter: 1
+        - to: OH14_Table
+          steps:
+            - material: OH14_Materials
+              amount: 1
+              doAfter: 1
+    - node: OH14_Table
+      entity: OH14_TableMetal
+      edges:
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 1
+          steps:
+            - tool: Anchoring
+              doAfter: 1

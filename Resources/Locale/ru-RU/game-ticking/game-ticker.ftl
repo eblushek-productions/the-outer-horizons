@@ -9,21 +9,15 @@ game-ticker-pause-start = Начало раунда было приостано�
 game-ticker-pause-start-resumed = Отсчёт начала раунда возобновлён.
 game-ticker-player-join-game-message = Добро пожаловать на Космическую Станцию 14! Если вы играете впервые, обязательно нажмите ESC на клавиатуре и прочитайте правила игры, а также не бойтесь просить помощи в "Админ помощь".
 game-ticker-get-info-text =
-    Привет и добро пожаловать в [color=white]Space Station 14![/color]
-    Текущий раунд: [color=white]#{ $roundId }[/color]
-    Текущее количество игроков: [color=white]{ $playerCount }[/color]
-    Текущая карта: [color=white]{ $mapName }[/color]
-    Текущий режим игры: [color=white]{ $gmTitle }[/color]
+    Номер раунда: [color=white]#{ $roundId }[/color]. Кол-во игроков: [color=white]{ $playerCount }[/color]
+    Карта: [color=white]{ $mapName }[/color]. Режим игры: [color=white]{ $gmTitle }[/color]
     >[color=yellow]{ $desc }[/color]
 game-ticker-get-info-preround-text =
-    Привет и добро пожаловать в [color=white]Space Station 14![/color]
-    Текущий раунд: [color=white]#{ $roundId }[/color]
-    Текущее количество игроков: [color=white]{ $playerCount }[/color] ([color=white]{ $readyCount }[/color] { $readyCount ->
+    Номер раунда: [color=white]#{ $roundId }[/color]. Кол-во игроков: [color=white]{ $playerCount }[/color], ([color=white]{ $readyCount }[/color] { $readyCount ->
         [one] готов
        *[other] готовы
     })
-    Текущая карта: [color=white]{ $mapName }[/color]
-    Текущий режим игры: [color=white]{ $gmTitle }[/color]
+    Карта: [color=white]{ $mapName }[/color]. Режим игры: [color=white]{ $gmTitle }[/color]
     >[color=yellow]{ $desc }[/color]
 game-ticker-no-map-selected = [color=red]Карта ещё не выбрана![/color]
 game-ticker-player-no-jobs-available-when-joining = При попытке присоединиться к игре ни одной роли не было доступно.

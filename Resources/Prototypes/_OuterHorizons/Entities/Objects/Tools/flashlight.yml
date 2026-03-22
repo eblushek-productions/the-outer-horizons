@@ -1,8 +1,9 @@
 - type: entity
-  name: светильник
+  name: фонарик
   parent: OH14_BaseItem
   id: OH14_FlashlightBasic
   description: Освещает путь к свободе.
+  suffix: Empty
   components:
   - type: Tag
     tags:
@@ -25,7 +26,7 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        startValue: 0.1
+        startValue: 1.8
         endValue: 2.0
         isLooped: true
   - type: ToggleableVisuals
@@ -47,7 +48,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMedium
+        # startingItem: OH14_PowerCellMedium
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/flashlight.rsi
     layers:
@@ -68,3 +69,14 @@
   - type: Appearance
   - type: StaticPrice
     price: 40
+
+- type: entity
+  parent: OH14_FlashlightBasic
+  id: OH14_FlashlightFilled
+  suffix: Filled
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: OH14_PowerCellMedium

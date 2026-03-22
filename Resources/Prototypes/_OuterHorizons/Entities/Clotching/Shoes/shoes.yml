@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent:  [ OH14_BaseItem, ClothingShoesBaseButcherable ]
   id: OH14_ClothingShoesBasic
   name: туфли
   description: Революционное изобретение в области ношения одежды, защищает паши ступни от холодного металлического пола.

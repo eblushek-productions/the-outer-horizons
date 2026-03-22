@@ -1,0 +1,32 @@
+- type: entity
+  parent: [ OH14_BaseItem, ClothingHeadBase ]
+  id: OH14_BasicWeldingMask
+  name: welding mask
+  abstract: true
+  components:
+  - type: Item
+    storedRotation: 0
+  - type: IngestionBlocker
+  - type: FlashImmunity
+  - type: IdentityBlocker
+  - type: EyeProtection
+  - type: HideLayerClothing
+    slots:
+    - Snout
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying3.png"
+
+- type: entity
+  parent: OH14_BasicWeldingMask
+  id: OH14_ClothingHeadWeldingMask
+  name: сварочная маска
+  description: Сварочная маска была придумана в 960м году, Тарра до 960го - ммм, искры в глазах))).
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Head/welding.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Head/welding.rsi
+  - type: Tag
+    tags:
+    - WeldingMask
+    - OH14_Tools

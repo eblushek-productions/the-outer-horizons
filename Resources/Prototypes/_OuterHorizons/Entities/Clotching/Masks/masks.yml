@@ -1,0 +1,14 @@
+- type: entity
+  parent: [ OH14_BaseItem, ClothingMaskPullableBase ]
+  id: OH14_ClothingMaskGas
+  name: маска
+  description: Сохранит твою дыхалку перед ваккумом 24/7, главное, не забудь подключить баллон.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/Mask/breath.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/Mask/breath.rsi
+  - type: BreathMask
+  - type: IngestionBlocker

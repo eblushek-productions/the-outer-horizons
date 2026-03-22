@@ -151,7 +151,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
         var posMatrix = Matrix3Helpers.CreateTransform(_coordinates.Value.Position, _rotation.Value);
         var ourEntRot = RotateWithEntity ? _transform.GetWorldRotation(xform) : _rotation.Value;
-        var ourEntMatrix = Matrix3Helpers.CreateTransform(_transform.GetWorldPosition(xform), ourEntRot);
+        var outWorldPos = _transform.GetWorldPosition(xform);
+        var ourEntMatrix = Matrix3Helpers.CreateTransform(outWorldPos, ourEntRot);
         var shuttleToWorld = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
         Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
@@ -220,12 +221,12 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
                 var gridCentre = Vector2.Transform(gridBody.LocalCenter, curGridToView);
 
-                var gridDistance = (gridBody.LocalCenter - xform.LocalPosition).Length();
-                var labelText = Loc.GetString("shuttle-console-iff-label", ("name", labelName),
-                    ("distance", $"{gridDistance:0.0}"));
-
                 var mapCoords = _transform.GetWorldPosition(gUid);
                 var coordsText = $"({mapCoords.X:0.0}, {mapCoords.Y:0.0})";
+
+                var gridDistance = (outWorldPos - mapCoords).Length();
+                var labelText = Loc.GetString("shuttle-console-iff-label", ("name", labelName),
+                    ("distance", $"{gridDistance:0.0}"));
 
                 // yes 1.0 scale is intended here.
                 var labelDimensions = handle.GetDimensions(Font, labelText, 1f);

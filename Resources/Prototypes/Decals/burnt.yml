@@ -1,5 +1,6 @@
 - type: decal
   id: burnt1
+  showMenu: true # OH14-Changes
   tags: ["burnt"]
   defaultCleanable: true
   sprite:
@@ -8,6 +9,7 @@
 
 - type: decal
   id: burnt2
+  showMenu: true # OH14-Changes
   tags: ["burnt"]
   defaultCleanable: true
   sprite:
@@ -16,6 +18,7 @@
 
 - type: decal
   id: burnt3
+  showMenu: true # OH14-Changes
   tags: ["burnt"]
   defaultCleanable: true
   sprite:
@@ -24,6 +27,7 @@
 
 - type: decal
   id: burnt4
+  showMenu: true # OH14-Changes
   tags: ["burnt"]
   defaultCleanable: true
   sprite:

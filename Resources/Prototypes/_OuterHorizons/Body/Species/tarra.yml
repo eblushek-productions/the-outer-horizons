@@ -117,7 +117,6 @@
     # Tail
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
-    - map: ["tailbag"]
     # Stuff that goes over the body but below equipment
     - map: ["enum.HumanoidVisualLayers.Overlay"]
     # More equipment
@@ -130,6 +129,7 @@
     - map: [ "outerClothing" ]
     - map: [ "back" ]
     - map: [ "neck" ]
+    - map: ["tailbag"]
     - map: [ "suitstorage" ]
     # Stuff that goes in front of equipment
     - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
@@ -152,6 +152,16 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_human"
       visible: false
+  - type: DamageVisuals
+    thresholds: [ 15, 30, 45, 60, 75 ]
+    targetLayers:
+    - "enum.HumanoidVisualLayers.Overlay"
+    damageOverlayGroups:
+      Brute:
+        sprite: _OuterHorizons/Mobs/Effects/brute_damage.rsi
+        # color: "#FF0000"
+      Burn:
+        sprite: _OuterHorizons/Mobs/Effects/burn_damage.rsi
 
 - type: entity
   parent:

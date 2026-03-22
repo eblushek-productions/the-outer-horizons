@@ -144,8 +144,13 @@ public abstract class SharedJetpackSystem : EntitySystem
     {
         // No and no again! Do not attempt to activate the jetpack on a grid with gravity disabled. You will not be the first or the last to try this.
         // https://discord.com/channels/310555209753690112/310555209753690112/1270067921682694234
-        return gridUid == null ||
-               (!HasComp<GravityComponent>(gridUid));
+
+        // OH14-Changes start, fuck off
+        // return gridUid == null ||
+        //        (!HasComp<GravityComponent>(gridUid));
+
+        return gridUid == null || !TryComp<GravityComponent>(gridUid, out var gravity) || !gravity.Enabled;
+        // OH14-Changes-end
     }
 
     private void OnJetpackGetAction(EntityUid uid, JetpackComponent component, GetItemActionsEvent args)

@@ -1,0 +1,47 @@
+- type: entity
+  parent: [ OH14_ItemSFXFabric, ClothingOuterStorageBase ]
+  id: OH14_ClothingOuterCoatUco
+  categories: [ ForkFiltered ]
+  name: бордовая жилетка
+  description: Толстая жилетка из синтетической ткани. Рукава отсутствуют, перчатки не помогут, вы обречены.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/OuterClothing/Coats/uco.rsi
+  - type: Clothing
+    equipDelay: 1
+    unequipDelay: 0.5
+    sprite: _OuterHorizons/Clothing/OuterClothing/Coats/uco.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+  - type: Item
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Heat: 0.90
+    priceMultiplier: 0
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity
+  parent: OH14_ClothingOuterCoatUco
+  id: OH14_ClothingOuterCoatRre
+  categories: [ ForkFiltered ]
+  name: темная куртка
+  description: Легкая куртка для ветренной погоды. Без понятия, каким образом вы здесь найдете ветер, но все именно так.
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Clothing/OuterClothing/Coats/rre.rsi
+  - type: Clothing
+    sprite: _OuterHorizons/Clothing/OuterClothing/Coats/rre.rsi

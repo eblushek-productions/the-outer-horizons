@@ -15,17 +15,19 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Numerics;
+using Robust.Client.UserInterface.CustomControls;
 
 namespace Content.Client.Atmos.Consoles;
 
 [GenerateTypedNameReferences]
-public sealed partial class AtmosAlertsComputerWindow : FancyWindow
+public sealed partial class AtmosAlertsComputerWindow : BaseWindow
 {
     private readonly IEntityManager _entManager;
     private readonly SpriteSystem _spriteSystem;
     private readonly SharedNavMapSystem _navMapSystem;
 
-    private EntityUid? _owner;
+    private readonly EntityUid? _owner;
     private NetEntity? _trackedEntity;
 
     private AtmosAlertsComputerEntry[]? _airAlarms = null;
@@ -33,7 +35,7 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
     private IEnumerable<AtmosAlertsComputerEntry>? _allAlarms = null;
 
     private IEnumerable<AtmosAlertsComputerEntry>? _activeAlarms = null;
-    private Dictionary<NetEntity, float> _deviceSilencingProgress = new();
+    private readonly Dictionary<NetEntity, float> _deviceSilencingProgress = new();
 
     public event Action<NetEntity?>? SendFocusChangeMessageAction;
     public event Action<NetEntity, bool>? SendDeviceSilencedMessageAction;
@@ -44,20 +46,24 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
     private const float SilencingDuration = 2.5f;
 
     // Colors
-    private Color _wallColor = new Color(64, 64, 64);
-    private Color _tileColor = new Color(28, 28, 28);
-    private Color _monitorBlipColor = Color.Cyan;
-    private Color _untrackedEntColor = Color.DimGray;
-    private Color _regionBaseColor = new Color(154, 154, 154);
-    private Color _inactiveColor = StyleNano.DisabledFore;
-    private Color _statusTextColor = StyleNano.GoodGreenFore;
-    private Color _goodColor = Color.LimeGreen;
-    private Color _warningColor = new Color(255, 182, 72);
-    private Color _dangerColor = new Color(255, 67, 67);
+    private readonly Color _wallColor = new (64, 64, 64);
+    private readonly Color _tileColor = new (28, 28, 28);
+    private readonly Color _monitorBlipColor = Color.Cyan;
+    private readonly Color _untrackedEntColor = Color.DimGray;
+    private readonly Color _regionBaseColor = new (154, 154, 154);
+    private readonly Color _inactiveColor = StyleNano.DisabledFore;
+    private readonly Color _statusTextColor = StyleNano.GoodGreenFore;
+    private readonly Color _goodColor = Color.LimeGreen;
+    private readonly Color _warningColor = new (255, 182, 72);
+    private readonly Color _dangerColor = new (255, 67, 67);
 
-    public AtmosAlertsComputerWindow(AtmosAlertsComputerBoundUserInterface userInterface, EntityUid? owner)
+    // Call default constructor for BaseWindow / Вызываем стандартный конструктор для работы с BaseWindow (Инициализация через Xaml)
+    public AtmosAlertsComputerWindow() : this(null, null) { }
+
+    public AtmosAlertsComputerWindow(AtmosAlertsComputerBoundUserInterface? userInterface, EntityUid? owner)
     {
         RobustXamlLoader.Load(this);
+        CloseButton.OnPressed += _ => Close();
         _entManager = IoCManager.Resolve<IEntityManager>();
         _spriteSystem = _entManager.System<SpriteSystem>();
         _navMapSystem = _entManager.System<SharedNavMapSystem>();
@@ -77,7 +83,7 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
         {
             NavMap.MapUid = xform.GridUid;
 
-            // Assign station name      
+            // Assign station name
             if (_entManager.TryGetComponent<MetaDataComponent>(xform.GridUid, out var stationMetaData))
                 stationName = stationMetaData.EntityName;
 
@@ -104,6 +110,13 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
         MasterTabContainer.SetTabTitle(1, Loc.GetString("atmos-alerts-window-tab-air-alarms"));
         MasterTabContainer.SetTabTitle(2, Loc.GetString("atmos-alerts-window-tab-fire-alarms"));
 
+        // Set color
+        var unlikeColor = Color.FromHex("#4bb2b5");
+        ShowInactiveAlarms.Label.FontColorOverride = unlikeColor;
+        ShowNormalAlarms.Label.FontColorOverride = unlikeColor;
+        ShowDangerAlarms.Label.FontColorOverride = unlikeColor;
+        ShowWarningAlarms.Label.FontColorOverride = unlikeColor;
+
         // Set UI toggles
         ShowInactiveAlarms.OnToggled += _ => OnShowAlarmsToggled(ShowInactiveAlarms, AtmosAlarmType.Invalid);
         ShowNormalAlarms.OnToggled += _ => OnShowAlarmsToggled(ShowNormalAlarms, AtmosAlarmType.Normal);
@@ -111,10 +124,12 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
         ShowDangerAlarms.OnToggled += _ => OnShowAlarmsToggled(ShowDangerAlarms, AtmosAlarmType.Danger);
 
         // Set atmos monitoring message action
+        if (userInterface == null)
+            return;
+
         SendFocusChangeMessageAction += userInterface.SendFocusChangeMessage;
         SendDeviceSilencedMessageAction += userInterface.SendDeviceSilencedMessage;
     }
-
     #region Toggle handling
 
     private void OnShowAlarmsToggled(CheckBox toggle, AtmosAlarmType toggledAlarmState)
@@ -583,5 +598,10 @@ public sealed partial class AtmosAlertsComputerWindow : FancyWindow
         }
 
         return output;
+    }
+
+    protected override DragMode GetDragModeFor(Vector2 relativeMousePos)
+    {
+        return DragMode.Move;
     }
 }

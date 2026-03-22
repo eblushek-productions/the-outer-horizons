@@ -1,0 +1,80 @@
+- type: entity
+  id: OH14_BaseStructure
+  categories: [ ForkFiltered ]
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: GravityAffected
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 800
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Pullable
+  - type: Tag
+    tags:
+      - Structure
+
+- type: entity
+  id: OH14_BaseStructureDynamic
+  parent: OH14_BaseStructure
+  abstract: true
+  components:
+  - type: MovedByPressure # УБрать если будут рофлы
+  - type: DamageOnHighSpeedImpact # УБрать если будут рофлы
+    damage:
+      types:
+        Blunt: 25
+    soundHit:
+      collection: MetalThud
+  # - type: TileFrictionModifier # УБрать если будут рофлы
+  #   modifier: 0.5
+  - type: Transform
+    anchored: false
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Anchorable
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSkates
+      params:
+        variation: 0.08
+
+- type: entity
+  id: OH14_StructureWheeled
+  categories: [ ForkFiltered ]
+  abstract: true
+  components:
+    - type: TileFrictionModifier
+      modifier: 0.4
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepSkates
+        params:
+          variation: 0.08

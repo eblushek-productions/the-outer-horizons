@@ -1,14 +1,18 @@
 - type: entity
   id: OH14_Dresser
-  categories: [ ForkFiltered ]
-  parent: BaseStructure
+  parent: OH14_CabinetBasic
   name: комод
   description: Маленький серый комод для нижнего белья и ядерных стержней.
   components:
   - type: Transform
   - type: Sprite
+    noRot: true
     sprite: _OuterHorizons/Structures/Decoration/furniture.rsi
-    state: dresser_dark
+    layers:
+    - state: dresser_dark
+    - state: dresser_dark_open
+      map: [ top ]
+      visible: false
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic

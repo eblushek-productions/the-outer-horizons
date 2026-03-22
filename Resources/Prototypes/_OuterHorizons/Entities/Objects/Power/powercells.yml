@@ -1,0 +1,138 @@
+- type: entity
+  id: OH14_BasicPowerCell
+  abstract: true
+  parent: OH14_BaseItem
+  components:
+  - type: Item
+  - type: Battery
+    pricePerJoule: 0.15
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
+  - type: Sprite
+    sprite: _OuterHorizons/Objects/Power/power_cells.rsi
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Extractable
+    juiceSolution:
+      reagents:
+        - ReagentId: Zinc
+          Quantity: 5
+  - type: Riggable
+  - type: Appearance
+  - type: BatteryVisuals
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryVisuals.State:
+        enum.PowerCellVisualLayers.Unshaded:
+          Full: {visible: true, state: o2}
+          Neither: {visible: true, state: o1}
+          Empty: {visible: false}
+
+# Основные
+
+- type: entity
+  id: OH14_PowerCellMedium # Обычная
+  parent: OH14_BasicPowerCell
+  name: батарейка
+  description: Обычная батарейка МКП3 класса. Не поджигать, не мочить и не вскрывать, на вкус как смерть в отравлении тяжелыми металлами. Я вас предупредил
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+      - PowerCell
+      - OH14_Tools
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: small
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: small_o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 720
+    startingCharge: 720
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryVisuals.State:
+        enum.PowerCellVisualLayers.Unshaded:
+          Full: {visible: true, state: small_o2}
+          Neither: {visible: true, state: small_o1}
+          Empty: {visible: false}
+
+- type: entity
+  id: OH14_PowerCellMediumEmpty
+  suffix: Empty
+  parent: OH14_PowerCellMedium
+  components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: small
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: small_o2
+        shader: unshaded
+        visible: false
+  - type: Battery
+    maxCharge: 720
+    startingCharge: 0
+
+- type: entity
+  id: OH14_PowerCellBig # Аккум
+  parent: [ OH14_ItemSFXAlt, OH14_BasicPowerCell ]
+  name: аккамулятор
+  description: Огромная батарейка, большая батарейка, хорошая батарейка.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+      - OH14_PowerCellBig
+  - type: Item
+    heldPrefix: medium
+    size: Normal
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: medium
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: medium_o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 3600
+    startingCharge: 3600
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryVisuals.State:
+        enum.PowerCellVisualLayers.Unshaded:
+          Full: {visible: true, state: medium_o2}
+          Neither: {visible: true, state: medium_o1}
+          Empty: {visible: false}
+
+- type: entity
+  id: OH14_PowerCellBigEmpty
+  suffix: Empty
+  parent: OH14_PowerCellBig
+  components:
+  - type: Tag
+    tags:
+      - OH14_PowerCellBig
+      - OH14_Tools
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: medium
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: medium_o2
+        shader: unshaded
+        visible: false
+  - type: Battery
+    maxCharge: 3600
+    startingCharge: 0

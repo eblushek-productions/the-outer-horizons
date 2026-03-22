@@ -6,6 +6,9 @@
   description: Футуристичная бочка газа, с навороченными ручками, дисплеем и клапанами. Крайне не практичная хрень, но у тебя не особо есть выбор.
   suffix: Пустая
   components:
+    - type: Construction
+      graph: OH14_GasCanister
+      node: OH14_GasCanister
     - type: Sprite
       sprite: _OuterHorizons/Structures/Storage/canister.rsi
       layers:
@@ -22,6 +25,9 @@
           layer:
           - MachineLayer
     - type: GasCanister
+      gasTankSlot:
+        insertSound: /Audio/_OuterHorizons/Storage/canister_in.ogg
+        ejectSound: /Audio/_OuterHorizons/Storage/canister_out.ogg
       gasMixture:
         volume: 1500
         moles: # List of gasses for easy reference
@@ -219,7 +225,7 @@
 # Broken
 
 - type: entity
-  parent: BaseStructureDynamic
+  parent: OH14_BaseStructureDynamic
   id: OH14_GasCanisterBrokenBase
   name: лопнувшая газовая канистра
   description: Лопнувшая под воздействием давления или деформации, футуристичная и не практичная, в прошлом, бочка для газа.
@@ -275,7 +281,6 @@
 - type: entity
   parent: OH14_GasCanisterBrokenBase
   id: OH14_StorageCanisterBroken
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: yellow-1
@@ -283,7 +288,6 @@
 - type: entity
   parent: OH14_GasCanisterBrokenBase
   id: OH14_AirCanisterBroken
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: grey-1
@@ -291,7 +295,6 @@
 - type: entity
   parent: OH14_GasCanisterBrokenBase
   id: OH14_OxygenCanisterBroken
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: blue-1
@@ -299,7 +302,6 @@
 - type: entity
   parent: OH14_GasCanisterBrokenBase
   id: OH14_NitrogenCanisterBroken
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: red-1
@@ -307,7 +309,51 @@
 - type: entity
   parent: OH14_GasCanisterBrokenBase
   id: OH14_PlasmaCanisterBroken
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: orange-1
+
+- type: entity
+  id: OH14_GasCanisterFrame
+  parent: OH14_FrameBasic
+  name: каркас канистры
+  description: Каркас вашего газового хранилища, ветхий и не надежный.
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Storage/canister.rsi
+    state: frame
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_SheetMaterials1:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+  - type: Construction
+    graph: OH14_GasCanister
+    node: frame

@@ -78,3 +78,144 @@
               doAfter: 2
             - tool: Prying
               doAfter: 3
+
+- type: constructionGraph
+  id: OH14_CabinetWallmount
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: OH14_CabinetWallmount
+          steps:
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 3
+    - node: OH14_CabinetWallmount
+      entity: OH14_WallCabinetBasic
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 2
+
+# Цистерна
+
+- type: constructionGraph
+  id: OH14_GasStorage
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: frame
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 4
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+    - node: frame
+      entity: OH14_GasStorageFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+                prototype: OH14_SheetGirder1
+                amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_GasStorage
+          steps:
+            - material: OH14_Materials
+              amount: 5
+              doAfter: 1
+    - node: OH14_GasStorage
+      entity: OH14_GasStorageYellow
+      edges:
+        - to: frame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 5
+            - !type:DumpCanister
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Prying
+              doAfter: 2
+
+# Канистра
+
+- type: constructionGraph
+  id: OH14_GasCanister
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: frame
+          steps:
+            - material: OH14_Girders
+              amount: 1
+              doAfter: 4
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+    - node: frame
+      entity: OH14_GasCanisterFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+                prototype: OH14_SheetGirder1
+                amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 1
+        - to: OH14_GasCanister
+          steps:
+            - material: OH14_Materials
+              amount: 3
+              doAfter: 1
+            - material: OH14_Components
+              amount: 1
+              doAfter: 1
+    - node: OH14_GasCanister
+      entity: OH14_StorageCanister
+      edges:
+        - to: frame
+          completed:
+            - !type:SpawnPrototype
+              prototype: OH14_SheetMaterials1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: OH14_SheetComponents1
+              amount: 1
+            - !type:DumpCanister
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Prying
+              doAfter: 2

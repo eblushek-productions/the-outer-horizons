@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Created by λserovich[BAD] (aserovich) for Outer Horizons project",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "watertank"
+    },
+    {
+      "name": "fueltank"
+    },
+    {
+      "name": "watertank-2"
+    },
+    {
+      "name": "watertank-2-1"
+    },
+    {
+      "name": "watertank-2-2"
+    },
+    {
+      "name": "watertank-2-3"
+    },
+    {
+      "name": "watertank-2-4"
+    },
+    {
+      "name": "watertank-2-5"
+    },
+    {
+      "name": "fueltank-2"
+    },
+    {
+      "name": "fueltank-2-1"
+    },
+    {
+      "name": "fueltank-2-2"
+    },
+    {
+      "name": "fueltank-2-3"
+    },
+    {
+      "name": "fueltank-2-4"
+    },
+    {
+      "name": "fueltank-2-5"
+    }
+  ]
+}
