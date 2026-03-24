@@ -66,6 +66,7 @@
       map: ["base"]
   - type: Item
     heldPrefix: girder
+    size: Small
   - type: Appearance
 
 - type: entity

@@ -19,6 +19,15 @@
     },
     {
       "name": "thrust_burn_unshaded"
-    }
+    },
+      {
+          "name": "heat1"
+      },
+      {
+          "name": "heat2"
+      },
+      {
+          "name": "heat3"
+      }
   ]
 }

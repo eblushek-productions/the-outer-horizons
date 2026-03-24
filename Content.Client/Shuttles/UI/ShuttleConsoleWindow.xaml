@@ -1,37 +1,38 @@
-<ui:ShuttleConsoleWindow 
+<ui:ShuttleConsoleWindow
     xmlns="https://spacestation14.io"
     xmlns:c="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
     xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:shuttleConsole="clr-namespace:Content.Client._OuterHorizons.ShuttleConsole"
     SetSize="739 609"
     Resizable="False"
     MouseFilter="Stop">
 
     <PanelContainer Name="Background" StyleClasses="PdaBackgroundRect" ModulateSelfOverride="#22232e"/>
-    <PanelContainer Name="Border" StyleClasses="PdaBorderRect"/>   
+    <PanelContainer Name="Border" StyleClasses="PdaBorderRect"/>
 
     <BoxContainer Orientation="Vertical" HorizontalExpand="True">
 
         <!-- Крестик для выхода -->
         <BoxContainer SetHeight="26" Margin="15 5" Orientation="Horizontal" HorizontalAlignment="Right">
             <TextureButton Name="CloseButton" StyleClasses="windowCloseButton" Modulate="#646464" VerticalAlignment="Center" Margin="0 4 0 0"/>
-        </BoxContainer> 
+        </BoxContainer>
 
         <!-- Содержимое -->
         <Control Margin="15 0 15 15" RectClipContent="True" VerticalExpand="true" HorizontalExpand="True">
 
             <!-- Контрастный цвет -->
-            <PanelContainer ModulateSelfOverride="#FFFFFF" StyleClasses="PdaBackground"> 
+            <PanelContainer ModulateSelfOverride="#FFFFFF" StyleClasses="PdaBackground">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat BackgroundColor="#050c0d" BorderColor="#1d1e27" BorderThickness="3"/>
                 </PanelContainer.PanelOverride>
-            </PanelContainer> 
+            </PanelContainer>
 
             <!-- Актуальное содержимое -->
             <Control Name="ContentsContainer" Margin="0 10" Modulate="#FFFFFF">
                 <BoxContainer Orientation="Vertical">
 
-                    <Label Text="{Loc 'shuttle-console-window-title'}" ModulateSelfOverride="#4bb2b5" HorizontalAlignment="Center" StyleClasses="ConsoleText" Margin="0 0 0 5"/>   
+                    <Label Text="{Loc 'shuttle-console-window-title'}" ModulateSelfOverride="#4bb2b5" HorizontalAlignment="Center" StyleClasses="ConsoleText" Margin="0 0 0 5"/>
                     <!-- Кнопки режимов -->
                     <PanelContainer Margin="10 0 10 0" Modulate="#4bb2b5">
 
@@ -45,6 +46,7 @@
                                 <c:MonotoneButton StyleClasses="OpenBoth" Name="NavModeButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="NAVIGATION" Margin="5"/>
                                 <c:MonotoneButton StyleClasses="OpenBoth" Name="MapModeButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="MAP MODE" Margin="5"/>
                                 <c:MonotoneButton StyleClasses="OpenBoth" Name="DockModeButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="DOCKING" Margin="5"/>
+                                <c:MonotoneButton StyleClasses="OpenBoth" Name="ThrusterInfoModeButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="THRUSTERS" Margin="5"/>
                             </BoxContainer>
                         </BoxContainer>
                     </PanelContainer>
@@ -54,10 +56,11 @@
                         <ui:NavScreen Name="NavContainer" Visible="False"/>
                         <ui:MapScreen Name="MapContainer" Visible="False"/>
                         <ui:DockingScreen Name="DockContainer" Visible="False"/>
+                        <shuttleConsole:ThrusterInfoScreen Name="ThrusterInfoContainer" Visible="False"/>
                     </BoxContainer>
                 </BoxContainer>
             </Control>
         </Control>
-        
+
     </BoxContainer>
 </ui:ShuttleConsoleWindow>

@@ -56,7 +56,7 @@
     storageRemoveSound: /Audio/_OuterHorizons/Items/pickup.ogg
     grid:
     - 0,0,3,7
-    maxItemSize: Huge
+    maxItemSize: Ginormous
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
