@@ -89,6 +89,17 @@
       sound:
         path: /Audio/Ambience/Objects/engine_hum.ogg
       enabled: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.30,-0.30,0.30,0.30"
+          density: 80
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
     - type: Sprite
       sprite: _OuterHorizons/Structures/Power/fuel_generator.rsi
       noRot: true

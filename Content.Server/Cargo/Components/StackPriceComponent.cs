@@ -1,4 +1,4 @@
-﻿namespace Content.Shared.Cargo.Components;
+﻿namespace Content.Server.Cargo.Components;
 
 /// <summary>
 /// This is used for pricing stacks of items.

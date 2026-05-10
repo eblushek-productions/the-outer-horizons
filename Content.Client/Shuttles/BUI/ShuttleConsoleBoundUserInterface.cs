@@ -1,5 +1,4 @@
 using Content.Client.Shuttles.UI;
-using Content.Shared._OuterHorizons.ShuttleConsole;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Events;
 using JetBrains.Annotations;
@@ -72,14 +71,6 @@ public sealed class ShuttleConsoleBoundUserInterface : BoundUserInterface
         {
             _window?.Dispose();
         }
-    }
-
-    protected override void ReceiveMessage(BoundUserInterfaceMessage message)
-    {
-        base.ReceiveMessage(message);
-
-        if(message is ThrusterChangedMessage thrusterChangedMessage)
-            _window?.OnSendMessage(thrusterChangedMessage);
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
