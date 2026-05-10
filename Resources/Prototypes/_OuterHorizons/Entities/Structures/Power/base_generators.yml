@@ -5,9 +5,8 @@
   parent: OH14_BaseStructure
   components:
     # Basic properties
-    - type: Transform
-      anchored: true
-    - type: Anchorable
+    # - type: Transform
+    #   anchored: true
     # - type: Physics
     #   bodyType: Dynamic
     - type: InteractionOutline

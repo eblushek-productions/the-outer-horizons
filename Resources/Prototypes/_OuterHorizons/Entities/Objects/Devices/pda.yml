@@ -68,7 +68,7 @@
     falloff: 3
     softness: 5
     autoRot: true
-    # netsync: false
+    netsync: false
     mask: /Textures/_OuterHorizons/Effects/LightMasks/cone_smoll.png
   - type: Ringer
   - type: RingerUplink

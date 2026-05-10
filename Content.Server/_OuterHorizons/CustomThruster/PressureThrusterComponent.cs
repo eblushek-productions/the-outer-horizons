@@ -1,4 +1,6 @@
 ﻿using Content.Server.NodeContainer.Nodes;
+using Content.Server.Shuttles.Components;
+using Content.Shared.Atmos;
 
 namespace Content.Server._OuterHorizons.CustomThruster;
 
@@ -7,25 +9,20 @@ public sealed partial class PressureThrusterComponent : Component
 {
     [DataField]
     public string InletName = "inlet";
-
-    [DataField]
-    public float MoleOutletLimit;
-
-    [DataField]
-    public float MoleMaxOutletLimit = 100f;
-
-    [DataField]
-    public float MoleMinOutletLimit = 10f;
-
-    [DataField]
-    public float AccelerationEfficiency = 1f;
-
-    [ViewVariables]
     public PipeNode Inlet;
+
+    [DataField]
+    public float PressureСonsumption = 100f;
+
+    [ViewVariables(VVAccess.ReadOnly)]
+    public ThrusterComponent ThrusterComponent;
+
+    [ViewVariables(VVAccess.ReadOnly)]
+    public float Pressure => Inlet.Air.Pressure;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextExhaust = TimeSpan.Zero;
 
     [ViewVariables(VVAccess.ReadWrite)]
-    public TimeSpan ExhaustTimeout = TimeSpan.FromSeconds(0.25);
+    public TimeSpan ExhaustTimeout = TimeSpan.FromSeconds(0.5);
 }

@@ -13,8 +13,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: ImageOverlay
-    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying3.png"
 
 - type: entity
   parent: OH14_BasicWeldingMask

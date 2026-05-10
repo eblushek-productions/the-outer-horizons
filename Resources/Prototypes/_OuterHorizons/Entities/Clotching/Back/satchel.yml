@@ -12,9 +12,9 @@
   - type: Sprite
     sprite: _OuterHorizons/Clothing/Back/Satchels/satchel.rsi
   - type: Storage
-    # maxItemSize: Normal
+    maxItemSize: Normal
     grid:
-    - 0,0,5,2
+    - 0,0,4,2
 
 - type: entity
   parent: ClothingBackpackSatchelBasic

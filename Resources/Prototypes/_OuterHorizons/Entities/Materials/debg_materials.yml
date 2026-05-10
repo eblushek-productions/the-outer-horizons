@@ -97,7 +97,6 @@
       map: ["base"]
   - type: Item
     heldPrefix: mechanic
-    size: Tiny
   - type: Appearance
 
 - type: entity
@@ -151,7 +150,6 @@
       map: ["base"]
   - type: Item
     heldPrefix: electronic
-    size: Tiny
   - type: Appearance
 
 - type: entity

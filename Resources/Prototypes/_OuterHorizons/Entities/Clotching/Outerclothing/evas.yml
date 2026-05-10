@@ -7,7 +7,7 @@
   components:
   - type: Item
     storedRotation: 90
-    size: Ginormous
+    size: Huge
     shape:
     - 0,0,3,2
   - type: Sprite

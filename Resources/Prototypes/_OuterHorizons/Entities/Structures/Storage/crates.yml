@@ -27,7 +27,6 @@
         layer:
         - MachineLayer
   - type: Storage
-    maxItemSize: Huge
     storageOpenSound: /Audio/_OuterHorizons/Storage/cabinet_open.ogg # TODO, оба под замену
     storageCloseSound: /Audio/_OuterHorizons/Storage/cabinet_close.ogg
     grid:

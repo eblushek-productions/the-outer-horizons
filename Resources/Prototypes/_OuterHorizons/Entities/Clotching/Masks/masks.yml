@@ -12,3 +12,5 @@
     sprite: _OuterHorizons/Clothing/Mask/breath.rsi
   - type: BreathMask
   - type: IngestionBlocker
+  - type: ImageOverlay
+    pathToOverlayImage: "/Textures/_OuterHorizons/Effects/Overlays/Trying3.png"
