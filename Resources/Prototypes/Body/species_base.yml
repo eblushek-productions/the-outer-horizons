@@ -75,6 +75,12 @@
       methods: [Touch]
       effects:
       - !type:WashCreamPie
+  #The Outer Horizons eye offset in combat mode
+  - type: EyeCursorOffset
+    maxOffset: 6
+    pvsIncrease: 0.6
+  - type: EyeOffsetInCombatMode
+  #The Outer Horizons eye offset in combat mode
   - type: StatusEffects
     allowed:
     - Electrocution
