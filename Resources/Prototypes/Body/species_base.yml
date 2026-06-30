@@ -79,7 +79,9 @@
   - type: EyeCursorOffset
     maxOffset: 6
     pvsIncrease: 0.6
-  - type: EyeOffsetInCombatMode
+  - type: TogglableEyeOffset
+    action: ActionToggleOffset
+    isActive: false
   #The Outer Horizons eye offset in combat mode
   - type: StatusEffects
     allowed:

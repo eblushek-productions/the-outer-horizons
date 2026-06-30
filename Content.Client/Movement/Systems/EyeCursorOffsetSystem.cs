@@ -1,8 +1,7 @@
 using Content.Client.Movement.Components;
 using Content.Client.Viewport;
-using Content.Shared._OuterHorizons.EyeOffsetInCombatMode;
+using Content.Shared._OuterHorizons.TogglableEyeOffset;
 using Content.Shared.Camera;
-using Content.Shared.CombatMode;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Robust.Client.Graphics;
@@ -31,9 +30,9 @@ public sealed partial class EyeCursorOffsetSystem : EntitySystem
     private void OnGetEyeOffsetEvent(EntityUid uid, EyeCursorOffsetComponent component, ref GetEyeOffsetEvent args)
     {
         //The Outer Horizons eye offset in combat mode begin
-        if (TryComp<EyeOffsetInCombatModeComponent>(uid, out var combatOffsetComp))
+        if (TryComp<TogglableEyeOffsetComponent>(uid, out var combatOffsetComp))
         {
-            if (!TryComp<CombatModeComponent>(uid, out var combatModeComp) || !combatModeComp.IsInCombatMode)
+            if (!combatOffsetComp.IsActive)
                 return;
 
             if (TryComp<MobStateComponent>(uid, out var mobStateComp) && mobStateComp.CurrentState != MobState.Alive)

@@ -1,0 +1,8 @@
+- type: entity
+  parent: BaseAction
+  id: ActionToggleOffset
+  name: Toggle eye offset
+  description: Toggles the eye offset
+  components:
+  - type: InstantAction
+    event: !type:ToggleOffsetActionEvent

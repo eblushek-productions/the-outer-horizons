@@ -1,12 +1,12 @@
+using Content.Shared.Actions.Components;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
-namespace Content.Shared._OuterHorizons.EyeOffsetInCombatMode;
+namespace Content.Shared._OuterHorizons.TogglableEyeOffset;
 
-/// <summary>
-/// Does whst it's name says - modifies the offset when in combat mode
-/// </summary>
-[RegisterComponent, NetworkedComponent]
-public sealed partial class EyeOffsetInCombatModeComponent : Component
+[RegisterComponent]
+[NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class TogglableEyeOffsetComponent : Component
 {
     /// <summary>
     /// The amount the view will be displaced when the cursor is positioned at/beyond the max offset distance.
@@ -27,4 +27,13 @@ public sealed partial class EyeOffsetInCombatModeComponent : Component
     /// </summary>
     [DataField]
     public float PvsIncrease = 0.6f;
+
+    [DataField(required: true)]
+    public EntProtoId<InstantActionComponent> Action;
+
+    [DataField, AutoNetworkedField]
+    public EntityUid? ActionEntity;
+
+    [DataField, AutoNetworkedField]
+    public bool IsActive = true;
 }
