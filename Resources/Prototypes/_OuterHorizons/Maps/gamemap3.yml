@@ -32,11 +32,11 @@
           availableJobs:
             OH14_UcoRole: [ 4, 4 ]
             OH14_UcoCommanderRole: [ 1, 1 ]
-    Ellesmere:
+    Primis:
       stationProto: OH14_StationWithDirelicts
       components:
         - type: StationNameSetup
-          mapNameTemplate: RRE "Ellesmere"
+          mapNameTemplate: RRE "Primis"
         - type: StationJobs
           availableJobs:
             OH14_RreRole: [ 4, 4 ]
