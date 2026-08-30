@@ -4,6 +4,7 @@
   id: OH14_ToolMassScanner
   description: Я это добавил сугубо чтобы ты не потерялся в космосе, окей?
   components:
+  - type: HandheldGPS # TODO, выводить координаты в окно радара
   - type: InworldSprite
   - type: Item
     sprite: _OuterHorizons/Objects/inhands.rsi

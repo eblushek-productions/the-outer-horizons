@@ -9,7 +9,7 @@
   - !type:StackResource
     stack: OH14_SheetIron
     count: 1
-  result: OH14_SheetGirder1
+  result: OH14_SheetGirder8
   resultCount: 1
 
 # Трубки
@@ -22,8 +22,8 @@
   requirements:
   - !type:StackResource
     stack: OH14_SheetIron
-    count: 2
-  result: OH14_SheetPipes1
+    count: 1
+  result: OH14_SheetPipes8
   resultCount: 1
 
 ### Панели
@@ -41,7 +41,7 @@
   - !type:StackResource
     stack: OH14_SheetPlatinum
     count: 1
-  result: OH14_Panel1
+  result: OH14_Panel8
   resultCount: 1
 
 # Укрепленная
@@ -58,7 +58,7 @@
   - !type:StackResource
     stack: OH14_SheetPlatinum
     count: 2
-  result: OH14_PanelHeavy1
+  result: OH14_PanelHeavy8
   resultCount: 1
 
 # Теплостойкая
@@ -75,7 +75,7 @@
   - !type:StackResource
     stack: OH14_SheetCobalt
     count: 2
-  result: OH14_PanelHeat1
+  result: OH14_PanelHeat8
   resultCount: 1
 
 # Шаттла
@@ -92,7 +92,7 @@
   - !type:StackResource
     stack: OH14_SheetPlatinum
     count: 1
-  result: OH14_PanelShuttle1
+  result: OH14_PanelShuttle8
   resultCount: 1
 
 # Укрепленная шаттла

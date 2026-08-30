@@ -20,7 +20,7 @@
     - state: inworld
       map: ["base"]
   - type: MeleeWeapon
-    attackRate: 0.7
+    attackRate: 0.8
     wideAnimationRotation: -135
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
@@ -59,7 +59,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 20
+        Structural: 25
   - type: Construction
     graph: OH14_PickaxeTipT2
     node: OH14_PickaxeT2
@@ -77,7 +77,7 @@
       groups:
         Brute: 10
       types:
-        Structural: 30
+        Structural: 35
   - type: Construction
     graph: OH14_PickaxeTipT3
     node: OH14_PickaxeT3
@@ -89,7 +89,7 @@
   id: OH14_PickaxeTip
   name: наконечник кирки
   suffix: Железный
-  description: Обычный.
+  description: Тыкни по нему рукояткой.
   components:
   - type: InworldSprite
   - type: GenericVisualizer
@@ -113,7 +113,7 @@
   parent: OH14_PickaxeTip
   id: OH14_PickaxeTipT2
   suffix: Кобальтовый
-  description: Улучшенный.
+  description: Улучшенный, тыкни по нему рукояткой.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
@@ -125,7 +125,7 @@
   parent: OH14_PickaxeTip
   id: OH14_PickaxeTipT3
   suffix: Платиновый
-  description: Пиздатый.
+  description: Продвинутый, тыкни по нему рукояткой.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi

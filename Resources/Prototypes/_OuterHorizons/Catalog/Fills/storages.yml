@@ -129,16 +129,32 @@
         children:
         - id: OH14_SheetGirder
         - id: OH14_SheetPipes
-          prob: 0.2
-        - id: OH14_SheetIron8
-        - id: OH14_SheetCopper8
-        - id: OH14_Panel8
-        - id: OH14_Panel8
-          prob: 0.2
-        - id: OH14_Component4
-          prob: 0.2
-        - id: OH14_Circuit4
-          prob: 0.2
+        - id: OH14_SheetIron
+        - id: OH14_SheetCopper
+        - id: OH14_SheetGlass
+        - id: OH14_Panel
+        - id: OH14_PanelHeavy
+        - id: OH14_Component
+        - id: OH14_Circuit
+
+- type: entity
+  parent: OH14_CabinetEngi
+  id: OH14_CabinetBasicFillShuttleRepair
+  suffix: Заполнен, Ремонт шаттла
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OH14_CircuitboardShuttle
+        - id: OH14_Panel
+        - id: OH14_SheetGirder
+        - id: OH14_HeatChamber
+          amount: 2
+        - id: OH14_CopperStator
+          amount: 2
+        - id: OH14_PowerUnitComplete
+        - id: OH14_ControlUnitComplete
 
 - type: entity
   parent: OH14_CabinetFreezer

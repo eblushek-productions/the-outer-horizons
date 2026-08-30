@@ -33,6 +33,7 @@
     back:
     - OH14_CrowbarBasic
     - OH14_FlashlightFilled
+    - OH14_OxygenTankWhiteFilled
 
 # Коммандир
 
@@ -69,3 +70,4 @@
     - OH14_Baton
     - OH14_CrowbarBasic
     - OH14_FlashlightFilled
+    - OH14_OxygenTankWhiteFilled

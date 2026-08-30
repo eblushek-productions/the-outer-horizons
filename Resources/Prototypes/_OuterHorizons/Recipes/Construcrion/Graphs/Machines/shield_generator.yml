@@ -23,10 +23,13 @@
               name: construction-graph-tag-controlunit
               doAfter: 1
             - material: OH14_ComponentAdv
-              amount: 16
+              amount: 8
               doAfter: 1
             - tag: OH14_GoldStator
               name: construction-graph-tag-gold-stator
+              doAfter: 1
+            - material: OH14_ComponentAdv
+              amount: 8
               doAfter: 1
             - tag: OH14_GoldStator
               name: construction-graph-tag-gold-stator

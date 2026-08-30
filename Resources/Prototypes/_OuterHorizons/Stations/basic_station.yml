@@ -44,20 +44,20 @@
           maxCount: 1
           stationGrid: false
           paths:
-          # - /Maps/_OuterHorizons/Direlicts/Discovery.yml
-          - /Maps/_OuterHorizons/Direlicts/Discovery_2.yml
-          - /Maps/_OuterHorizons/Direlicts/Discovery_3.yml
-          - /Maps/_OuterHorizons/Direlicts/Kurlum.yml
-          - /Maps/_OuterHorizons/Direlicts/Kurlum_2.yml
+          - /Maps/_OuterHorizons/Direlicts/Discovery.yml
+          # - /Maps/_OuterHorizons/Direlicts/Discovery_2.yml
+          # - /Maps/_OuterHorizons/Direlicts/Discovery_3.yml
+          # - /Maps/_OuterHorizons/Direlicts/Kurlum.yml
+          # - /Maps/_OuterHorizons/Direlicts/Kurlum_2.yml
           - /Maps/_OuterHorizons/Direlicts/TinCan.yml
-          - /Maps/_OuterHorizons/Direlicts/TinCan_2.yml
-          - /Maps/_OuterHorizons/Direlicts/TinCan_3.yml
-          # - /Maps/_OuterHorizons/Direlicts/Hauler.yml
-          - /Maps/_OuterHorizons/Direlicts/Hauler_2.yml
-          - /Maps/_OuterHorizons/Direlicts/Hauler_3.yml
-          # - /Maps/_OuterHorizons/Direlicts/Mika.yml
-          - /Maps/_OuterHorizons/Direlicts/Mika_2.yml
-          - /Maps/_OuterHorizons/Direlicts/Mika_3.yml
-          # - /Maps/_OuterHorizons/Direlicts/TS_20b.yml
+          # - /Maps/_OuterHorizons/Direlicts/TinCan_2.yml
+          # - /Maps/_OuterHorizons/Direlicts/TinCan_3.yml
+          - /Maps/_OuterHorizons/Direlicts/Hauler.yml
+          # - /Maps/_OuterHorizons/Direlicts/Hauler_2.yml
+          # - /Maps/_OuterHorizons/Direlicts/Hauler_3.yml
+          - /Maps/_OuterHorizons/Direlicts/Mika.yml
+          # - /Maps/_OuterHorizons/Direlicts/Mika_2.yml
+          # - /Maps/_OuterHorizons/Direlicts/Mika_3.yml
+          - /Maps/_OuterHorizons/Direlicts/TS_20b.yml
           # - /Maps/_OuterHorizons/Direlicts/TS_20b_2.yml
-          - /Maps/_OuterHorizons/Direlicts/TS_20b_3.yml
+          # - /Maps/_OuterHorizons/Direlicts/TS_20b_3.yml

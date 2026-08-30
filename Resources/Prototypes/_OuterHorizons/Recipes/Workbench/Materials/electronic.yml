@@ -115,8 +115,20 @@
   - !type:StackResource
     stack: OH14_CoilCopper
     count: 2
+  result: OH14_AnalogBoard
+  resultCount: 1
+
+- type: CERecipe
+  tag: CERecipeWorkbench
+  id: OH14_AnalogBoardAlt
+  category: Electronics
+  craftTime: 4
+  requirements:
+  - !type:StackResource
+    stack: OH14_Circuit
+    count: 4
   - !type:StackResource
     stack: OH14_CoilGold
     count: 2
   result: OH14_AnalogBoard
-  resultCount: 1
+  resultCount: 2
