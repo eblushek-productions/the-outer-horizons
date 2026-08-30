@@ -57,6 +57,9 @@
   - type: IconSmooth
     key: walls
     base: wall
+  - type: GuideHelp
+    guides:
+    - OH14_GuideResources
 
 - type: entity
   parent: OH14_BaseWallRock

@@ -4,7 +4,7 @@
   name: обыкновенная кирка
   parent: OH14_BaseItem
   id: OH14_Pickaxe
-  description: Доисторическая ковырялка для каменных пород.
+  description: Доисторическая Ковырялка для каменных пород
   components:
   - type: Appearance
   - type: InworldSprite
@@ -45,12 +45,15 @@
   - type: Construction
     graph: OH14_PickaxeTip
     node: OH14_Pickaxe
+  - type: GuideHelp
+    guides:
+    - OH14_GuideResources
 
 - type: entity
   name: улучшенная кирка
   parent: OH14_Pickaxe
   id: OH14_PickaxeT2
-  description: Ковырялка для каменных пород с улучшенным наконечником.
+  description: Импровизированное приспособление, способное вскапывать и Плотную каменную породу.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
@@ -68,7 +71,7 @@
   name: продвинутая кирка
   parent: OH14_Pickaxe
   id: OH14_PickaxeT3
-  description: Инструмент для каменных пород с улучшенным наконечником.
+  description: Профессиональный Инструмент, способный быстро вскапывать любую каменную породу
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi
@@ -89,7 +92,7 @@
   id: OH14_PickaxeTip
   name: наконечник кирки
   suffix: Железный
-  description: Тыкни по нему рукояткой.
+  description: Присоедини это к рукоятке.
   components:
   - type: InworldSprite
   - type: GenericVisualizer
@@ -112,8 +115,9 @@
 - type: entity
   parent: OH14_PickaxeTip
   id: OH14_PickaxeTipT2
+  name: Улучшенный наконечник кирки
   suffix: Кобальтовый
-  description: Улучшенный, тыкни по нему рукояткой.
+  description: Улучшенный.Присоедини это к рукоятке.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_2.rsi
@@ -124,8 +128,9 @@
 - type: entity
   parent: OH14_PickaxeTip
   id: OH14_PickaxeTipT3
+  name: Продвинутый наконечник кирки
   suffix: Платиновый
-  description: Продвинутый, тыкни по нему рукояткой.
+  description: Продвинутый.Присоедини это к рукоятке.
   components:
   - type: Sprite
     sprite: _OuterHorizons/Objects/Tools/Mining/pickaxe_3.rsi
