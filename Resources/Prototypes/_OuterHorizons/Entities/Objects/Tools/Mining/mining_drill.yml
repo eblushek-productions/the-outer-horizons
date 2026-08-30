@@ -37,6 +37,9 @@
         Brute: 10
       types:
         Structural: 15
+  - type: GuideHelp
+    guides:
+    - OH14_GuideResources
 
 - type: entity
   parent: OH14_MiningDrill
