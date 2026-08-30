@@ -13,7 +13,6 @@
   weights:
     OH14_BaseWallStone: 3
     OH14_BaseWallIce: 0.5
-    OH14_BaseWallStoneOre: 0.2
 
 # Event Schedulers
 
@@ -25,8 +24,8 @@
   - type: BasicStationEventScheduler
     minimumTimeUntilFirstEvent: 1
     minMaxEventTiming:
-      min: 10
-      max: 720
+      min: 120
+      max: 1480
     scheduledGameRules: !type:NestedSelector
       tableId: OH14_BasicMeteorSwarmEventsTable
 
@@ -73,7 +72,7 @@
     weight: 22
     minimumPlayers: 0
   - type: MeteorSwarm
-    announcement: Мелкие огоньки мерцают на горизонте, стремительно приближаясь к вам. По всей видимости, прибывает внеочередной дождь из мусора.
+    announcement: Вы видите светлые огоньки на горизонте колец, и по всей видимости, они приближаются.
     announcementSound: null
     nonDirectional: true
     meteors:

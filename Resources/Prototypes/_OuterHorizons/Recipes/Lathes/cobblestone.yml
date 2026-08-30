@@ -27,6 +27,13 @@
   completetime: 3
 
 - type: latheRecipe
+  id: OH14_CobblestonePlatinum
+  result: OH14_OrePlatinum1
+  materials:
+    OH14_CobblestonePlatinum: 100
+  completetime: 3
+
+- type: latheRecipe
   id: OH14_CobblestoneSilicon
   result: OH14_OreSilicon1
   materials:

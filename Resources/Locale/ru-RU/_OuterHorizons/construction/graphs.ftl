@@ -8,10 +8,10 @@ construction-graph-tag-crtscreen = экран
 
 construction-graph-tag-powerunit = блок питания
 
-construction-graph-tag-controlunit = блок контроля
+construction-graph-tag-controlunit = блок управления
 
 construction-graph-tag-copper-rotor = медный ротор
 construction-graph-tag-copper-stator = медная катушка
 
 construction-graph-tag-gold-rotor = золотой ротор
-construction-graph-tag-gold-stator = медный статор
+construction-graph-tag-gold-stator = золотая катушка

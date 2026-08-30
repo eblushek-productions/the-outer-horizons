@@ -2,40 +2,47 @@
   id: OH14_OreIron
   result: OH14_SheetIron8
   materials:
-    OH14_OreIron: 800
+    OH14_OreIron: 400
   completetime: 20
 
 - type: latheRecipe
   id: OH14_OreCopper
   result: OH14_SheetCopper8
   materials:
-    OH14_OreCopper: 800
+    OH14_OreCopper: 400
   completetime: 20
 
 - type: latheRecipe
   id: OH14_OreGold
   result: OH14_SheetGold8
   materials:
-    OH14_OreGold: 800
+    OH14_OreGold: 400
   completetime: 20
 
 - type: latheRecipe
-  id: OH14_OreSilicon
-  result: OH14_SheetSilicon8
+  id: OH14_OrePlatinum
+  result: OH14_SheetPlatinum8
   materials:
-    OH14_OreSilicon: 800
+    OH14_OrePlatinum: 400
   completetime: 20
+
+# - type: latheRecipe
+#   id: OH14_OreSilicon
+#   result: OH14_SheetSilicon8
+#   materials:
+#     OH14_OreSilicon: 400
+#   completetime: 20
 
 - type: latheRecipe
   id: OH14_OreCobalt
   result: OH14_SheetCobalt8
   materials:
-    OH14_OreCobalt: 800
+    OH14_OreCobalt: 400
   completetime: 20
 
 - type: latheRecipe
   id: OH14_Glass
   result: OH14_SheetGlass8
   materials:
-    OH14_SheetSilicon: 800
+    OH14_OreSilicon: 400
   completetime: 20

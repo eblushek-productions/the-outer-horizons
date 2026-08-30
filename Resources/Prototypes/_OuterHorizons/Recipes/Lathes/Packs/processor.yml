@@ -5,6 +5,7 @@
   - OH14_CobblestoneIron
   - OH14_CobblestoneCopper
   - OH14_CobblestoneGold
+  - OH14_CobblestonePlatinum
   - OH14_CobblestoneSilicon
   - OH14_CobblestoneCobalt
 
@@ -14,6 +15,7 @@
   - OH14_OreIron
   - OH14_OreCopper
   - OH14_OreGold
+  - OH14_OrePlatinum
   # - OH14_OreSilicon
   - OH14_OreCobalt
   - OH14_Glass
