@@ -15,3 +15,5 @@ construction-graph-tag-copper-stator = медная катушка
 
 construction-graph-tag-gold-rotor = золотой ротор
 construction-graph-tag-gold-stator = золотая катушка
+
+construction-graph-tag-powercell = акумулятор

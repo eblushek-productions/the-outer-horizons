@@ -5,6 +5,7 @@
   name: обыкновенная стена
   description: Держит экипаж внутри и грейтайдов снаружи.
   components:
+  - type: Repairable
   - type: SpaceGarbage
   - type: Appearance
   - type: DamageVisuals

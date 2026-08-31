@@ -205,7 +205,7 @@
         - to: frame1
           steps:
             - material: OH14_Girders
-              amount: 1
+              amount: 2
               doAfter: 1
     - node: frame1
       actions:
@@ -214,14 +214,14 @@
       edges:
         - to: frame2
           steps:
-            - material: OH14_SheetIron
+            - material: OH14_CoilCopper
               amount: 4
               doAfter: 1
         - to: start
           completed:
             - !type:GivePrototype
               prototype: OH14_SheetGirder1
-              amount: 1
+              amount: 2
             - !type:DeleteEntity {}
           steps:
             - tool: Screwing
@@ -235,12 +235,12 @@
           steps:
             - tag: OH14_PowerCellBig
               store: powercell
-              name: construction-graph-tag-power-cell
+              name: construction-graph-tag-powercell
               doAfter: 1
         - to: frame1
           completed:
             - !type:GivePrototype
-              prototype: OH14_SheetIron1
+              prototype: OH14_CoilCopper1
               amount: 4
           steps:
             - tool: Screwing
@@ -300,10 +300,10 @@
         - to: OH14_GeneratorTEF
           steps:
             - tag: OH14_CopperStator
-              name: construction-graph-tag-copper-rotor
+              name: construction-graph-tag-copper-stator
               doAfter: 1
             - tag: OH14_CopperRotor
-              name: construction-graph-tag-copper-stator
+              name: construction-graph-tag-copper-rotor
               doAfter: 1
         - to: frame
           completed:
