@@ -31,6 +31,10 @@
   name: железный лист
   suffix: 16
   components:
+  - type: FloorTile
+    outputs:
+    - OH14_PlatingLattice
+    - OH14_Plating
   - type: Material
   - type: PhysicalComposition
     materialComposition:

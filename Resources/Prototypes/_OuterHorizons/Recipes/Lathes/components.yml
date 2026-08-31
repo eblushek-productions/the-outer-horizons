@@ -2,12 +2,12 @@
   id: OH14_Component
   result: OH14_Component1
   materials:
-    OH14_SheetIron: 400
+    OH14_SheetIron: 200
   completetime: 4
 
 - type: latheRecipe
   id: OH14_ComponentAdv
   result: OH14_ComponentAdv1
   materials:
-    OH14_SheetPlatinum: 400
+    OH14_SheetPlatinum: 200
   completetime: 4
