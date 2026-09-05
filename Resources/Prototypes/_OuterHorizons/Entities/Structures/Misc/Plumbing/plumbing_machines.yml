@@ -119,7 +119,7 @@
     solutions:
       tank:
         reagents:
-        - ReagentId: WeldingFuel
+        - ReagentId: Hydrogen # TODO, доработать заглушку в виде водорода
           Quantity: 1500
 
 - type: entity

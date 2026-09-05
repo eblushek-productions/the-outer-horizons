@@ -355,3 +355,17 @@
   - type: Construction
     graph: OH14_MagneticFiledGenerator
     node: frame1
+
+## Конденс
+
+- type: entity
+  id: OH14_GasCondenserFrame
+  parent: OH14_FrameBasic
+  name: каркас конденсатора
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/condenser.rsi
+    state: frame0
+  - type: Construction
+    graph: OH14_GasCondenser
+    node: frame1

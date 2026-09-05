@@ -134,7 +134,7 @@
     - type: ChemicalFuelGeneratorAdapter
       solution: tank
       reagents:
-        WeldingFuel: 1
+        Hydrogen: 1 # TODO, доработать заглушку в виде водорода
     - type: SolutionContainerManager
       solutions:
         tank:

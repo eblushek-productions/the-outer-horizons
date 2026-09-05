@@ -89,7 +89,7 @@
     solutions:
       Welder:
         reagents:
-        - ReagentId: WeldingFuel
+        - ReagentId: Hydrogen # TODO, доработать заглушку в виде водорода
           Quantity: 200
         maxVol: 200
   - type: Tool
@@ -97,6 +97,7 @@
       collection: Welder
     qualities: Welding
   - type: Welder
+    fuelReagent: Hydrogen # TODO, доработать заглушку в виде водорода
   - type: PointLight
     enabled: false
     radius: 1.5
@@ -120,9 +121,9 @@
   - type: SolutionContainerManager
     solutions:
       Welder:
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 0
+        # reagents:
+        # - ReagentId: Hydrogen # TODO, доработать заглушку в виде водорода
+        #   Quantity: 0
         maxVol: 200
 
 - type: entity

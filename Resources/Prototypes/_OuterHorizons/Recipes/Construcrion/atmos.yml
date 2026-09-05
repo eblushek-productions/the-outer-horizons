@@ -232,3 +232,14 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
+
+- type: construction
+  hide: false
+  id: OH14_GasCondenser
+  graph: OH14_GasCondenser
+  startNode: start
+  targetNode: OH14_GasCondenser
+  category: construction-category-atmos
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
