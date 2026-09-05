@@ -1,0 +1,103 @@
+- type: entity
+  parent: [ OH14_BaseStructure, BaseMachinePowered, OH14_PlumbingMachineBase ]
+  id: OH14_GasCondenser
+  name: конденсатор
+  description: Конденсирует газ в жидкость, но не наоборот.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Construction
+    graph: OH14_GasCondenser
+    node: OH14_GasCondenser
+  - type: PlumbingDevice
+    updateInterval: 2
+    solutionLimit: 380
+  - type: Plungeable
+  - type: PlumbingOutlet
+    solutionName: tank
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Misc/Atmospherics/condenser.rsi
+    # snapCardinals: true
+    # granularLayersRendering: true
+    layers:
+    - state: pipe
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+      renderingStrategy: Default
+    - state: display
+    - state: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+    # - state: trans
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: SolutionContainerVisuals
+    maxFillLevels: 7
+    fillBaseName: fill-
+  - type: PipeColorVisuals
+  - type: Rotatable
+  - type: GasCondenser
+  - type: AtmosPipeColor
+  - type: AtmosPipeLayers
+    spriteLayersRsiPaths:
+      enum.PipeVisualLayers.Pipe:
+        Primary: _OuterHorizons/Structures/Misc/Atmospherics/condenser.rsi
+        Secondary: _OuterHorizons/Structures/Misc/Atmospherics/condenser_alt1.rsi
+        Tertiary: _OuterHorizons/Structures/Misc/Atmospherics/condenser_alt2.rsi
+  - type: AtmosDevice
+  - type: PipeRestrictOverlap
+  - type: ApcPowerReceiver
+    powerLoad: 2000
+  # - type: WiresPanel
+  # - type: WiresVisuals
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpillBehavior
+        solution: tank
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+      outlet:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: North
+  - type: Transform
+    noRot: false
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 400
+        canReact: false
+  - type: MixableSolution
+    solution: tank
+  - type: DrainableSolution
+    solution: tank
+  - type: ExaminableSolution
+    solution: tank
+  - type: PowerSwitch
+  - type: AtmosMonitoringConsoleDevice
+    navMapBlip: Thermoregulator

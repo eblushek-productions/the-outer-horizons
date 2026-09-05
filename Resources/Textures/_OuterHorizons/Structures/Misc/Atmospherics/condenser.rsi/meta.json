@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+    "states": [
+        {
+            "name": "trans"
+        },
+        {
+            "name": "pipe",
+            "directions": 4
+        },
+        {
+            "name": "display"
+        },
+        {
+            "name": "unshaded"
+        },
+        {
+            "name": "frame0"
+        },
+        {
+            "name": "frame1"
+        },
+        {
+            "name": "frame2"
+        },
+        {
+            "name": "fill-1"
+        },
+        {
+            "name": "fill-2"
+        },
+        {
+            "name": "fill-3"
+        },
+        {
+            "name": "fill-4"
+        },
+        {
+            "name": "fill-5"
+        },
+        {
+            "name": "fill-6"
+        },
+        {
+            "name": "fill-7"
+        }
+    ]
+}

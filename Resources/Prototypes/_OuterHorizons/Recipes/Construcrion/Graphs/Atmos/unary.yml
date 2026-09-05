@@ -1,0 +1,92 @@
+- type: constructionGraph
+  id: OH14_GasCondenser
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: OH14_Girders
+              amount: 2
+              doAfter: 1
+    - node: frame1
+      entity: OH14_GasCondenserFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: start
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_SheetGirder1
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: false
+          steps:
+            - tool: Screwing
+              doAfter: 2
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_Component
+              amount: 4
+              doAfter: 1
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_GasCondenserFrame
+      edges:
+        - to: frame1
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_Component1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_CoilIron
+              amount: 8
+              doAfter: 1
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      entity: OH14_GasCondenserFrame
+      edges:
+        - to: frame2
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_CoilIron1
+              amount: 8
+          steps:
+            - tool: Prying
+              doAfter: 1
+        - to: OH14_GasCondenser
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: OH14_SheetIron
+              amount: 4
+              doAfter: 1
+    - node: OH14_GasCondenser
+      entity: OH14_GasCondenser
+      edges:
+        - to: frame3
+          completed:
+            - !type:GivePrototype
+              prototype: OH14_SheetIron1
+              amount: 4
+          steps:
+            - tool: Prying
+              doAfter: 1

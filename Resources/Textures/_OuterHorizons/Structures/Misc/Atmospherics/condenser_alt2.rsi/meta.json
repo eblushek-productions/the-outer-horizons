@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "All right reserved",
+  "copyright": "Created by Aserovich (Aska) for Outer Horizons project. Do not use, copy, or modify without permission.",
+    "states": [
+        {
+            "name": "pipe",
+            "directions": 4
+        }
+    ]
+}
