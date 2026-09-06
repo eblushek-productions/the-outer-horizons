@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: OH14_MagneticFiledGenerator
+  id: OH14_MagneticFieldGenerator
   start: start
   graph:
     - node: start
@@ -12,9 +12,9 @@
               amount: 4
               doAfter: 2
     - node: frame1
-      entity: OH14_MagneticFiledGeneratorFrame
+      entity: OH14_MagneticFieldGeneratorFrame
       edges:
-        - to: OH14_MagneticFiledGenerator
+        - to: OH14_MagneticFieldGenerator
           steps:
             - tag: OH14_PowerUnitComplete
               name: construction-graph-tag-powerunit
@@ -37,5 +37,5 @@
             - material: OH14_SheetCobalt
               amount: 10
               doAfter: 1
-    - node: OH14_MagneticFiledGenerator
-      entity: OH14_MagneticFiledGenerator
+    - node: OH14_MagneticFieldGenerator
+      entity: OH14_MagneticFieldGenerator

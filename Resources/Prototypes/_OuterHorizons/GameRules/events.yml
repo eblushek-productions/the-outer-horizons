@@ -43,3 +43,15 @@
     extraCount: 2
     lightBreakChancePerSecond: 0.001
     doorToggleChancePerSecond: 0.01
+
+- type: entity
+  parent: OH14_SolarFlare
+  id: OH14_SolarFlareEnd
+  components:
+  - type: StationEvent
+    startAudio:
+      path: /Audio/_OuterHorizons/Soundtracks/Dust_storm.ogg
+      params:
+        volume: -4
+    maxOccurrences: 1
+  - type: SolarFlare

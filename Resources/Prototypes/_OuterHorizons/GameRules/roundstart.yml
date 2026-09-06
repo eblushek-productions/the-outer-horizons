@@ -43,3 +43,22 @@
   - type: BasicStationEventScheduler
     scheduledGameRules: !type:NestedSelector
       tableId: OH14_BasicGameRulesTable
+
+- type: entity
+  id: OH14_BasicStationEndedRoundScheduler
+  parent: OH14_BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: OH14_BaseRoundEdndedGameRule
+    maximumSpanUntilFirstEvent: 0
+    minimumTimeUntilFirstEvent: 60
+    minMaxEventTiming:
+      max: 240
+      min: 240
+
+- type: entityTable
+  id: OH14_BaseRoundEdndedGameRule
+  table: !type:AllSelector
+    children:
+    - id: OH14_SolarFlareEnd

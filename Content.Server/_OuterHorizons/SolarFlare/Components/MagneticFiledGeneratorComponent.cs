@@ -6,8 +6,8 @@ namespace Content.Server._OuterHorizons.SolarFlare.Components;
 public sealed partial class MagneticFieldGeneratorComponent : Component
 {
     [ViewVariables(VVAccess.ReadOnly)]
-    public EntityUid? Filed = null;
+    public EntityUid? FieldUid = null;
 
     [DataField("spawn", required: true)]
-    public string ProtoSpawnId = null!;
+    public EntProtoId? ProtoSpawnId = null!;
 }
