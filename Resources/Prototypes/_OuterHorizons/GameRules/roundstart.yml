@@ -51,7 +51,6 @@
   - type: BasicStationEventScheduler
     scheduledGameRules: !type:NestedSelector
       tableId: OH14_BaseRoundEdndedGameRule
-
     maximumSpanUntilFirstEvent: 0
     minimumTimeUntilFirstEvent: 60
     minMaxEventTiming:
