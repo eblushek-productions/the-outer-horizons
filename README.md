@@ -1,5 +1,5 @@
 <div class="header" align="center">
-<img alt="Space Station 14" width="936" height="423" src="https://media.discordapp.net/attachments/1465636610694451200/1465637170671915080/image.png?ex=698ba0bb&is=698a4f3b&hm=3fea7647266c64b1ded054c1657d164d9646a39515143bdb470917ac3b544128&=&format=webp&quality=lossless&width=1872&height=846">
+<img alt="Space Station 14" src="Resources/Textures/_OuterHorizons/oh_background1.png">
 </div>
 
 # ©2025-2026 Outer Horizons.
