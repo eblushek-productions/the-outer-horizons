@@ -1,9 +1,9 @@
 - type: construction
   hide: false
-  id: OH14_MagneticFiledGenerator
-  graph: OH14_MagneticFiledGenerator
+  id: OH14_MagneticFieldGenerator
+  graph: OH14_MagneticFieldGenerator
   startNode: start
-  targetNode: OH14_MagneticFiledGenerator
+  targetNode: OH14_MagneticFieldGenerator
   category: construction-category-machines
   placementMode: SnapgridCenter
   canBuildInImpassable: false

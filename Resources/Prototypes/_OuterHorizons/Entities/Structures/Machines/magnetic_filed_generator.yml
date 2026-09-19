@@ -1,13 +1,13 @@
 - type: entity
-  id: OH14_MagneticFiledGenerator
+  id: OH14_MagneticFieldGenerator
   name: генератор магнитных полей
   parent: BaseMachinePowered
   categories: [ ForkFiltered ]
   description: Держитесь на расстоянии не более 2х метров от него, чтобы радиация вас не убила. Большое потребление энергии, НЕ ДЕРЖИТЕ ВО ВКЛЮЧЕНОМ СОСТОЯНИИ ПРОСТО ТАК.
   components:
   - type: Construction
-    graph: OH14_MagneticFiledGenerator
-    node: OH14_MagneticFiledGenerator
+    graph: OH14_MagneticFieldGenerator
+    node: OH14_MagneticFieldGenerator
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
