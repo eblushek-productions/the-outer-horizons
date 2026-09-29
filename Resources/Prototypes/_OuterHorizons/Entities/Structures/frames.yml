@@ -344,7 +344,7 @@
 ## Геник
 
 - type: entity
-  id: OH14_MagneticFiledGeneratorFrame
+  id: OH14_MagneticFieldGeneratorFrame
   parent: OH14_FrameBasic
   name: каркас генератора магнитных полей
   components:
@@ -353,7 +353,7 @@
     sprite: _OuterHorizons/Structures/Machines/shield_generator.rsi
     state: frame0
   - type: Construction
-    graph: OH14_MagneticFiledGenerator
+    graph: OH14_MagneticFieldGenerator
     node: frame1
 
 ## Конденс

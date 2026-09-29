@@ -43,3 +43,23 @@
   - type: BasicStationEventScheduler
     scheduledGameRules: !type:NestedSelector
       tableId: OH14_BasicGameRulesTable
+
+# Конец раунда
+
+- type: entityTable
+  id: OH14_BasicRoundEndTable
+  table: !type:AllSelector
+    children:
+      - id: OH14_SolarFlareEnd
+
+- type: entity
+  id: OH14_BasicRoundEndScheduler
+  parent: OH14_BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: OH14_BasicRoundEndTable
+    minimumTimeUntilFirstEvent: 7200
+    minMaxEventTiming:
+      max: 3600
+      min: 3600

@@ -1,0 +1,19 @@
+- type: entity
+  parent: OH14_BaseGameRule
+  id: OH14_SolarFlareEnd
+  components:
+  - type: StationEvent
+    startAudio:
+      path: /Audio/_OuterHorizons/Soundtracks/Dust_storm.ogg
+      params:
+        volume: -4
+    maxOccurrences: 1
+    earliestStart: 0
+    minimumPlayers: 0
+    duration: 120
+  - type: SolarFlare
+  - type: SolarFlareRule
+    affectedChannels:
+    - Common
+    lightBreakChancePerSecond: 0.01
+    doorToggleChancePerSecond: 0.005

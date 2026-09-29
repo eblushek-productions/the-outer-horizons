@@ -3,7 +3,7 @@ using Robust.Shared.Physics.Events;
 
 namespace Content.Server._OuterHorizons;
 
-public sealed class MagneticFiledSystem : EntitySystem
+public sealed class MagneticFieldSystem : EntitySystem
 {
     public override void Initialize()
     {

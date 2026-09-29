@@ -1,5 +1,5 @@
 using Content.Server._OuterHorizons.SolarFlare.Components;
-using Content.Server.Power.Components;
+using Content.Shared.Power;
 
 namespace Content.Server._OuterHorizons.SolarFlare;
 
@@ -9,28 +9,24 @@ public sealed class MagneticFieldGeneratorSystem : EntitySystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<MagneticFieldGeneratorComponent, PowerChangedEvent>(OnPowerChanged);
     }
 
-    public override void Update(float frameTime)
+    public void OnPowerChanged(EntityUid uid, MagneticFieldGeneratorComponent comp, ref PowerChangedEvent args)
     {
-        base.Update(frameTime);
-
-        var query = EntityQueryEnumerator<MagneticFieldGeneratorComponent, ApcPowerReceiverComponent>();
-        while (query.MoveNext(out var uid, out var generator, out var apcPower))
+        if (!args.Powered)
         {
-            if (!apcPower.Powered)
+            if (comp.FieldUid is not null)
             {
-                if (generator.Filed is not null)
-                {
-                    QueueDel(generator.Filed);
-                    generator.Filed = null;
-                }
-                continue;
+                QueueDel(comp.FieldUid);
+                comp.FieldUid = null;
             }
-
-            if (generator.Filed is null)
+        }
+        else
+        {
+            if (comp.FieldUid is null)
             {
-                generator.Filed = Spawn(generator.ProtoSpawnId, Transform(uid).Coordinates);
+                comp.FieldUid = Spawn(comp.ProtoSpawnId, Transform(uid).Coordinates);
             }
         }
     }
