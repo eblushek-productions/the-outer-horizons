@@ -46,6 +46,8 @@
     size: Normal
     shape:
     - 0,0,0,1
+  - type: Durability
+    maxDurability: 110
 
 - type: entity
   parent: OH14_BaseCrowbar

@@ -27,6 +27,8 @@
       - Slicing
     useSound:
       path: /Audio/Items/Culinary/chop.ogg
+  - type: Durability
+    maxDurability: 50
 
 - type: entity
   name: нож

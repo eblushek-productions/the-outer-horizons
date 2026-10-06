@@ -14,6 +14,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared._OuterHorizons.Durability; //Outer Horizonts change
 
 namespace Content.Shared.Tools.Systems;
 
@@ -35,6 +36,8 @@ public abstract partial class SharedToolSystem : EntitySystem
     [Dependency] private   readonly TileSystem _tiles = default!;
     [Dependency] private   readonly TurfSystem _turfs = default!;
 
+    [Dependency] protected   readonly SharedDurabilitySystem _durability = default!; //Outer Horizonts change
+
     public const string CutQuality = "Cutting";
     public const string PulseQuality = "Pulsing";
 
@@ -54,6 +57,8 @@ public abstract partial class SharedToolSystem : EntitySystem
 
         var ev = args.WrappedEvent;
         ev.DoAfter = args.DoAfter;
+
+        _durability.DurabilityUse(uid, args.User); //Outer Horizonts change
 
         if (args.OriginalTarget != null)
             RaiseLocalEvent(GetEntity(args.OriginalTarget.Value), (object) ev);

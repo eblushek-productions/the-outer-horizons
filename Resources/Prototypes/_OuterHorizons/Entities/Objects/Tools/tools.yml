@@ -47,6 +47,7 @@
       Steel: 100
   - type: StaticPrice
     price: 30
+  - type: Durability
 
 - type: entity
   name: отвертка
@@ -96,6 +97,7 @@
       Steel: 100
   - type: StaticPrice
     price: 30
+  - type: Durability
 
 - type: entity
   name: гаечный ключ
@@ -149,6 +151,7 @@
   - type: GuideHelp
     guides:
     - Construction
+  - type: Durability
 
 - type: entity
   name: мультитул
@@ -277,6 +280,18 @@
         Piercing: 10
     soundHit:
       path: "/Audio/Items/drill_hit.ogg"
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Durability
+    useEnergy: true
+    chargePerUse: 10
 
 - type: entity
   parent: OH14_BaseItem

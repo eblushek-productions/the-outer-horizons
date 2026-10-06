@@ -111,6 +111,8 @@
   - type: Tag
     tags:
     - OH14_Tools
+  - type: Durability
+    maxDurability: 95
 
 - type: entity
   name: ваккумная сварка
@@ -138,3 +140,15 @@
     sprite: _OuterHorizons/Objects/Tools/welder_mini.rsi
   - type: Tool
     speedModifier: 0.3
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Durability
+    useEnergy: true
+    chargePerUse: 12
