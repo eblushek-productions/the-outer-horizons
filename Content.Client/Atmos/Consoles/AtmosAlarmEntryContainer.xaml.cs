@@ -1,6 +1,7 @@
 using Content.Client.Stylesheets;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Atmos.EntitySystems;
 using Content.Shared.Atmos.Monitor;
 using Content.Shared.FixedPoint;
 using Content.Shared.Temperature;
@@ -22,9 +23,10 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
 
     private readonly IEntityManager _entManager;
     private readonly IResourceCache _cache;
-    private readonly Color _defaultColor = Color.FromHex("#A9A9A9");
-    private readonly Color _safeColor = Color.FromHex("#7BC722");
-    private readonly Color _dangerousColor = Color.FromHex("#E03131");
+    private readonly SharedAtmosphereSystem _atmosphere;
+    //private readonly Color _defaultColor = Color.FromHex("#A9A9A9");
+    //private readonly Color _safeColor = Color.FromHex("#7BC722");
+    //private readonly Color _dangerousColor = Color.FromHex("#E03131");
 
     private Dictionary<AtmosAlarmType, string> _alarmStrings = new Dictionary<AtmosAlarmType, string>()
     {
@@ -40,6 +42,7 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
 
         _entManager = IoCManager.Resolve<IEntityManager>();
         _cache = IoCManager.Resolve<IResourceCache>();
+        _atmosphere = _entManager.System<SharedAtmosphereSystem>();
 
         NetEntity = uid;
         Coordinates = coordinates;
@@ -152,7 +155,7 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
                     foreach ((var gas, (var mol, var percent, var alert)) in keyValuePairs)
                     {
                         FixedPoint2 gasPercent = percent * 100f;
-                        var gasAbbreviation = Atmospherics.GasAbbreviations.GetValueOrDefault(gas, Loc.GetString("gas-unknown-abbreviation"));
+                        var gasAbbreviation = Loc.GetString(_atmosphere.GetGas(gas).Abbreviation);
 
                         var gasLabel = new Label()
                         {
