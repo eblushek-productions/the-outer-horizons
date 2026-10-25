@@ -2,7 +2,7 @@
   id: OH14_Debug
   editorHidden: false
   name: tiles-debug
-  sprite: /Textures/_OuterHorizons/Tiles/DEBUG.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   footstepSounds:
     collection: FootstepPlating
   heatCapacity: 10000
@@ -11,7 +11,7 @@
   id: OH14_Plating
   editorHidden: false
   name: tiles-plating
-  sprite: /Textures/_OuterHorizons/Tiles/plating.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/plating.png
   baseTurf: OH14_PlatingLattice
   isSubfloor: true
   deconstructTools: [ Prying ]
@@ -24,7 +24,7 @@
   id: OH14_PlatingLattice
   editorHidden: false
   name: tiles-plating
-  sprite: /Textures/_OuterHorizons/Tiles/plating_lattice.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/plating_lattice.png
   baseTurf: OH14_Lattice
   isSubfloor: true
   isSpace: true
@@ -37,7 +37,7 @@
 # - type: tile
 #   id: OH14_PlatingWindow # к сожалению логике игры не понять мою идею
 #   name: tiles-plating
-#   sprite: /Textures/_OuterHorizons/Tiles/plating_window.png
+#   sprite: /Textures/_OuterHorizons/Tiles/Plating/plating_window.png
 #   baseTurf: Space
 #   isSubfloor: true
 #   isSpace: true
@@ -52,7 +52,7 @@
   id: OH14_Lattice
   editorHidden: false
   name: tiles-lattice
-  sprite: /Textures/_OuterHorizons/Tiles/lattice.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/lattice.png
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]
@@ -68,7 +68,7 @@
   id: OH14_LatticeLD
   editorHidden: false
   name: tiles-lattice
-  sprite: /Textures/_OuterHorizons/Tiles/lattice_ld.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/lattice_ld.png
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]
@@ -83,7 +83,7 @@
   id: OH14_LatticeLU
   editorHidden: false
   name: tiles-lattice
-  sprite: /Textures/_OuterHorizons/Tiles/lattice_lu.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/lattice_lu.png
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]
@@ -98,7 +98,7 @@
   id: OH14_LatticeRD
   editorHidden: false
   name: tiles-lattice
-  sprite: /Textures/_OuterHorizons/Tiles/lattice_rd.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/lattice_rd.png
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]
@@ -113,7 +113,7 @@
   id: OH14_LatticeRU
   editorHidden: false
   name: tiles-lattice
-  sprite: /Textures/_OuterHorizons/Tiles/lattice_ru.png
+  sprite: /Textures/_OuterHorizons/Tiles/Plating/lattice_ru.png
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]

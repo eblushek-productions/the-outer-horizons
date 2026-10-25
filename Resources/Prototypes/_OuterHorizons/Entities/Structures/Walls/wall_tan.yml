@@ -1,0 +1,35 @@
+- type: entity
+  parent: OH14_BaseWall
+  id: OH14_BaseWall_RRE
+  suffix: RRE
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/basic.rsi
+    state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/basic.rsi
+    state: full
+
+- type: entity
+  parent: [ BaseDeltaPressureReinforcedGlass, WallDiagonalBase ]
+  id: OH14_WallDiagonal_RRE
+  suffix: RRE
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/diagonal.rsi
+    state: state0
+
+- type: entity
+  parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
+  id: OH14_WallReinforced_RRE
+  suffix: RRE
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/reinforced.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Tan_arm_wall/reinforced.rsi
+    state: full

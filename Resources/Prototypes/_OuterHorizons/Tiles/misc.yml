@@ -1,0 +1,44 @@
+# =============================================================================
+# Разное
+# =============================================================================
+
+- type: tile
+  parent: OH14_BasicShipTile
+  id: OH14_FloorShipService
+  editorHidden: false
+  name: кухонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/service.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  id: OH14_FloorShip_Window
+  editorHidden: false
+  parent: OH14_BasicShipTile
+  name: стеклянный пол
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/glass.png
+  baseTurf: OH14_PlatingLattice
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: OH14_TileItemGlass
+  heatCapacity: 250
+
+- type: tile
+  id: OH14_FloorShip_ReinfWindow
+  editorHidden: false
+  parent: OH14_BasicShipTile
+  name: укрепленный стеклянный пол
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/reinf_glass.png
+  baseTurf: OH14_PlatingLattice
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: OH14_TileItemGlass
+  heatCapacity: 250

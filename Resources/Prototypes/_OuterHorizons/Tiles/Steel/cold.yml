@@ -1,0 +1,105 @@
+# =============================================================================
+# Холодные
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold
+  editorHidden: false
+  name: холодная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Horizontal
+  editorHidden: false
+  name: холодная горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Vertical
+  editorHidden: false
+  name: холодная вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Mono
+  editorHidden: false
+  name: холодная монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Mini
+  editorHidden: false
+  name: холодная мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Plastic
+  editorHidden: false
+  name: холодная пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Diagonal
+  editorHidden: false
+  name: холодная диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/diagonal.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_Maint
+  editorHidden: false
+  name: холодная техническая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/maint.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipCold_MaintMono
+  editorHidden: false
+  name: холодная техническая моно плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_cold/maint_mono.png

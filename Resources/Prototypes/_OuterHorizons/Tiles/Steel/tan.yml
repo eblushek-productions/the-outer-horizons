@@ -1,0 +1,105 @@
+# =============================================================================
+# Холодные
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan
+  editorHidden: false
+  name: бежевая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Horizontal
+  editorHidden: false
+  name: бежевая горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Vertical
+  editorHidden: false
+  name: бежевая вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Mono
+  editorHidden: false
+  name: бежевая монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Mini
+  editorHidden: false
+  name: бежевая мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Plastic
+  editorHidden: false
+  name: бежевая пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Diagonal
+  editorHidden: false
+  name: бежевая диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/diagonal.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_Maint
+  editorHidden: false
+  name: бежевая техническая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/maint.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipTan_MaintMono
+  editorHidden: false
+  name: бежевая техническая моно плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_tan/maint_mono.png

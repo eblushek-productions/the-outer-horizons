@@ -54,7 +54,7 @@
     state: steel
   - type: FloorTile
     outputs:
-      - OH14_FloorSteel
+      - OH14_FloorShipGrey
   - type: Stack
     stackType: OH14_TileSteel
 
@@ -66,7 +66,7 @@
     state: white
   - type: FloorTile
     outputs:
-      - OH14_FloorSteelWhite
+      - OH14_FloorShipWhite
   - type: Stack
     stackType: OH14_TileSteelWhite
 
@@ -78,7 +78,7 @@
     state: dark
   - type: FloorTile
     outputs:
-      - OH14_FloorSteelDark
+      - OH14_FloorShipDark
   - type: Stack
     stackType: OH14_TileSteelDark
 
@@ -92,6 +92,6 @@
     state: glass
   - type: FloorTile
     outputs:
-      - OH14_FloorGlass
+      - OH14_FloorShip_Window
   - type: Stack
     stackType: OH14_TileGlass
