@@ -2,7 +2,7 @@
   id: OH14_IceMoon
   editorHidden: false
   name: поверхность астероида
-  sprite: /Textures/_OuterHorizons/Tiles/asteroid.png
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/asteroid.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -14,7 +14,7 @@
   id: OH14_IceMoonAlternative
   editorHidden: false
   name: поверхность астероида для разметки
-  sprite: /Textures/_OuterHorizons/Tiles/asteroid.png
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/asteroid.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -25,7 +25,7 @@
   id: OH14_Ice
   editorHidden: false
   name: поверхность ледяного астероида
-  sprite: /Textures/_OuterHorizons/Tiles/ice.png
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/ice.png
   isSubfloor: true
   friction: 0.05
   mobAcceleration: 0.1
@@ -39,7 +39,7 @@
   id: OH14_FloorDirt
   editorHidden: false
   name: земля
-  sprite: /Textures/_OuterHorizons/Tiles/dirt.png
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/dirt.png
   # heatCapacity: 10000
   isSubfloor: true
   footstepSounds:
@@ -54,10 +54,20 @@
   id: OH14_FloorDirtIndestructible
   editorHidden: false
   name: неразрушимая земля
-  sprite: /Textures/_OuterHorizons/Tiles/dirt.png
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/dirt.png
   heatCapacity: 10000
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
   weather: true
   indestructible: true
+
+- type: tile
+  id: OH14_Concrete
+  editorHidden: false
+  name: бетонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Planetary/concrete.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepTile
+  heatCapacity: 10000

@@ -1,0 +1,98 @@
+# =============================================================================
+# Серые
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey
+  editorHidden: false
+  name: серая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Horizontal
+  editorHidden: false
+  name: серая горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Vertical
+  editorHidden: false
+  name: серая вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Mono
+  editorHidden: false
+  name: серая монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Mini
+  editorHidden: false
+  name: серая мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Plastic
+  editorHidden: false
+  name: серая пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Chess
+  editorHidden: false
+  name: серая шахматная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/chess.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipGrey_Diagonal
+  editorHidden: false
+  name: серая диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_grey/diagonal.png

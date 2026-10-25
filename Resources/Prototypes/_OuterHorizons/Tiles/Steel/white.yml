@@ -1,0 +1,98 @@
+# =============================================================================
+# Белые
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite
+  editorHidden: false
+  name: белая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Horizontal
+  editorHidden: false
+  name: белая горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Vertical
+  editorHidden: false
+  name: белая вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Mono
+  editorHidden: false
+  name: белая монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Mini
+  editorHidden: false
+  name: белая мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Plastic
+  editorHidden: false
+  name: белая пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Chess
+  editorHidden: false
+  name: белая шахматная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/chess.png
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipWhite_Diagonal
+  editorHidden: false
+  name: белая диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_white/diagonal.png

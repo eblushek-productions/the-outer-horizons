@@ -1,0 +1,91 @@
+# =============================================================================
+# Темные
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark
+  editorHidden: false
+  name: темная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Horizontal
+  editorHidden: false
+  name: темная горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Vertical
+  editorHidden: false
+  name: темная вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Mono
+  editorHidden: false
+  name: темная монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Mini
+  editorHidden: false
+  name: темная мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Plastic
+  editorHidden: false
+  name: темная пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipDark_Diagonal
+  editorHidden: false
+  name: темная диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_dark/diagonal.png

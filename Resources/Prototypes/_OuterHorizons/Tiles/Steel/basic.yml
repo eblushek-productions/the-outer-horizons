@@ -1,0 +1,12 @@
+- type: tile
+  id: OH14_BasicShipTile
+  abstract: true
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 2000
+  baseTurf: OH14_Plating
+  itemDrop: OH14_TileItemSteel
+  baseWhitelist:
+  - OH14_IceMoon

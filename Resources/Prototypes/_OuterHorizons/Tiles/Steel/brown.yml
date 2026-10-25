@@ -1,0 +1,91 @@
+# =============================================================================
+# Коричневые
+# =============================================================================
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown
+  editorHidden: false
+  name: коричневая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/basic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Horizontal
+  editorHidden: false
+  name: коричневая горизонтальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Vertical
+  editorHidden: false
+  name: коричневая вертикальная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Mono
+  editorHidden: false
+  name: коричневая монотонная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/mono.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Mini
+  editorHidden: false
+  name: коричневая мини плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/mini.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Plastic
+  editorHidden: false
+  name: коричневая пластиковая плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/plastic.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  parent: OH14_BaseStationTile
+  id: OH14_FloorShipBrown_Diagonal
+  editorHidden: false
+  name: коричневая диагональная плитка
+  sprite: /Textures/_OuterHorizons/Tiles/Steel_brown/diagonal.png

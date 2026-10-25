@@ -16,13 +16,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: серая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -36,13 +36,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -56,13 +56,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: черная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -78,13 +78,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: пластиковая серая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/plastic.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -97,13 +97,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: пластиковая белая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_plastic.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -116,13 +116,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: пластиковая черная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_plastic.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -137,7 +137,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная моно-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_mono.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -150,7 +150,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная моно-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_mono.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -163,7 +163,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая моно-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_mono.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -178,7 +178,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -191,7 +191,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -204,7 +204,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -219,7 +219,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_diagonal_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -232,7 +232,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_diagonal_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -245,7 +245,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая мини-плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_diagonal_mini.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -260,7 +260,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная диагональная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_diagonal.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -273,7 +273,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная диагональная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_diagonal.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -286,7 +286,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая диагональная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_diagonal.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -301,7 +301,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_herringbone.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -314,7 +314,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_herringbone.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -327,7 +327,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_herringbone.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -342,7 +342,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_pavement.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -355,7 +355,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_pavement.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -368,7 +368,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_pavement.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -383,7 +383,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стальная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_pavement_vertical.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -396,7 +396,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: темная кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/dark_pavement_vertical.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -409,7 +409,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: белая кирпичная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/white_pavement_vertical.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -424,7 +424,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: стеклянный пол
-  sprite: /Textures/_OuterHorizons/Tiles/glass.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_PlatingLattice
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -438,7 +438,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: укрепленный стеклянный пол
-  sprite: /Textures/_OuterHorizons/Tiles/reinf_glass.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_PlatingLattice
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -454,7 +454,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: техническая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/steel_maint.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -467,7 +467,7 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: техническая плитка
-  sprite: /Textures/_OuterHorizons/Tiles/tech_maint.png
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -482,13 +482,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: кухонная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/service.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -501,13 +501,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: шахматная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/checker_dark.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -520,13 +520,13 @@
   editorHidden: false
   parent: OH14_BaseStationTile
   name: шахматная плитка
-  sprite: /Textures/_OuterHorizons/Tiles/checker_white.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  sprite: /Textures/_OuterHorizons/Tiles/Misc/DEBUG.png
+  # variants: 4
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
   baseTurf: OH14_Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
