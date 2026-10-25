@@ -27,10 +27,10 @@
     tags:
       - Wall
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/basic.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/basic.rsi
     state: full
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/basic.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/basic.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -68,10 +68,10 @@
   - type: SpaceGarbage
   - type: Sprite
     drawdepth: Walls
-    sprite: _OuterHorizons/Structures/Walls/basic_diagonal.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/basic_diagonal.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/diagonal.rsi
     state: state0
   - type: Destructible
     thresholds:
@@ -109,9 +109,9 @@
     damageOverlay:
       sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/reinforced.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/reinforced.rsi
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/reinforced.rsi
+    sprite: _OuterHorizons/Structures/Walls/Tan_wall/reinforced.rsi
     state: full
   - type: Construction
     graph: OH14_Girder
@@ -188,9 +188,9 @@
     damageOverlay:
       sprite: _OuterHorizons/Structures/Walls/damage.rsi
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/basic.rsi
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/shuttle.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/basic.rsi
     state: full
   - type: Destructible
     thresholds:
@@ -216,6 +216,17 @@
         acts: ["Destruction"]
 
 - type: entity
+  parent: OH14_WallShuttle
+  id: OH14_WallShuttleUco
+  suffix: UCO
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/colored_uco.rsi
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/colored_uco.rsi
+    state: full
+
+- type: entity
   parent: OH14_WallDiagonal
   id: OH14_WallShuttleDiagonal
   name: диагональная стена шаттла
@@ -223,10 +234,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/diagonal.rsi
     state: state0
 
 - type: entity
@@ -237,31 +248,32 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal_alt.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/diagonal_alt.rsi
     state: state0
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/shuttle_diagonal_alt.rsi
+    sprite: _OuterHorizons/Structures/Walls/Shuttle_wall/diagonal_alt.rsi
     state: state0
 
 - type: entity
   parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
   id: OH14_WallAluminum
   name: легкая стена
+  suffix: немапит
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/aluminum.rsi
+    sprite: _OuterHorizons/Structures/Walls/Light_wall/aluminum.rsi
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/aluminum.rsi
+    sprite: _OuterHorizons/Structures/Walls/Light_wall/aluminum.rsi
     state: full
 
 - type: entity
   parent: [ BaseDeltaPressurePlasma, OH14_BaseWall ]
   id: OH14_WallAluminumOrange
   name: легкая стена
-  suffix: Оранжевая
+  suffix: немапит
   components:
   - type: Sprite
-    sprite: _OuterHorizons/Structures/Walls/aluminum_orange.rsi
+    sprite: _OuterHorizons/Structures/Walls/Light_wall/aluminum_orange.rsi
   - type: Icon
-    sprite: _OuterHorizons/Structures/Walls/aluminum_orange.rsi
+    sprite: _OuterHorizons/Structures/Walls/Light_wall/aluminum_orange.rsi
     state: full

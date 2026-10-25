@@ -1,0 +1,48 @@
+- type: entity
+  parent: OH14_BaseWallRock
+  id: OH14_BaseWallConcrete
+  name: бетонная стена
+  description: Защищает экипаж внутри от шахты снаружи.
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          OH14_Cobblestone1:
+            min: 0
+            max: 1
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Concrete_wall/basic.rsi
+    state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Concrete_wall/basic.rsi
+    state: full
+
+- type: entity
+  parent: OH14_BaseWallConcrete
+  id: OH14_BaseWallConcreteRRE
+  suffix: RRE
+  components:
+  - type: Sprite
+    sprite: _OuterHorizons/Structures/Walls/Concrete_wall/colored_rre.rsi
+    state: full
+  - type: Icon
+    sprite: _OuterHorizons/Structures/Walls/Concrete_wall/colored_rre.rsi
+    state: full
